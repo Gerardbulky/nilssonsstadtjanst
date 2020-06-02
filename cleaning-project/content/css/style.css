@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+header {
+    margin: 0;
+}
+/************** IMAGES *************************/
+*{ box-sizing: border-box; }
+
+.logo-pic {
+   /* background: url("../images/logo.jpg");*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*min-height: 360px;*/
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0px;
+}
+.image {
+    border: 1px solid #ccc;
+    background-color: rgb(235, 230, 247);
+    }
+.gallery img{
+    width: 100%;
+    height: auto;
+    }
+
+.desc {text-align: center;
+      padding: 15px;
+      color: rgb(47, 13, 110);
+ }
+ 
+.gallery {
+    padding: 0 25px;
+    float: left;
+    width: 30%;
+   
+}
+.jumbotron {
+    height: 280px;
+
+}
+/************** NAV BAR *********************/
+
+
+    
+   
