@@ -11,7 +11,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*min-height: 360px;*/
+    min-height: 360px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -19,32 +19,88 @@ header {
     width: 100%;
     padding: 0px;
 }
-.image {
-    border: 1px solid #ccc;
-    background-color: rgb(235, 230, 247);
-    }
-.gallery img{
+.jumbotron{
+    padding-top: 10px;
+    height: 250px;;
+}
+
+.gallery{
     width: 100%;
     height: auto;
-    }
+}
 
+.image{
+   
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 30px;
+    border: 1px solid #ccc;
+    max-width: 24%;
+    object-fit: cover;
+    object-position: center;
+}
 .desc {text-align: center;
-      padding: 15px;
+      padding: 10px;
       color: rgb(47, 13, 110);
  }
  
-.gallery {
-    padding: 0 25px;
-    float: left;
-    width: 30%;
-   
-}
-.jumbotron {
-    height: 280px;
-
-}
 /************** NAV BAR *********************/
+.nav-color-home {
+    background-color: #e67e22;
+}
+.nav-color-home-clean {
+    background-color: #ac8c9c;
+}
+.nav-color-window {
+    background-color: #c7c1bc;
+}
+.nav-color-moving {
+    background-color: #228ee6;
+}
+.nav-color-big {
+    background-color: #5657bb;
+}
+.nav-color-company {
+    background-color: #7e6262;
+}
 
+ /*****CLOSING GAPS B/N Nav Items*******/
 
-    
+.list-inline-item:not(:last-child) {
+    margin: 0;
+    }
+ .navcontainer {
+     font-size: 0;
+ }
+ #nav li {
+     font-size: 14px;
+     padding: 0;
+ }
+ .navitem {
+     height: 116px;
+     text-align: center;
+     padding: 0;
+ }
+ .navitem a {
+     width: 100%;
+     text-decoration: none;
+     color: #fff;
+     height: 116px;
+ }
+ .navitem a i {
+     padding-top: 22px;
+     display: block;
+     color: #fafafa;
+     font-size: 26px;
+ }
+ .navitem span {
+     display: block;
+     width: 100%;
+     padding-top: 5px;
+     text-align: center;
+     text-transform: uppercase; 
+     font-size: 14px;
+     font-weight: 300px;
+ }
    
