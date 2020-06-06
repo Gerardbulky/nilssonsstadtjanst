@@ -1,51 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-header {
+body {
     margin: 0;
 }
 /************** IMAGES *************************/
 *{ box-sizing: border-box; }
 
-.logo-pic {
-   /* background: url("../images/logo.jpg");*/
+/*#logo-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 360px;
+    min-height: 100px;
+    max-width: 95%;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
-    border: 1px solid #ccc;
-    width: 100%;
+    border: 1px solid rgb(252, 249, 249);
     padding: 0px;
+    margin-left: 0px;
+    
 }
-.jumbotron{
-    padding-top: 10px;
-    height: 250px;;
+    
+
+/*.card {max-width: 200px;
+       padding: 0px;
+       margin: 25px;
+
 }
 
-.gallery{
-    width: 100%;
-    height: auto;
-}
-
-.image{
-   
-    float: left;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 30px;
-    border: 1px solid #ccc;
-    max-width: 24%;
-    object-fit: cover;
-    object-position: center;
-}
-.desc {text-align: center;
-      padding: 10px;
-      color: rgb(47, 13, 110);
+.card-desc {text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: rgb(67, 63, 99);
+      text-decoration: none;
  }
- 
-/************** NAV BAR *********************/
+
+.padding{
+    margin-top: 15px;
+    padding-top: 25px;
+    padding-bottom: 5px; 
+    background-color: transparent;
+}
+.gallery {
+    height: 100px;
+}
+/************** NAV BAR ***************
 .nav-color-home {
     background-color: #e67e22;
 }
@@ -65,42 +64,36 @@ header {
     background-color: #7e6262;
 }
 
- /*****CLOSING GAPS B/N Nav Items*******/
-
-.list-inline-item:not(:last-child) {
-    margin: 0;
-    }
- .navcontainer {
-     font-size: 0;
- }
- #nav li {
-     font-size: 14px;
-     padding: 0;
- }
- .navitem {
-     height: 116px;
-     text-align: center;
-     padding: 0;
- }
- .navitem a {
-     width: 100%;
-     text-decoration: none;
-     color: #fff;
-     height: 116px;
- }
- .navitem a i {
-     padding-top: 22px;
-     display: block;
-     color: #fafafa;
-     font-size: 26px;
- }
- .navitem span {
-     display: block;
-     width: 100%;
-     padding-top: 5px;
-     text-align: center;
-     text-transform: uppercase; 
-     font-size: 14px;
-     font-weight: 300px;
- }
-   
+   /*************************H0ver.css**********
+   .hvr-sweep-to-bottom:before {
+       background-color: rgba(0, 0, 0, 0.2);
+       height: 115px;
+   }******/
+/***********************Image Header*************************/
+.gallery{
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid rgb(247, 217, 217);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.card {
+       padding: 0px;
+       margin: 20px;
+       float: left;
+}
+.pop2 {
+    width: 50rem;
+}
+.inner{
+    overflow: hidden;
+}
+.inner img {
+    transition: all 1.5s ease;
+}
+.inner:hover img {transform: scale(1.2);
+}
+/**********************navigation*********************/
