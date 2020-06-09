@@ -1,75 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 body {
-    margin: 0;
-}
-/************** IMAGES *************************/
-*{ box-sizing: border-box; }
-
-/*#logo-img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100px;
-    max-width: 95%;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    border: 1px solid rgb(252, 249, 249);
+    margin: 0px;
     padding: 0px;
-    margin-left: 0px;
-    
-}
-    
-
-/*.card {max-width: 200px;
-       padding: 0px;
-       margin: 25px;
-
 }
 
-.card-desc {text-align: center;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      color: rgb(67, 63, 99);
-      text-decoration: none;
- }
-
-.padding{
-    margin-top: 15px;
-    padding-top: 25px;
-    padding-bottom: 5px; 
-    background-color: transparent;
-}
-.gallery {
-    height: 100px;
-}
-/************** NAV BAR ***************
-.nav-color-home {
-    background-color: #e67e22;
-}
-.nav-color-home-clean {
-    background-color: #ac8c9c;
-}
-.nav-color-window {
-    background-color: #c7c1bc;
-}
-.nav-color-moving {
-    background-color: #228ee6;
-}
-.nav-color-big {
-    background-color: #5657bb;
-}
-.nav-color-company {
-    background-color: #7e6262;
-}
-
-   /*************************H0ver.css**********
-   .hvr-sweep-to-bottom:before {
-       background-color: rgba(0, 0, 0, 0.2);
-       height: 115px;
-   }******/
 /***********************Image Header*************************/
+.images{
+    margin: 0px;
+    width: 100%;
+}
 .gallery{
     
     background-position: center;
@@ -78,6 +18,11 @@ body {
     border: 1px solid rgb(247, 217, 217);
     margin: 0px;
     padding: 0px;
+    width: 100%;
+}
+.gallery-pics{
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 .card {
@@ -97,3 +42,82 @@ body {
 .inner:hover img {transform: scale(1.2);
 }
 /**********************navigation*********************/
+.navbar {
+    background-color: rgb(74, 153, 226);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.navbar-nav li{
+    text-align: center;
+    padding-left: 40px;
+}
+.navbar-nav li a{
+    font-weight: 600;
+    color: #fff !important;
+    }
+.fa-bars{
+    color: #fff;
+    font-size: 30px !important;
+}
+.navbar-toggler {
+    outline: none !important;
+}
+.dropdown-menu {
+    background-color: rgb(74, 153, 226);
+}
+.navbar a:hover{
+    background-color:  rgb(67, 63, 99);
+    transition: 0.4s;
+}
+
+/*****************************F00ter*****************************/
+.footer{
+   padding: 0;
+    margin: 0;
+   width: 100%;
+}
+
+.logo {
+    font-family: lobster;
+    color: #282853;
+}
+.socials-links li a i{
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     padding: 12px 0;
+     line-height: 7px;
+     text-align: center;
+     color: #fff;
+     background-color: #282853;
+     transition: all 0.35s ease-in-out;
+     -moz-transition: all 0.35s ease-in-out;
+     -webkit-transition: all 0.35s ease-in-out;
+     -o-transition: all 0.35s ease-in-out;
+     }
+.socials-links li a i:hover {
+    background-color: rgb(204, 46, 46);
+}
+
+.copyright{
+    background-color: rgb(74, 153, 226);
+    
+    color: #fff;
+    
+}
+
+.jumbotron{
+    margin: 0;
+  width: 100%;
+}   
+    
+.copyright{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.carousel slide{
+    width: 100%;
+    height: 50vhr;
+}
