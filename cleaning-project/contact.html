@@ -114,8 +114,40 @@
 </nav>
 </header>
 
-    <section>
+<!-------------------------------------Maps and Emails----------------------------------------------------->
+    <section class="container-fluid">
+     <div class="row">
+     <div class="col-md-8">
+     <div id="map"></div>
+     </div>
+<!------------------------------------------Opening hours---------------------------------------------------->     
+     <div class="col-md-4">
+    <div class="card border-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><h4>Contact</h4></div>
+  <div class="card-body text-primary">
+  <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
+   <br>
+   <a target="_blank" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> : gerardambe@yahoo.com</a>
+   <br>
+   <a target="_blank" href="https://superclean.se/"><i class="fa fa-globe" aria-hidden="true"></i> : https://superclean.se</a>
+   <br>
+   <a target="_blank" href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i class="fa fa-location-arrow" aria-hidden="true"></i>  : location</a>
+  </div>
+</div>
+<div class="card border-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><h4>Opening Hours</h4></div>
+  <div class="card-body table">
+   <tr> <td><strong>MON-FRI:</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    7:00 - 16:00</td></tr>
+    <br>
+    <tr><td><strong>Saturday:</strong> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Closed</td></tr>
+    <br>
+    <tr><td><strong>Sunday:</strong>   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   Closed</td></tr>
+  </div>
+</div>
+    </div>
+     </div>
     </section>
+<!-------------------------------------Contact Information------------------------------------------------------>
 
     <div class="container-fluid socials no-gutter footer"> <!--2-->
    <div class="row jumbotron">
@@ -168,8 +200,8 @@
    </div>
     </div>
     </div>
-   
-    </div> 
+    </div>
+    
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -185,5 +217,10 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2ecqKkWdDB1dPy1zn1FD6JnP5yqx2Y5A&callback=initMap">
+    </script>
+    <script src="../js/maps.js"></script>
   </body>
 </html>

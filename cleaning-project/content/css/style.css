@@ -67,7 +67,7 @@ body {
     background-color: rgb(74, 153, 226);
 }
 .navbar a:hover{
-    background-color:  rgb(67, 63, 99);
+    background-color:  #282853;
     transition: 0.4s;
 }
 
@@ -120,4 +120,36 @@ body {
 
 .card-header{
     color: #282853;
+}
+/*.vatten {
+    width: 1200px;
+    opacity: 0.7;
+    margin-bottom: -40px;
+    border-bottom: thin #183b6a solid;
+}*/
+.vatten{
+    width: 100%;
+    height: auto;
+}
+/*.sliding{
+    width: 75%;
+    margin: 0 auto;
+}*/
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+/***********************************Media Query************************************/
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 576px) {
+    
 }
