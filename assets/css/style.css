@@ -161,10 +161,14 @@ body {
 }*/
 
 #map {
-    height: 400px;
+    height: 300px; 
     width: 100%;
 }
-
+.center-form{
+    margin-top: 30px;
+    width: 60%;
+    
+}
 
 /***********************************Media Query************************************/
 
