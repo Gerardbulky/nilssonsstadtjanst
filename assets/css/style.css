@@ -7,46 +7,42 @@ body {
 
 /***********************Image Header*************************/
 
-.images {
+.container-fluid {
     margin: 0px;
     width: 100%;
 }
-
-.gallery {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid rgb(247, 217, 217);
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-}
-
-.gallery-pics {
+.logo {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
+/*.gally {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}*/
+
 .card {
     padding: 0px;
-    margin: 20px;
+    margin: 25px;
     float: left;
+    border-bottom:thick #cdd7e6  solid;
 }
 
-.pop2 {
-    width: 50rem;
+.gallery {
+    width: 55rem;
 }
 
-.inner {
+.gally-pic {
     overflow: hidden;
 }
 
-.inner img {
+.gally-pic img {
     transition: all 1.5s ease;
 }
 
-.inner:hover img {
+.gally-pic:hover img {
     transform: scale(1.2);
 }
 
@@ -154,22 +150,44 @@ body {
     height: auto;
 }
 
-
-/*.sliding{
-    width: 75%;
-    margin: 0 auto;
-}*/
+/********************************Map Section***********************************************/
 
 #map {
-    height: 300px; 
+    height: 500px; 
     width: 100%;
 }
-.center-form{
-    margin-top: 30px;
-    width: 60%;
-    
+
+/********************************Contact form Section***********************************************/
+
+.form {
+    padding: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    border: thin #cdd7e6 solid;
+}
+.email-us-header{
+    margin-left: 20px;
+    margin-top: 15px;
 }
 
+button[type="submit"] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #fafafa;
+    margin-left: 20px;
+}
+.kiki {
+width: 60%;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 20px;
+}
+.kiki2 {width: 80%;
+margin-left: 20px; 
+}
+        
+.formy-bottom{border-bottom: thick #cdd7e6 solid;}
 /***********************************Media Query************************************/
 
 @media (max-width: 992px) {}
