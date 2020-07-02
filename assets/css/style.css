@@ -1,37 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-body {
-    margin: 0px;
-    padding: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Roboto:ital,wght@1,700&display=swap');
 
 /***********************Image Header*************************/
-
 .container-fluid {
     margin: 0px;
     width: 100%;
-}
-.logo {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-/*.gally {
-    margin: 0px;
     padding: 0px;
+}
+.promo{
     width: 100%;
+}
+/*.promo a:hover {
+    text-decoration: none;
+    background-color: #fd0202;
+    transition: 0.4s;
 }*/
-
 .card {
     padding: 0px;
-    margin: 25px;
+    margin-top: 20px;
+    margin-left: 25px;
     float: left;
     border-bottom:thick #cdd7e6  solid;
 }
 
+.card-title{margin-left: 5px;
+            margin-bottom: 5px;}
+
 .gallery {
-    width: 55rem;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 0px;
 }
 
 .gally-pic {
@@ -135,6 +133,7 @@ body {
 
 .card-header {
     color: #282853;
+    
 }
 
 
@@ -146,8 +145,8 @@ body {
 }*/
 
 .vatten {
-    width: 100%;
-    height: auto;
+    padding: 0px;
+    margin: 0px;
 }
 
 /********************************Map Section***********************************************/
@@ -187,11 +186,8 @@ margin-left: 20px;
 margin-left: 20px; 
 }
         
-.formy-bottom{border-bottom: thick #cdd7e6 solid;}
-/***********************************Media Query************************************/
+.contact-bottom{border-bottom: thick #cdd7e6 solid;}
 
-@media (max-width: 992px) {}
+.information{margin-bottom: 50px;}
 
-@media (max-width: 768px) {}
 
-@media (max-width: 576px) {}
