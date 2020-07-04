@@ -16,10 +16,11 @@
 .card {
     padding: 0px;
     margin-top: 20px;
-    margin-left: 25px;
+    margin-left: 0px;
     float: left;
     border-bottom:thick #cdd7e6  solid;
     background-color: #fafafa;
+    align-content: center;
 }
 
 .card-title{margin-left: 5px;
@@ -54,7 +55,9 @@
     padding: 0px;
     width: 100%;
 }
-
+.dropdown-menu{
+    background-color: rgb(74, 153, 226);
+}
 .navbar-nav li {
     text-align: center;
     padding-left: 40px;
