@@ -7,7 +7,7 @@
 # **UX**
 - This project is intended for users who are looking for a website that offers cleaning services such as home cleaning,company cleaning,window cleaning etc. Below is a **sketch** of the Desktop and Mobile version the project website.
 <img src="assets/images/sketchDesktop.jpg" width=300> <img src="assets/images/sketchMobil.jpg" width=300>.
-- Attached is a [link to the deployed project on github](https://c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/#/workspace/cleaning-company) and a [link to the hosted site](https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html).
+- Attached is a [link to the deployed project on github](hhttps://github.com/gerardambe/cleaning-company) and a [link to the hosted site](https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html).
 - The project in its entirety provides easy access to users with images of what the service offers in both mobile and Desktop easy to access versions.
 - As a user by clicking on the different features will provide you with more elaborated and explicit detailed information on what to expect.
 - In the contact section you have a mail section to send your request and also a map section that provides the users with the locations.
