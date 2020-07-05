@@ -1,7 +1,7 @@
 #  **Superclean Cleaning Service**
 - This is a simple project built entirely using html,css, bootstrap and javascrpit.Come take a walk🕺 with me through its entirety😎.
-- The project is divided into the **header,body and footer**. At the header section which contains the **logo image** and three **photos** showing the types of cleaning offered and a **navigation bar**.
-- The body section contains an **image slideer** and with an two card one containing information about the **opening hours** and the other about the **contact information**.
+- The project is divided into the **header,body and footer**. The header contains the **logo image** and three **photos** showing pictures of the types of cleaning offered by the company and a **navigation bar**.
+- The body section contains an **image slider** together with two card one containing information about the **opening hours** and the other card providing some **contact information**.
 - The footer contains a **wave image** and below that is the **company name** and **contact information** and **social links** and lastly we have the **copyright** section.
 
 # **UX**
@@ -9,8 +9,8 @@
 <img src="assets/images/sketchDesktop.jpg" width=300> <img src="assets/images/sketchMobil.jpg" width=300>.
 - Attached is a [link to the deployed project on github](https://c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/#/workspace/cleaning-company) and a [link to the hosted site](https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html).
 - The project in its entirety provides easy access to users with images of what the service offers in both mobile and Desktop easy to access versions.
-- As a user by clicking on the features will provide you with more elaborated and explicit detailed information on the different services rendered.
-- In the contact section you have a mail section to send your request and also a map section to guide your way around.
+- As a user by clicking on the different features will provide you with more elaborated and explicit detailed information on what to expect.
+- In the contact section you have a mail section to send your request and also a map section that provides the users with the locations.
 # **Features**
 - In this section, am gonna walk you through the different parts of the project from the header right down to the footer with a brief description of the different features implemented. 
 ## **Existing Features**
@@ -18,17 +18,17 @@
 - The **header** contains a logo with a name of the cleaning service.
 - It also contains three cleaning images that shows some services offered.
 - it contains a navigation bar which contains **Home,Services,Prices,Discount,About and Contact**.
-- The site always opens up into the **home page** which is the active site.
+- The site always opens up into the **home page** which is the active page.
 - The **service button** in the navigation bar when clicked will redirect the user to the different cleaning services offered by the company.
 - The **price button** in the navigation bar when clicked will redirect the user to the price section of the site that contains price information. 
 - The **discount button** in the navigation bar when clicked redirects the user to the discount section of the site that provides discount informations.
 - The **About button** in the navigation bar when clicked redirect the user to the page containing informations about the company.
-- The **contact button** in the navigation bar when click redirects the user to the contact page which contains a **map** showing locations of the company in different areas and a contact form that provides informations on what the users would like to archieve from the company.
-- upon smaller and medium sreens, the logo image occupies full width, while on larger screens goes by the rule of thirds. Meanwhile the cleaning images are only visible on larger screens.
+- The **contact button** in the navigation bar when click redirects the user to the contact page which contains a **map** showing locations of the company in different areas and a mail section for the user to send a message to the company.
+- On smaller and medium screens sizes, the logo image occupies full width of the screen, while on larger screens sizes,it goes by the rule of thirds. And also, the three cleaning images are only visible on large and xtra large screens.
 ### **The Body**
-- The **body** contains an image fader, that fades into different images at every two seconds. it also contains two cards,each contains a **contact card** and the other and an information about the **opening hours card**.
+- The **body** contains an image fader, that fades into different images at every two seconds. it also contains two cards,the **contact card** and the **opening hours card**.
 - The **contact card** contains **phone number,email address** and **location** to the user. while,
-- The phone number, when click by the user can make a call to the company from the site.
+- The phone number, when clicked makes a call to the company from the site.
 - The location icon, when clicked will open into the google map, showing the different routes and duration to the company's location.
 - An email address to the company.
 - An a website of the company.
@@ -61,8 +61,8 @@ I would like to implement a feature whereby users can be able to book and pay fo
 - Trying to submit the form with all fields filled up, pops up an alert saying **successfully submitted** with an **ok button** 
 
 #### ** Different Screen Sizes**
-- On ipads and smaller divices, the logo occupies the full width while on larger devices and desktops it goes by the rule of thirds. 1/3 of the screen is  the logo image and 2/3 the gallery images.
-- On ipads and smaller divices the gallery is not displayed while on larger screen the gallery images are displayed.
+- On ipads and smaller divices, the logo image occupies the full width of the device while on larger devices and desktops it goes by the rule of thirds. 1/3 of the screen is  the logo image and 2/3 the gallery images.
+- On ipads and smaller divices the gallery images are not displayed while on larger screen the gallery images are displayed.
 - Similarly the map and email section takes 2/3 on larger screens and the contact card and opening hour cards takes 1/3 on larger screens.
 - On smaller screens they take up full widths. 
 
@@ -74,3 +74,14 @@ I would like to implement a feature whereby users can be able to book and pay fo
 - I will git add those changes to my repository. "git add ."
 - I will then commit the file with a final commit message. using "git commit -m "final commit message"
 - I will then push my file to the github using. "git push"
+- The code can be run locally using "python3 -m http.server"
+# **Credit**
+## **Content**
+- I owe a big thank you to all those who contributed in one way or another during this project.
+- Some ideas where obtained,like the rule of thirds from some materials at code institude.
+- The idea of using the sweetalert obtained from [link](https://www.youtube.com/watch?v=GC-9Bn7_eXs).
+- The idea of pop up when hovering over the google markers were obtained from [link](https://www.youtube.com/watch?v=Zxf1mnP5zcw&list=LLdR7i1DWa2mvrstuxruyJVw&index=13&t=900s).
+## **Media**
+- Some of the photos used where obtained from Can Stock Photo.
+## **Acknowledgements**
+- I recieved inspiration from myself because i work as a cleaner in a cleaning company. Just wanted to experiment what is like building a cleaning company.
