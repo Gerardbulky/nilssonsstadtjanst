@@ -7,7 +7,7 @@
 # **UX**
 - This project is intended for users who are looking for a website that offers cleaning services such as home cleaning,company cleaning,window cleaning etc. Below is a **sketch** of the Desktop and Mobile version the project website.
 <img src="assets/images/sketchDesktop.jpg" width=300> <img src="assets/images/sketchMobil.jpg" width=300>.
-- Attached is a [link to the deployed project on github](hhttps://github.com/gerardambe/cleaning-company) and a [link to the hosted site](https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html).
+- Attached is a [link to the deployed project on github](https://gerardambe.github.io/cleaning-company/) and a [link to the hosted site](https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html).
 - The project in its entirety provides easy access to users with images of what the service offers in both mobile and Desktop easy to access versions.
 - As a user by clicking on the different features will provide you with more elaborated and explicit detailed information on what to expect.
 - In the contact section you have a mail section to send your request and also a map section that provides the users with the locations.
@@ -67,14 +67,15 @@ I would like to implement a feature whereby users can be able to book and pay fo
 - On smaller screens they take up full widths. 
 
 # **Deployment**
-- The project is deployed on GitHub page. 
-- At the beginning i had to initialsed an empty git repository using "git init".
-- The i had to initially commit the empty git repository with "git commit -m "Initial commit".
-- I would git status at intervals to see what changes i have included. "git status"
-- I will git add those changes to my repository. "git add ."
-- I will then commit the file with a final commit message. using "git commit -m "final commit message"
-- I will then push my file to the github using. "git push"
-- The code can be run locally using "python3 -m http.server"
+The project was deployed to GitHub Pages using the following steps...
+
+- Log in to GitHub and locate the [GitHub Repository](https://github.com/gerardambe/cleaning-company/settings)
+- At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+- Scroll down the Settings page until you locate the "GitHub Pages" Section.
+- Under "Source", click the dropdown called "None" and select "Master Branch".
+- The page will automatically refresh.
+- Scroll back down through the page to locate the now published site [link](https://gerardambe.github.io/cleaning-company/) in the "GitHub Pages" section.
+ 
 # **Credit**
 ## **Content**
 - I owe a big thank you to all those who contributed in one way or another during this project.
@@ -85,3 +86,5 @@ I would like to implement a feature whereby users can be able to book and pay fo
 - Some of the photos used where obtained from Can Stock Photo.
 ## **Acknowledgements**
 - I recieved inspiration from myself because i work as a cleaner in a cleaning company. Just wanted to experiment what is like building a cleaning company.
+- I would like to thank my Mentor for his support throughout this journey.
+- The tutor for their relentless efforts
