@@ -1,20 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% for task in tasks %}
-        {{ task.category_name }}<br>
-        {{ task.number_of_rooms }}<br>
-        {{ task.any_additional_information }}<br>
-        {{ task.choose_cleaning_time_and_date }}<br>
-        {{ task.full_name }}<br>
-        {{ task.address }}<br>
-        {{ task.phone_number }}<br>
-    {% endfor %}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cleaning company</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <!------------------------------------Image Header-------------------------------------------------------------------->
+
+        <!-- <div class="promo text-center" style="background-color:rgb(74, 153, 226); display:inline-block; color:#fd0202; padding-top:5px; padding-bottom:0px;"><h5><small><strong><i class="fa fa-star" style="color:white;"></i> Your frist cleaning is free <i class="fa fa-star" style="color:white;"></i></strong></small> 👉 <a style="color:#fafafa;" href="0720107276" target="_blank" class="btn-sm btn-success"><small><strong>  Book Now!</strong></small></a> </h5></div>-->
+
+      <!------------------------------------Logo Image------------>
+         <div class="row">
+         <div class="col-lg-4">
+            <a href="index.html">
+              <img
+              alt="logo image"
+                id="logo-img"
+                class="responsive-image"
+                style="margin: 0px; max-width: 100%;"
+                src="assets/images/logo.jpg"
+              />
+            </a>
+           </div>
+          
+          <!------------------------------------Gallery Images------------>
+          <div class="col-lg-8">
+          <div class="container-fluid">
+            <div class="row gallery justified-content-center">
+             <div class="col-md-4 d-none d-lg-block d-lg-4">
+                <div class="card shadow" style="width: 100%;">
+                  <div class="gally-pic">
+                    <img
+                      src="assets/images/window.jpg"
+                      class="card-img-top"
+                      height="120px"
+                      alt="Window Cleaning"
+                    />
+                  </div>
+                  <div class="card-body text-center">
+                    <h6 class="card-title title-one">Window Cleaning</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-none d-lg-block d-lg-4">
+                <div class="card shadow" style="width: 100%;">
+                  <div class="gally-pic">
+                    <img
+                      src="assets/images/home.jpg"
+                      class="card-img-top"
+                      height="120px"
+                      alt="Home Cleaning"
+                    />
+                  </div>
+                  <div class="card-body text-center">
+                    <h6 class="card-title title-two">Home Cleaning</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-none d-lg-block d-lg-4">
+                <div class="card shadow" style="width: 100%;">
+                  <div class="gally-pic">
+                    <img
+                      src="assets/images/moving.jpg"
+                      class="card-img-top"
+                      height="120px"
+                      alt="Moving Cleaning"
+                    />
+                  </div>
+                  <div class="card-body text-center">
+                    <h6 class="card-title title-three">Moving Cleaning</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+          </header>
+      <!------------------------------------------Navigation------------------------------------------------------------->
+      <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Home<span class="mr-auto"></span
+              ></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="home-clean.html">Home Cleaning</a>
+                <a class="dropdown-item" href="#">Window Cleaning</a>
+                <a class="dropdown-item" href="#">Company Cleaning</a>
+                <a class="dropdown-item" href="#">Moving Cleaning</a>
+                <a class="dropdown-item" href="#">Office Cleaning</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prices.html">Prices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="discount.html">Discounts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tasks.html">Book A Cleaning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+    
+    <!-------------------------------------Image Slider----------------------------------------------------->
+    <section class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <!----------------------About Our Company content in body------------------------------------------------------------>
+          <div class="card information">
+            <div class="card-body">
+              <div>
+              <h6><strong>Book Your Cleaning</strong></h6>
+                {% block content %}
+                  {% for task in tasks %}
+                    {{ task.category_name }}<br>
+                    {{ task.number_of_rooms }}<br>
+                    {{ task.any_additional_information }}<br>
+                    {{ task.choose_cleaning_time_and_date }}<br>
+                    {{ task.full_name }}<br>
+                    {{ task.address }}<br>
+                    {{ task.phone_number }}<br>
+                  {% endfor %}
+                {% endblock %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------Section Contact in body------------------------------------------------------------>
+        <div class="col-md-4">
+          <div class="card border-primary mb-3" style="width:100%; justified-content-center">
+            <div class="card-header">
+              <h5>Contact</h5>
+            </div>
+            <div class="card-body text-primary">
+              <a href="tel:0720107276"
+                ><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a
+              >
+              <br />
+              <a target="_blank" href="#"
+                ><i class="fa fa-envelope-o" aria-hidden="true"></i> :
+                gerardbulky@gmail.com</a
+              >
+              <br />
+              <a target="_blank" href="https://superclean.se/"
+                ><i class="fa fa-globe" aria-hidden="true"></i> :
+                https://superclean.se</a
+              >
+              <br />
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"
+                ><i class="fa fa-location-arrow" aria-hidden="true"></i> :
+                Location</a
+              >
+            </div>
+          </div>
+
+          <!----------------------Section Opening Hours in body------------------------------------------------------------>
+          <div class="card border-secondary mb-3" style="width:100%; justified-content-center">
+            <div class="card-header">
+              <h5>Opening Hours</h5>
+            </div>
+            <div class="card-body table">
+              <tr>
+                <td>
+                  <strong>Mon-Fri:</strong>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
+                  
+                </td>
+              </tr>
+              <br />
+              <tr>
+                <td>
+                  <strong>Saturday:</strong>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Closed
+                </td>
+              </tr>
+              <br />
+              <tr>
+                <td>
+                  <strong>Sunday:</strong>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                  Closed
+                </td>
+              </tr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------------------------Footer Section----------------------------------------------------------->
+    <footer class="container-fluid">
+    <div class="row">
+    <div class="col-md-12">
+      <div class="vatten">
+        <img
+          src="assets/images/waves.jpg"
+          class="img-fluid no-repeat center top"
+          alt="Responsive image"
+          width="100%"
+          height="auto"/>
+      </div>
+    </div>
+    </div>
+      <!----------------------Section logo footer--------------------------------------------------------->
+
+      <div class="content socials footer">
+      <div class="row jumbotron">
+        <div class="col-md-4 logo">
+          <h1>
+            <text-muted>Super Clean AB</text-muted>
+          </h1>
+        </div>
+
+        <!----------------------Section contact footer----------------------------------------------------->
+        <div class="col-md-4 info">
+          <a href="tel:0720107276"> Telephone : 0720107276</a>
+          <br />
+          <a target="_blank" href="#"> Email : gerardbulky@gmail.com</a>
+          <br />
+          <a target="_blank" href="https://superclean.se/">
+            Website : https://superclean.se</a
+          >
+          <br />
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"
+            >Location</a
+          >
+        </div>
+
+        <!----------------------Section Social links Footer------------------------------------------------->
+        <div
+          class="col-md-4 socials page-footer font-small special-color-dark pt-4"
+        >
+          <ul class="list-unstyled socials-links">
+            <li class="list-inline-item">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/gerard bossman/"
+                class="btn-floating btn-fb mx-1"
+              >
+                <i class="fa fa-facebook-f" aria-hidden="true"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a target="_blank" href="#" class="btn-floating btn-inst mx-1">
+                <i class="fa fa-instagram" aria-hidden="true"> </i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!----------------------Section copyright footer--------------------------------------------------->
+      <div class="content footer">
+        <!--3-->
+        <div class="row copyright">
+          <div class="col-md-12">
+            <div class="footer-copyright text-center py-3">
+              © Copyright: Me 2020
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
