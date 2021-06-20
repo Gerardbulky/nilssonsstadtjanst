@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for task in tasks %}
+        {{ task.category_name }}<br>
+        {{ task.number_of_rooms }}<br>
+        {{ task.any_additional_information }}<br>
+        {{ task.choose_cleaning_time_and_date }}<br>
+        {{ task.full_name }}<br>
+        {{ task.address }}<br>
+        {{ task.phone_number }}<br>
+    {% endfor %}
+</body>
+</html>
