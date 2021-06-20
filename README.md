@@ -75,6 +75,7 @@ The project was deployed to GitHub Pages using the following steps...
 - Under "Source", click the dropdown called "None" and select "Master Branch".
 - The page will automatically refresh.
 - Scroll back down through the page to locate the now published site [link](https://gerardambe.github.io/cleaning-company/) in the "GitHub Pages" section.
+- You can run the server using **python3 -m http.server**
  
 # **Credit**
 ## **Content**
