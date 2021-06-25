@@ -200,3 +200,10 @@ margin-left: 20px;
 .Middle{
     background-color: #ffffff;
 }
+
+.border-tertiary {
+    border-bottom: thick #cdd7e6 solid;
+    background-color: rgba(0,0,0,.03);
+    margin: auto;
+    padding: 15px;
+}

@@ -2,7 +2,7 @@ FROM gitpod/workspace-full
 
 USER root
 # Setup Heroku CLI
-RUN curl https://cli-assets.heroku.com/install.sh | sh
+RUN curl https://cli-static.heroku.com/install.sh | sh
 
 # Setup MongoDB and MySQL
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && \
