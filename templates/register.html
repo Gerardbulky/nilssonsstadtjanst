@@ -132,37 +132,50 @@
             </div>
         </nav>
     </div>
+    <!-------------------------------------Flashed Messages------------------------------------------------->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="row flashes my-2">
+                    <div class="col-12">
+                        <h4 class="text-center" style="background-color: azure; height: 40px;">{{ message }}</h4>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
-    <!-------------------------------------Image Slider----------------------------------------------------->
+    <!-------------------------------------Registration Section----------------------------------------------------->
     <section class="container">
+        <h2 class="offset-3" style="margin-top: 20px;">Register</h2>
         <div class="row">
             <div class="col-sm-8">
                     <div class="card-body">
-                        <form class="border-tertiary">
+                        <form class="border-tertiary" method="POST" action="{{ url_for('register') }}">
                             <!----------Users Usersname-------------->
-                            <div class="form-group row" method="POST" action="{{ url_for('register') }}">
-                                <label for="Username" class="col-sm-2 col-form-label">Username <i class="fa fa-user"></i></label>
+                            <div class="form-group row">
+                                <label for="username" class="col-sm-2 col-form-label">Username <i class="fa fa-user" aria-hidden="true"></i></label>
                                 <div class="col-sm-10">
-                                    <input type="username" class="form-control" id="Username">
+                                    <input type="text" name="username" id="username" class="form-control" minlength="4" maxlength="25" required>
                                 </div>
                             </div>
                             <!----------Users Password-------------->
                             <div class="form-group row">
-                                <label for="Password" class="col-sm-2 col-form-label">Password <i class="fa fa-lock"></i></label>
+                                <label for="password" class="col-sm-2 col-form-label">Password <i class="fa fa-lock" aria-hidden="true"></i></label>
                                 <div class="col-sm-10">
-                                    <input type="password" id="password" name="password" class="form-control" minlength="5" pattern="^[a-zA-Z0-9]{5,15}$" maxlength="15" class="validate" required>
+                                    <input type="password" name="password" id="password" class="form-control" minlength="4" maxlength="25" class="validate" required>
                                 </div>
                             </div>
                             <!----------Users Repeat Password-------------->
                             <div class="form-group row">
-                                <label for="confirm" class="col-sm-2 col-form-label">Repeat Password <i class="fa fa-lock"></i></label>
+                                <label for="confirm" class="col-sm-2 col-form-label">Repeat Password <i class="fa fa-lock" aria-hidden="true"></i></label>
                                 <div class="col-sm-10">
-                                    <input type="confirm" id="confirm" name="confirm" class="form-control" id="confirm" class="form-control" minlength="5" pattern="^[a-zA-Z0-9]{5,15}$" maxlength="15" class="validate" required>
+                                    <input type="password" name="confirm" id="confirm" class="form-control" class="validate" required>
                                 </div>
                             </div>
                             <!----------Register Button-------------->
                             <div class="row" style="margin: 5px;">
-                                <button type="button" class="btn btn-primary btn-lg btn-block">Register <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                             </div>
                             <!----------SIGN IN IF ALREADY HAVE AN ACCOUNT-------------->
                             <div class="row">

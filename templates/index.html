@@ -127,6 +127,16 @@
       </div>
     </nav>
   </div>
+  <!-------------------------------------Flashed Messages------------------------------------------------->
+   {% with messages == get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <div class="row flashes">
+          <h4 class="toast" style="background-color: azure; height: 20px;">{{ message }}</h4>
+        </div>
+      {% endfor %}
+    {% endif %}
+   {% endwith %}
 
   <!-------------------------------------Image Slider----------------------------------------------------->
   <section class="container Middle">
