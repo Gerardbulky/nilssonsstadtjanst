@@ -14,7 +14,7 @@
     type="text/css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     type="text/css" />
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+  <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -108,21 +108,24 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
+          {% if session.user %}
           <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Manage Bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Log Out</a>
+            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Log In</a>
+            <a class="nav-link" href="{{ url_for('register') }}">Create account</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
-          </li>
+          {% endif %}
         </ul>
       </div>
     </nav>

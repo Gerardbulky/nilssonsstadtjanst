@@ -147,11 +147,11 @@
 
     <!-------------------------------------Registration Section----------------------------------------------------->
     <section class="container">
-        <h2 class="offset-3" style="margin-top: 20px;">Create Account</h2>
+        <h2 class="offset-3" style="margin-top: 20px;">Log In</h2>
         <div class="row">
             <div class="col-md-8">
                 <div class="card-body">
-                    <form class="border-tertiary" method="POST" action="{{ url_for('register') }}">
+                    <form class="border-tertiary" method="POST" action="{{ url_for('login') }}">
                         <!----------Users Usersname-------------->
                         <div class="form-group row">
                             <label for="username" class="col-md-2 col-form-label">Username <i class="fa fa-user"
@@ -170,26 +170,37 @@
                                     maxlength="25" class="validate" required>
                             </div>
                         </div>
-                        <!----------Users Repeat Password-------------->
-                        <div class="form-group row">
-                            <label for="confirm" class="col-md-2 col-form-label">Repeat Password <i class="fa fa-lock"
-                                    aria-hidden="true"></i></label>
-                            <div class="col-md-10">
-                                <input type="password" name="confirm" id="confirm" class="form-control" class="validate"
-                                    required>
-                            </div>
+                        <!----------login Button-------------->
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="checkbox">
+                            <label class="form-check-label" for="checkbox">Remember my password </label>
                         </div>
-                        <!----------Register Button-------------->
+                        <!----------login Button-------------->
                         <div class="row" style="margin: 5px;">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Create account <i
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Log In <i
                                     class="fa fa-sign-in" aria-hidden="true"></i></button>
                         </div>
                         <!----------SIGN IN IF ALREADY HAVE AN ACCOUNT-------------->
                         <div class="row">
-                            <div class="col">
+                            <div class="col-4">
                                 <p class="text-center my-1">
-                                    <strong class="small"> Already Have An Account <a href="{{ url_for('login') }}"
-                                            class="font-weight-bold">LOG IN</a></strong>
+                                    <strong class="small d-none d-md-block"> Forgotten Password <a href="#" class="font-weight-bold">
+                                        Reset Password</a></strong>
+                                </p>
+                                <p class="text-center my-1">
+                                    <strong class="small d-block d-md-none"><a href="#" class="font-weight-bold" style="color: black;">
+                                        Reset Password</a></strong>
+                                </p>
+                            </div>
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <p class="text-center my-1">
+                                    <strong class="small d-none d-md-block"> If You don't Have An Account <a href="{{ url_for('register')}}"
+                                            class="font-weight-bold">Create account</a></strong>
+                                </p>
+                                <p class="text-center my-1">
+                                    <strong class="small d-block d-md-none"><a href="{{ url_for('register')}}"
+                                            class="font-weight-bold" style="color: black;">Create an Account</a></strong>
                                 </p>
                             </div>
                         </div>
