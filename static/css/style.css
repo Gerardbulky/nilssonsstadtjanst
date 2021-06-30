@@ -80,8 +80,8 @@
 .dropdown-menu {
     background-color: rgb(216, 231, 245);
 }
-/*
-.navbar a:hover {
+
+/*.navbar a:hover {
     background-color: #6164fc;
     transition: 0.4s;
     height: 100%;

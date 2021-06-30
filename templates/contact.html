@@ -1,31 +1,45 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <!-------------------------------------tasks section----------------------------------------------------->
+    <!-------------------------------------Map Section-------------------------------------------------------->
+    <div class="container contact-header">
+        <h4>Contact</h4>
+    </div>
     <section class="container">
         <div class="row">
             <div class="col-md-8">
-                <div class="card information">
-                    <div class="card-body">
-                        <div>
-                            <h6><strong>Book Your Cleaning</strong></h6>
-                            {% for task in tasks %}
-                            {{ task.category_name }}<br>
-                            {{ task.number_of_rooms }}<br>
-                            {{ task.any_additional_information }}<br>
-                            {{ task.choose_cleaning_time_and_date }}<br>
-                            {{ task.full_name }}<br>
-                            {{ task.address }}<br>
-                            {{ task.phone_number }}<br>
-                            {% endfor %}
-                        </div>
+                <div id="map"></div>
+                <!-------------------------------------Contact Form--------------------------------------------------------->
+    
+                <div class="form contact-bottom">
+                    <div class="email-us-header">
+                        <h6>
+                            Email us if interested in our services <span>😊</span>
+                        </h6>
                     </div>
+                    <form id="contact-form">
+                        <input type="text" name="name" id="fullname" class="form-control kiki" placeholder="Name"
+                            required />
+                        <input type="email" name="email" id="emailaddress" class="form-control kiki" placeholder="Email"
+                            required />
+                        <input type="text" name="subject" id="subject" class="form-control kiki" placeholder="Subject"
+                            required />
+                        <textarea name="messagesummary" id="messagesummary" rows="5" class="form-control kiki2"
+                            placeholder="Message"></textarea>
+                        <div class="form-row">
+                            <div class="col">
+                                <button id="button" type="submit" class="btn btn-primary">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
     
             <!----------------------Section Contact in body------------------------------------------------------------>
             <div class="col-md-4">
-                <div class="card border-primary mb-3" style="width:100%; justified-content-center">
+                <div class="card border-primary mb-3" style="width:100%; content-center">
                     <div class="card-header">
                         <h5>Contact</h5>
                     </div>
@@ -44,9 +58,8 @@
                             Location</a>
                     </div>
                 </div>
-    
                 <!----------------------Section Opening Hours in body------------------------------------------------------------>
-                <div class="card border-secondary mb-3" style="width:100%; justified-content-center">
+                <div class="card border-secondary mb-3" style="width:100%; content-center">
                     <div class="card-header">
                         <h5>Opening Hours</h5>
                     </div>

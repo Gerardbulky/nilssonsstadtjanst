@@ -14,7 +14,10 @@
     type="text/css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     type="text/css" />
-  <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+  {% block styles %}
+  {% endblock %}
+  <title>{% block title %}SuperClean{% endblock %}</title>
 </head>
 
 <body>
@@ -25,9 +28,9 @@
     <!------------------------------------Logo Image------------>
     <div class="row Top">
       <div class="col-lg-4">
-        <a href="index.html">
+        <a href="{{ url_for('index') }}">
           <img alt="logo image" id="logo-img" class="responsive-image"
-            style="margin: 0px; max-width: 100%; background: #fff;" src="static/images/logo.jpg" />
+            style="margin: 0px; max-width: 100%; background: #fff;" src="{{ url_for('static', filename='images/logo.jpg') }}" />
         </a>
       </div>
 
@@ -38,7 +41,7 @@
           <div class="col-md-4 d-none d-lg-block d-lg-4">
             <div class="card shadow" style="width: 100%;">
               <div class="gally-pic">
-                <img src="static/images/window.jpg" class="card-img-top" style="height: 120px" alt="Window Cleaning" />
+                <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top" style="height: 120px" alt="Window Cleaning" />
               </div>
               <div class="card-body text-center">
                 <h6 class="card-title title-one">Window Cleaning</h6>
@@ -48,7 +51,7 @@
           <div class="col-md-4 d-none d-lg-block d-lg-4">
             <div class="card shadow" style="width: 100%;">
               <div class="gally-pic">
-                <img src="static/images/home.jpg" class="card-img-top" style="height: 120px" alt="Home Cleaning" />
+                <img src="{{ url_for('static', filename='images/home.jpg') }}" class="card-img-top" style="height: 120px" alt="Home Cleaning" />
               </div>
               <div class="card-body text-center">
                 <h6 class="card-title title-two">Home Cleaning</h6>
@@ -58,7 +61,7 @@
           <div class="col-md-4 d-none d-lg-block d-lg-4">
             <div class="card shadow" style="width: 100%;">
               <div class="gally-pic">
-                <img src="static/images/moving.jpg" class="card-img-top" style="height: 120px" alt="Moving Cleaning" />
+                <img src="{{ url_for('static', filename='images/moving.jpg') }}" class="card-img-top" style="height: 120px" alt="Moving Cleaning" />
               </div>
               <div class="card-body text-center">
                 <h6 class="card-title title-three">Moving Cleaning</h6>
@@ -81,7 +84,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home<span class="mr-auto"></span></a>
+            <a class="nav-link" href="{{ url_for('index') }}">Home<span class="mr-auto"></span></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -97,41 +100,48 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="prices.html">Prices</a>
+            <a class="nav-link" href="{{ url_for('prices') }}">Prices</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="discount.html">Discounts</a>
+            <a class="nav-link" href="{{ url_for('discount') }}">Discounts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="tasks.html">Book A Cleaning</a>
+            <a class="nav-link" href="{{ url_for('get_tasks') }}">Book A Cleaning</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
           </li>
           {% if session.user %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Manage Bookings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Manage Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+            </li>
           {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('register') }}">Create account</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('register') }}">Create account</a>
+            </li>
           {% endif %}
         </ul>
       </div>
     </nav>
   </div>
+
+  <div class="container">
+    <div class="row overlay">
+      <div class="col"></div>
+    </div>
+  </div>
   <!-------------------------------------Flashed Messages------------------------------------------------->
-   {% with messages == get_flashed_messages() %}
+  <section>
+   {% with messages = get_flashed_messages() %}
     {% if messages %}
       {% for message in messages %}
         <div class="row flashes">
@@ -140,28 +150,29 @@
       {% endfor %}
     {% endif %}
    {% endwith %}
+  </section>
 
+  {% block content %}
   <!-------------------------------------Image Slider----------------------------------------------------->
   <section class="container Middle">
     <div class="row">
-      <div class="col-sm-8 sliding">
+      <div class="col-md-8 sliding">
         <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="2000">
-              <img src="static/images/ovencleaning.jpg" class="d-block w-100" style="height: 50vmin" alt="..." />
+              <img src="{{ url_for('static', filename='images/ovencleaning.jpg') }}" class="d-block w-100" style="height: 50vmin" alt="..." />
             </div>
             <div class="carousel-item" data-interval="2000">
-              <img src="static/images/window.jpg" class="d-block w-100" style="height: 50vmin" alt="..." />
+              <img src="{{ url_for('static', filename='images/window.jpg') }}" class="d-block w-100" style="height: 50vmin" alt="..." />
             </div>
             <div class="carousel-item" data-interval="2000">
-              <img src="static/images/moving.jpg" class="d-block w-100" style="height: 50vmin" alt="..." />
+              <img src="{{ url_for('static', filename='images/moving.jpg') }}" class="d-block w-100" style="height: 50vmin" alt="..." />
             </div>
             <div class="carousel-item" data-interval="2000">
-              <img src="static/images/home.jpg" class="d-block w-100" style="height: 50vmin" alt="..." />
+              <img src="{{ url_for('static', filename='images/home.jpg') }}" class="d-block w-100" style="height: 50vmin" alt="..." />
             </div>
           </div>
         </div>
-
         <!----------------------About Our Company content in body------------------------------------------------------------>
         <div class="card information Middle">
           <div class="card-body">
@@ -182,7 +193,6 @@
           </div>
         </div>
       </div>
-
       <!----------------------Section Contact in body------------------------------------------------------------>
       <div class="col-md-4">
         <div class="card border-primary mb-3" style="width:100%;">
@@ -228,12 +238,13 @@
       </div>
     </div>
   </section>
+  {% endblock %}
   <!---------------------------Footer Section----------------------------------------------------------->
   <footer class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <div class="vatten">
-          <img src="static/images/waves.jpg" class="img-fluid no-repeat center top" alt="Responsive image"
+          <img src="{{ url_for('static', filename='images/waves.jpg') }}" class="img-fluid no-repeat center top" alt="Responsive image"
             style="width:100%; height: auto;" />
         </div>
       </div>
@@ -300,7 +311,7 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
 </body>
 
 </html>
