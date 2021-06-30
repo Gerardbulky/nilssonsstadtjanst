@@ -318,6 +318,13 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
+  <!--maps.js-->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7mXrqRgrOSz2Ek9m4X-DJRNMmQllpSOo&callback=initMap"></script>
+  <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+  <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
+  <!--sweetalert popup-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
