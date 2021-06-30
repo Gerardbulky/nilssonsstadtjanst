@@ -10,17 +10,23 @@
     type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
     type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    type="text/css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     type="text/css" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
-  {% block styles %}
+  {% block extrascripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_xvQLhl1lpI2EFLO4SqJ1N");
+      })();
+    </script>
   {% endblock %}
   <title>{% block title %}SuperClean{% endblock %}</title>
 </head>
 
 <body>
+<header>
   <!------------------------------------Image Header-------------------------------------------------------------------->
 
   <!-- <div class="promo text-center" style="background-color:rgb(74, 153, 226); display:inline-block; color:#fd0202; padding-top:5px; padding-bottom:0px;"><h5><small><strong><i class="fa fa-star" style="color:white;"></i> Your frist cleaning is free <i class="fa fa-star" style="color:white;"></i></strong></small> 👉 <a style="color:#fafafa;" href="0720107276" target="_blank" class="btn-sm btn-success"><small><strong>  Book Now!</strong></small></a> </h5></div>-->
@@ -133,6 +139,7 @@
       </div>
     </nav>
   </div>
+</header>
 
   <div class="container">
     <div class="row overlay">
@@ -152,8 +159,8 @@
    {% endwith %}
   </section>
 
-  {% block content %}
   <!-------------------------------------Image Slider----------------------------------------------------->
+  {% block content %}
   <section class="container Middle">
     <div class="row">
       <div class="col-md-8 sliding">
@@ -310,7 +317,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
 </body>
 
