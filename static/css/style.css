@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Roboto:ital,wght@1,700&display=swap');
 
 /***********************Image Header*************************/
+body{
+    width: 100%;
+}
+
 .container-fluid {
     margin: 0px;
     padding: 0px;
