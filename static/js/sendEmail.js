@@ -1,14 +1,14 @@
- $(document).ready(function(){
-   // ADDING Eventlistener to Contact-form.     
-       $("#contact-form").submit(function(event){
-           event.preventDefault();
-             emailjs.send("gmail","gerardbulky", {
-        "from_name": document.getElementById("fullname").value,
-        "from_email": document.getElementById("emailaddress").value,
-        "from_subject": document.getElementById("subject").value,
-        "from_message": document.getElementById("messagesummary").value,
+$(document).ready(function(){
+// ADDING Eventlistener to Contact-form.   
+    $("#contact-form").submit(function(event){
+        event.preventDefault();
+            emailjs.send("gmail","gerardbulky", {
+    "from_name": document.getElementById("fullname").value,
+    "from_email": document.getElementById("emailaddress").value,
+    "from_subject": document.getElementById("subject").value,
+    "from_message": document.getElementById("messagesummary").value,
     })
- })
+})
 
  // ADDING Alerts using sweetAlert.js
      $("#button").click(function(){

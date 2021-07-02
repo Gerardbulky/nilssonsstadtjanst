@@ -183,9 +183,11 @@
           <div class="card-body">
             <strong>Our Vision</strong>
             <p>
-              The cleaners we hired are professionals who take pride in doing excellent work and in exceeding your
-              expectations and attention to detail.
+              The cleaners we hired are professionals who take pride in doing excellent work, providing you with the peace of mind that you want from a cleaning company, leaving you with more time to spend on the
+              things that matter.
             </p>
+            <!---------
+              and in exceeding your expectations and attention to detail.
             <p>
               We carefully screen all of our cleaners, so you can rest assured that your home would receive the absolute
               highest quality of service providing you with the peace of mind that you want from a cleaning company.
@@ -195,17 +197,21 @@
               Leave the cleaning to us and we will take care of everything, leaving you with more time to spend on the
               things that matter.
             </p>
-            <br>
+            --------->
             <hr>
-            <p>You can book a free home visit. <strong class="strong" style="color: red;"> Our first home visits are free.</strong> In this visit we tell you more about how the cleaning is done. We know what your home looks like and submit a price proposal. <br>
+            <p><bold class="strong" style="color: red;"> Our first home visits are free.</bold> In this visit we tell you more about how the cleaning is done. We also know what your home looks like and submit a price proposal. <br>
               <a href="#" class="btn btn-outline-primary btn-sm active" role="button" aria-pressed="true"
                 style="margin-top: 10px;">Book visit</a>
             </p>
             <hr>
-            <p>You can still book a cleaning without having a customer's visit.  <br>
+            <p>You can also book your cleaning without having a customer's visit.  <br>
               <a href="{{ url_for('get_tasks') }}" class="btn btn-outline-primary btn-sm active" role="button" aria-pressed="true" style="margin-top: 10px;">Book Cleaning</a>
             </p>
             <hr>
+            <p>You can send us an email with more details about your cleaning or if there is anything you would like us to know or if you want to get in contact with us and we shall get to you as soon as possible.  <br> 
+            <a href="{{ url_for('get_tasks') }}" class="btn btn-outline-primary btn-sm active" role="button" aria-pressed="true" style="margin-top: 10px;">Send Email</a>
+
+            </p>
           </div>
         </div>
       </div>
@@ -332,6 +338,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7mXrqRgrOSz2Ek9m4X-DJRNMmQllpSOo&callback=initMap"></script>
   <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
   <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   <!--sweetalert popup-->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
