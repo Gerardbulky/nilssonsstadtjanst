@@ -1,3 +1,4 @@
 $(document).ready(function(){
-    $('#myCollapsible').collapse('show') 
+    $('#myCollapsible').collapse('show')
+    $('#element').toast('show')
 })

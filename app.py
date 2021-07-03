@@ -12,7 +12,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = "mongodb+srv://root1989:BossMan@myfirstcluster.dgoye.mongodb.net/superclean_company_bookings?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 
@@ -41,7 +41,7 @@ def prices():
 
 @app.route("/get_tasks")
 def get_tasks():
-    tasks = mongo.db.tasks.find()
+    tasks = list(mongo.db.tasks.find())
     return render_template("tasks.html", tasks=tasks)
 
 

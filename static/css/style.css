@@ -5,9 +5,11 @@ body{
     width: 100%;
 }
 
+
 .container-fluid {
     margin: 0px;
     padding: 0px;
+    width: 100%;
 }
 /*.promo{
     width: 100%;
@@ -63,6 +65,9 @@ body{
 }
 .dropdown-menu{
     background-color: rgb(42, 47, 51);
+}
+.navbar{
+    width: 100%;
 }
 .navbar-nav li {
     text-align: center;
