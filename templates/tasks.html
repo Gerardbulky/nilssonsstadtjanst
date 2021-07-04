@@ -1,16 +1,19 @@
 {% extends "index.html" %}
 
 {% block content %}
+
+<h3 class="header my-4" style="text-align: center;">All Bookings <hr style="width: 100px; height: 3px; background-color: rgb(4, 4, 32);"> </h3>
+
 <section class="container">
-    <div class=" row accordion" id="accordionExample" style="width: 100%">
-        <div class="col-md-10 card offset-2" style="width: 100%;">
+    <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
+        <div class="col-10 mr-auto card">
             {% for task in tasks %}
             <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
                 <h2 class="mb-0">
                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
-                            <small>{{ task.category_name }} : {{ task.choose_cleaning_time_and_date }}</small></i>
+                            <small>{{ task.category_name }}</small></i>
                     </button>
                 </h2>
             </div>
@@ -20,7 +23,7 @@
                     {{ task.full_name }} <br>
                     {{ task.address }} <br>
                     {{ task.phone_number }} <br>
-                    {{ task.number_of_rooms }} <br>
+                    {{ task.choose_cleaning_time_and_date }}
                     <p>{{ task.any_additional_information }} <br></p>
                 </div>
             </div>
