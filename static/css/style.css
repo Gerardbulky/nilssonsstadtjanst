@@ -60,15 +60,13 @@ body{
     margin: 0px;
     padding: 0px;
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .dropdown-menu{
     background-color: rgb(42, 47, 51);
 }
-.navbar{
-    width: 100%;
-}
+
 .navbar-nav li {
     text-align: center;
     padding-left: 40px;

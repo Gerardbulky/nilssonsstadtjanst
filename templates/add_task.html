@@ -1,0 +1,78 @@
+{% extends "index.html" %}
+
+{% block content %}
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card information" style="width: 100%;">
+                <div class="card-body">
+                    <form class="text-center">
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-folder-open mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3" style="width: 80%;" required>
+                                    
+                                    <option selected>Choose An Option</option>
+                                    <option value="1">Home Visit</option>
+                                    <option value="1">Home Cleaning</option>
+                                    <option value="2">Big Cleaning</option>
+                                    <option value="3">Company Cleaning</option>
+                                    <option value="3">Moving Cleaning</option>
+                                    <option value="3">Window Cleaning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-align-left mr-2 pt-5" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="any_additional_information" style="width: 80%;">
+                                    <textarea class="form-control" id="any_additional_information" type="text" name="any_additional_information" rows="3" placeholder="Any Additional information" required></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-calendar mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="time_and_date"  style="width: 80%;">
+                                    <input id="time_and_date" name="time_and_date" type="text" class=" form-control datepicker validate" placeholder="Time & Date" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-home mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="address" style="width: 80%;">
+                                    <input type="text" class="form-control" name="address" id="address" placeholder="Address" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-phone mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="phone_number" style="width: 80%;">
+                                    <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-user mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="phone_number" style="width: 80%;">
+                                    <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Full Name"
+                                        required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
