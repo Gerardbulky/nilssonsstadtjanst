@@ -13,7 +13,7 @@
                     <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
-                            <small>{{ task.category_name }}</small></i>
+                            <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
                     </button>
                 </h2>
             </div>
@@ -23,7 +23,6 @@
                     {{ task.full_name }} <br>
                     {{ task.address }} <br>
                     {{ task.phone_number }} <br>
-                    {{ task.choose_cleaning_time_and_date }}
                     <p>{{ task.any_additional_information }} <br></p>
                 </div>
             </div>

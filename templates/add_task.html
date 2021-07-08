@@ -11,18 +11,18 @@
         <div class="col-12">
             <div class="card information" style="width: 100%;">
                 <div class="card-body">
-                    <form class="text-center" method="POST" action="">
+                    <form class="text-center" method="POST" action="{{ url_for('add_task') }}">
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-folder-open mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
                                 <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3" style="width: 80%;" required>
                                     <option selected>Choose An Option</option>
-                                    <option value="1">Home Visit</option>
-                                    <option value="1">Home Cleaning</option>
-                                    <option value="2">Big Cleaning</option>
-                                    <option value="3">Company Cleaning</option>
-                                    <option value="3">Moving Cleaning</option>
-                                    <option value="3">Window Cleaning</option>
+                                    <option value="Home Visit">Home Visit</option>
+                                    <option value="Home Cleaning">Home Cleaning</option>
+                                    <option value="Big Cleaning">Big Cleaning</option>
+                                    <option value="Company Cleaning">Company Cleaning</option>
+                                    <option value="Moving Cleaning">Moving Cleaning</option>
+                                    <option value="Window Cleaning">Window Cleaning</option>
                                 </select>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-user mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
-                                <label for="phone_number" style="width: 80%;">
+                                <label for="full_name" style="width: 80%;">
                                     <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Full Name"
                                         required>
                                 </label>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Submit  <i class="fa fa-plus-square right ml-2"></i></button>
                             </div>
                         </div>
                     </form>
