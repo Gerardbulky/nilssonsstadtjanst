@@ -4,11 +4,39 @@
     <!-------------------------------------Registration Section----------------------------------------------------->
     <section class="container">
         <h2 class="offset-3" style="margin-top: 20px;">Create Account</h2>
+        <hr class="offset-3" style="width: 200px; height: 1px; background-color: #4998ee;">
         <div class="row">
             <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body text-center">
                     <form class="border-tertiary" method="POST" action="{{ url_for('register') }}">
-                        <!----------Users Usersname-------------->
+                        <!----------Users Usersname------->
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-user-plus mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="username" style="width: 80%;">
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                                </label>
+                            </div>
+                        </div>
+                        <!----------Users Password--------->
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-lock mr-3" aria-hidden="true" style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
+                                <label for="password" style="width: 80%;">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                                </label>
+                            </div>
+                        </div>
+                        <!----------Users Repeat Password--------->
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-lock mr-3" aria-hidden="true" style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
+                                <label for="confirm" style="width: 80%;">
+                                    <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Repeat Password" required>
+                                </label>
+                            </div>
+                        </div>
+                        <!----------Users Usersname-------------
                         <div class="form-group row">
                             <label for="username" class="col-md-2 col-form-label">Username <i class="fa fa-user"
                                     aria-hidden="true"></i></label>
@@ -16,8 +44,8 @@
                                 <input type="text" name="username" id="username" class="form-control" minlength="4"
                                     maxlength="25" required>
                             </div>
-                        </div>
-                        <!----------Users Password-------------->
+                        </div>------->
+                        <!----------Users Password-------
                         <div class="form-group row">
                             <label for="password" class="col-md-2 col-form-label">Password <i class="fa fa-lock"
                                     aria-hidden="true"></i></label>
@@ -25,8 +53,8 @@
                                 <input type="password" name="password" id="password" class="form-control" minlength="4"
                                     maxlength="25" class="validate" required>
                             </div>
-                        </div>
-                        <!----------Users Repeat Password-------------->
+                        </div>------->
+                        <!----------Users Repeat Password-------
                         <div class="form-group row">
                             <label for="confirm" class="col-md-2 col-form-label">Repeat Password <i class="fa fa-lock"
                                     aria-hidden="true"></i></label>
@@ -34,9 +62,9 @@
                                 <input type="password" name="confirm" id="confirm" class="form-control" class="validate"
                                     required>
                             </div>
-                        </div>
+                        </div>------->
                         <!----------Register Button-------------->
-                        <div class="row" style="margin: 5px;">
+                        <div class="row" style="margin: 25px;">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Create account <i
                                     class="fa fa-sign-in" aria-hidden="true"></i></button>
                         </div>

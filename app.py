@@ -102,15 +102,17 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+
     # grapping the session user's username from db
+    categories = mongo.db.categories.find()
+    task = mongo.db.tasks.find().sort("_id", -1)
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("profile"))
-
+    if "user" in session:
+        return render_template("profile.html", username=username, categories=categories, task=task)
+       
+    return render_template(url_for('login'))
 
 @app.route("/logout")
 def logout():
@@ -129,11 +131,13 @@ def add_task():
             "time_and_date": request.form.get("time_and_date"),
             "address": request.form.get("address"),
             "phone_number": request.form.get("phone_number"),
-            "full_name": request.form.get("full_name")
+            "how_often": request.form.get("how_often"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(task)
         flash("Task Successfully Added")
-        return redirect(url_for("get_tasks"))
+        return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("add_task.html", categories=categories)
 

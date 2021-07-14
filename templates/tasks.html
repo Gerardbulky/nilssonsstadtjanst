@@ -2,30 +2,31 @@
 
 {% block content %}
 
-<h3 class="header my-4" style="text-align: center;">All Bookings <hr style="width: 100px; height: 3px; background-color: rgb(4, 4, 32);"> </h3>
-
+<h3 class="header my-4" style="text-align: center;">All Bookings <hr style="width: 100px; height: 1px; background-color: #4998ee;"> </h3>
 <section class="container">
     <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
         <div class="col-10 mr-auto card">
             {% for task in tasks %}
-            <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
-                            <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
-                    </button>
-                </h2>
-            </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    {{ task.full_name }} <br>
-                    {{ task.address }} <br>
-                    {{ task.phone_number }} <br>
-                    <p>{{ task.any_additional_information }} <br></p>
+                <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
+                                <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
+                        </button>
+                    </h2>
                 </div>
-            </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Full Name: &nbsp;&nbsp;&nbsp; {{ task.full_name }} <br>
+                        Address: &nbsp;&nbsp; &nbsp; &nbsp; {{ task.address }} <br>
+                        Phone: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ task.phone_number }}<br>
+                        Information: &nbsp; {{ task.any_additional_information }}<br>
+                        How Often: &nbsp; {{ task.how_often }}<br>
+                        Created By: &nbsp; &nbsp;  {{ task.created_by }}<br>
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </div>

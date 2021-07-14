@@ -3,7 +3,7 @@
 
 {% block content %}
 <h3 class="header my-4" style="text-align: center;">Manage Bookings
-    <hr style="width: 200px; height: 3px; background-color: rgb(4, 4, 32);">
+    <hr style="width: 200px; height: 1px; background-color: #4998ee;">
 </h3>
 
 <section class="container">
@@ -28,7 +28,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-align-left mr-2 pt-5" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <i class="fa fa-align-left mr-2 mb-2 pt-5" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="any_additional_information" style="width: 80%;">
                                     <textarea class="form-control" id="any_additional_information" type="text" name="any_additional_information" rows="3" placeholder="Any Additional information" required></textarea>
                                 </label>
@@ -39,6 +39,20 @@
                                 <i class="fa fa-calendar mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="time_and_date"  style="width: 80%;">
                                     <input id="time_and_date" name="time_and_date" type="text" class=" form-control" placeholder="Time & Date" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-list-ol mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="how_often" style="width: 80%;">
+                                <select class="custom-select mr-sm-2" id="how_often">
+                                    <option selected>How Often</option>
+                                    <option value="1">Once A Month</option>
+                                    <option value="2">Twice A Month</option>
+                                    <option value="3">Trice A Month</option>
+                                    <option value="3">fourth A Month</option>
+                                </select>
                                 </label>
                             </div>
                         </div>

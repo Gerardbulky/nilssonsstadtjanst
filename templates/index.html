@@ -111,9 +111,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('discount') }}">Discounts</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('get_tasks') }}">All Tasks</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
           </li>
@@ -121,23 +119,28 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
             </li>
+            {% if superuser %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('add_task') }}">Book Cleaning</a>
+              <a class="nav-link" href="{{ url_for('get_tasks') }}">All Tasks</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Manage Bookings</a>
             </li>
+            {% endif %}
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
             </li>
-          {% else %}
+            {% else %}
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('register') }}">Create account</a>
             </li>
-          {% endif %}
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button" class="btn btn-success"><strong>  Book Cleaning </strong></button></a>
+            </li>
         </ul>
       </div>
     </nav>
@@ -151,7 +154,7 @@
           <div class="col" style="background-color: rgb(183, 240, 232); text-align: center;">
           <h4 role="alert" aria-live="assertive" aria-atomic="true" id="element" class="toast" data-autohide="false" style="max-width: 80%; display: contents;">
             
-            <div class="toast-body" style="font-size: x-large;">
+            <div class="toast-body" style="font-size: x-large; margin: 7px;">
               {{ message }}
             </div>
           </h4>
@@ -207,16 +210,16 @@
             --------->
             <hr>
             <p><bold class="strong" style="color: red;"> Our first home visits are free.</bold> In this visit we tell you more about how the cleaning is done. We also know what your home looks like and submit a price proposal. <br>
-              <a href="#" class="btn btn-outline-primary btn-sm active" role="button" aria-pressed="true"
+              <a href="#" class="btn btn-outline-success btn-sm active" role="button" aria-pressed="true"
                 style="margin-top: 10px;">Book visit</a>
             </p>
             <hr>
             <p>You can also book your cleaning without having a customer's visit.  <br>
-              <a href="{{ url_for('get_tasks') }}" class="btn btn-outline-primary btn-sm active" role="button" aria-pressed="true" style="margin-top: 10px;">Book Cleaning</a>
+              <a href="{{ url_for('add_task') }}" class="btn btn-outline-success btn-sm active" role="button" aria-pressed="true" style="margin-top: 10px;">Book Cleaning</a>
             </p>
             <hr>
             <p>You can send us an email with more details about your cleaning or if there is anything you would like us to know or if you want to get in contact with us and we shall get to you as soon as possible.  <br> 
-            <a href="{{ url_for('get_tasks') }}" class="btn btn-outline-primary btn-sm active" role="button" aria-pressed="true" style="margin-top: 10px;">Send Email</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline-success btn-sm active" role="button" aria-pressed="true" style="margin-top: 10px;">Send Email</a>
 
             </p>
           </div>
