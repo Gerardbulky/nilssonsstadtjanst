@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+<section class="container">
+    <h3 class="header my-4" style="text-align: center;">Manage Categories
+        <hr style="width: 200px; height: 1px; background-color: #4998ee;">
+    </h3>
+    <div class="row mx-auto">
+        {% for categories in categories %}
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 d-inline">
+                <div class="card" style="width: 16rem; background-color: rgb(33, 33, 145); color: #fff;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-4">{{ categories.category_name }}</h5>
+                        <a href="#" class="btn btn-success">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

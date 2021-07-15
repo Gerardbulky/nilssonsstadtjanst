@@ -12,7 +12,7 @@
                         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
                             data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
-                                <a class="btn btn-warning" href="{{ url_for('delete_task', task_id=task._id) }}">Delete</a>
+                                <a class="btn btn-danger" href="{{ url_for('delete_task', task_id=task._id) }}">Delete</a>
                                 <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
                         </button>
                     </h2>
