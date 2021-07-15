@@ -41,7 +41,7 @@ def prices():
 
 @app.route("/get_tasks")
 def get_tasks():
-    tasks = mongo.db.tasks.find()
+    tasks = mongo.db.tasks.find().sort("_id", -1)
     return render_template("tasks.html", tasks=tasks)
 
 
@@ -140,6 +140,13 @@ def add_task():
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("add_task.html", categories=categories)
+
+
+@app.route("/delete_task/<task_id>")
+def delete_task(task_id):
+    mongo.db.tasks.remove({"_id": ObjectId(task_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for("get_tasks"))
 
 
 if __name__=="__main__":
