@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,700&family=Roboto:ital,wght@1,700&display=swap');
 
 /***********************Image Header*************************/
-body{
-    width: 100%;
+body {
+  margin: 0px;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
+.row{
+        margin-right: 0px;
+}
 
 .container-fluid {
     margin: 0px;
@@ -60,9 +65,15 @@ body{
     margin: 0px;
     padding: 0px;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    
 }
+.nav-link:hover {
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4),
+              inset -1px -1px 3px rgba(255,255,255,0.4);
+}
+
 .dropdown-menu{
     background-color: rgb(42, 47, 51);
 }
@@ -88,15 +99,8 @@ body{
 
 .dropdown-menu {
     background-color: rgb(216, 231, 245);
-}
-
-/*.navbar a:hover {
-    background-color: #6164fc;
-    transition: 0.4s;
-    height: 100%;
     width: 100%;
 }
-*/
 
 /*****************************F00ter*****************************/
 /*.jumbotron{ background-color: rgb(239, 240, 247);}*/
@@ -217,4 +221,35 @@ margin-left: 20px;
     background-color: rgba(0,0,0,.03);
     margin: auto;
     padding: 15px;
+}
+
+/************** centers the cards and renders spacing as well *********************/
+.category_cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/******************************   buttons ***** **********************/
+.button{
+    width: 150px;
+    margin: auto;
+    line-height: 2;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 20px / 15px;
+    border: none;
+    cursor: pointer;
+
+    background-color: #5acc86;
+    background-color: #5acc86;
+    box-shadow: inset 1px 1px 3px rgba(255,255,255,0.4),
+                inset -1px -1px 3px rgba(0,0,0,0.4);
+}
+
+/******************* for vatten to get full width************/
+.col-12{
+    padding-right: 0;
 }

@@ -5,17 +5,27 @@
     <h3 class="header my-4" style="text-align: center;">Manage Categories
         <hr style="width: 200px; height: 1px; background-color: #4998ee;">
     </h3>
-    <div class="row mx-auto">
+    <!-------------Add category button------------------------>
+    <div class="row">
+        <div class="col text-center my-3">
+            <a href="{{ url_for('add_category') }}" class="btn btn-outline-success btn-lg active" role="button"
+                aria-pressed="true" style="display: inline;">ADD CATEGORY <i class="fa fa-plus-square right ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-------------Add category section------------------------>
+    <div class="row">
         {% for categories in categories %}
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 d-inline">
-                <div class="card" style="width: 16rem; background-color: rgb(33, 33, 145); color: #fff;">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-4">{{ categories.category_name }}</h5>
-                        <a href="#" class="btn btn-success">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </div>
+        <div class="category_cards col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+            <div class="card" style="width: 16rem; background-color: rgb(14, 14, 92); color: #fff;">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-4">{{ categories.category_name }}</h5>
+                    <a href="#" class="btn btn-success">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
                 </div>
             </div>
+        </div>
         {% endfor %}
     </div>
 </section>
