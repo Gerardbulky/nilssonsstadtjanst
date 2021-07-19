@@ -11,20 +11,13 @@
         <div class="col-12">
             <div class="card information" style="width: 100%;">
                 <div class="card-body">
-                    <form class="text-center" method="POST" action="{{ url_for('add_task') }}">
+                    <form class="text-center" method="POST" action="{{ url_for('home_visit') }}">
                         <!-------------section for select cleaning section------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-folder-open mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
                                 <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3" style="width: 80%;" required>
-                                    <option selected>Window Cleaning</option>
-                                    <option value="Home Cleaning">Home Cleaning</option>
-                                    <option value="Big Cleaning">Big Cleaning</option>
-                                    <option value="Company Cleaning">Company Cleaning</option>
-                                    <option value="Moving Cleaning">Moving Cleaning</option>
-                                    <option value="Window Cleaning">Window Cleaning</option>
-                                    <option value="Window Cleaning">Steps Cleaning</option>
-                                    <option value="Window Cleaning">Office Cleaning</option>
+                                    <option selected>Home Visit</option>
                                 </select>
                             </div>
                         </div>
@@ -46,21 +39,6 @@
                                     value="2021-07-12 00:00" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" placeholder="Date & Time" required>
                                 </label>
                                 <span class="validity"></span>
-                            </div>
-                        </div>
-                        <!-------------section for how often------------------------>
-                        <div class="row">
-                            <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-list-ol mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
-                                <label for="how_often" style="width: 80%;">
-                                <select class="custom-select mr-sm-2" id="how_often">
-                                    <option selected>How Often</option>
-                                    <option value="1">Once A Month</option>
-                                    <option value="2">Twice A Month</option>
-                                    <option value="3">Trice A Month</option>
-                                    <option value="3">fourth A Month</option>
-                                </select>
-                                </label>
                             </div>
                         </div>
                         <!-------------section for address------------------------>
