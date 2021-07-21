@@ -1,7 +1,7 @@
 $(document).ready(function initMap() {
       // Map Options
       var options = {
-        zoom: 8,
+        zoom: 7,
         center: { lat: 59.7294, lng: 13.2354 },
       };
       // initialising the map

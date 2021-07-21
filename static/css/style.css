@@ -173,8 +173,9 @@ body {
 /********************************Map Section***********************************************/
 
 #map {
-    height: 500px; 
+    height: 250px; 
     width: 100%;
+    text-align: center;
 }
 
 /********************************Contact form Section***********************************************/
@@ -198,12 +199,12 @@ button[type="submit"] {
     margin-left: 20px;
 }
 .kiki {
-width: 60%;
+width: 90%;
 margin-top: 10px;
 margin-bottom: 10px;
 margin-left: 20px;
 }
-.kiki2 {width: 80%;
+.kiki2 {width: 90%;
 margin-left: 20px; 
 }
         
