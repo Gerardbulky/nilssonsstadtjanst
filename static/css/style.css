@@ -233,6 +233,16 @@ margin-left: 20px;
     justify-content: space-around;
 }
 
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    border:thick #cdd7e6  solid;
+    background-color: #fff;
+
+}
 /******************************   buttons ***** **********************/
 .button{
     width: 150px;
@@ -259,3 +269,34 @@ margin-left: 20px;
 .additional_info{
     padding-bottom: 20px;
 }
+.slick-next:before, .slick-prev:before {
+    background-color: rgb(116, 81, 241);
+}
+.slick-next {
+    right: -5px;
+}
+
+.card-img-down{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transition: width 2s, height 4s;
+}
+
+.card-text{
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-img-down:hover{
+     width: 300px;
+}
+
+@media (min-width: 30em) { 
+
+ }

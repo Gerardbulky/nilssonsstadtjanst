@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+    <!-----slick css link----->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% block extrascripts %}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
+    <!-------maps------->
     <script type="text/javascript">
         (function () {
             emailjs.init("user_xvQLhl1lpI2EFLO4SqJ1N");
@@ -33,7 +39,7 @@
     <div class="container-fluid">
         <!------------------------------------Logo Image------------>
         <div class="row Top">
-            <div class="col-lg-4">
+            <div class="col-md-4">
                 <a href="{{ url_for('index') }}">
                     <img alt="logo image" id="logo-img" class="responsive-image"
                         style="margin: 0px; max-width: 100%; background: #fff;"
@@ -200,6 +206,8 @@
                         </div>
                     </div>
                 </div>
+                <!------------------------------slick slider----------------------------------------------------->
+                
                 <!----------------------About Our Company content in body------------------------------------------------------------>
                 <div class="card information Middle">
                     <div class="card-body">
@@ -294,6 +302,58 @@
             </div>
         </div>
     </section>
+
+    <section class="container">
+        <div class="row slider">
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Home Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/home.logo2.png') }}" alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Window Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 7rem;" src="{{ url_for('static', filename='images/window.logoo.png') }}"
+                    alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Big Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/big.logoo.png') }}"
+                    alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Company Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/company.logo.png') }}"
+                    alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Moving Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/moving.logo.png') }}"
+                    alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Steps Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/steps.logo.png') }}"
+                    alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Office Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 6rem;" src="{{ url_for('static', filename='images/office.logo.png') }}"
+                    alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+                <h5 class="text-center my-4">Boutique Cleaning</h5>
+                <img class="card-img-down mb-4" style="width: 5rem;"
+                    src="{{ url_for('static', filename='images/boutique.logo.png') }}" alt="Card image cap">
+                <a href="#" class="card-text">Go somewhere</a>
+            </div>
+        </div>
+    </section>
     {% endblock %}
     <!---------------------------Footer Section----------------------------------------------------------->
     <footer class="container-fluid">
@@ -369,10 +429,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <!--------slick cdn------------>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
     <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
     <!--maps.js-->
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7mXrqRgrOSz2Ek9m4X-DJRNMmQllpSOo&callback=initMap"></script>
+    
     <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
     <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
