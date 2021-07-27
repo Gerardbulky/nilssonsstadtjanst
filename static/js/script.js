@@ -6,6 +6,7 @@ $(document).ready(function(){
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 3,
+        dots: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -13,7 +14,7 @@ $(document).ready(function(){
                     arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
-                    slidesToShow: 3
+                    slidesToShow: 3,
                 }
             },
             {
@@ -22,7 +23,7 @@ $(document).ready(function(){
                     arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
-                    slidesToShow: 1
+                    slidesToShow: 1,
                 }
             }
         ]
