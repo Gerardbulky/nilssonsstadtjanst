@@ -8,7 +8,7 @@ body {
 }
 
 .row{
-        margin-right: 0px;
+    margin-right: 0px;
 }
 
 .container-fluid {
@@ -239,8 +239,10 @@ margin-left: 20px;
     justify-content: space-around;
     margin: 10px;
     padding: 10px;
-    border:thick #cdd7e6  solid;
+    border: thin #cdd7e6 solid;
+    border-bottom:thick #cdd7e6 solid;
     background-color: #fff;
+    box-shadow: 10px 5px 5px rgb(223, 219, 219);
 
 }
 /******************************   buttons ***** **********************/
@@ -269,6 +271,8 @@ margin-left: 20px;
 .additional_info{
     padding-bottom: 20px;
 }
+
+
 .slick-next:before, .slick-prev:before {
     background-color: rgb(116, 81, 241);
 }
@@ -294,7 +298,11 @@ margin-left: 20px;
 }
 
 .card-img-down:hover{
-     width: 300px;
+     transform: scale(1.2);
+}
+
+.card-img-down{
+    transition: all 0.5s ease;
 }
 
 @media (min-width: 30em) { 
