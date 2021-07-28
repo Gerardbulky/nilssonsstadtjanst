@@ -259,7 +259,7 @@ margin-left: 20px;
     cursor: pointer;
 
     background-color: #5acc86;
-    background-color: #5acc86;
+    background-color: #007bff;
     box-shadow: inset 1px 1px 3px rgba(255,255,255,0.4),
                 inset -1px -1px 3px rgba(0,0,0,0.4);
 }
@@ -303,6 +303,11 @@ margin-left: 20px;
 
 .card-img-down{
     transition: all 0.5s ease;
+}
+
+.navbar-brand:hover {
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4),
+              inset -1px -1px 3px rgba(255,255,255,0.4);
 }
 
 @media (min-width: 30em) { 

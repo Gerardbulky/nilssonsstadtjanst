@@ -90,18 +90,20 @@
         </div>
     </div>
     <!------------------------------------------Navigation------------------------------------------------------------->
-<div class="container-fluid"> 
+<div class="container-fluid sticky-top"> 
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand ml-5" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='images/logo-again2.png') }}" class="responsive" alt="logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+             <!--  <li class="nav-item active">
                     <a class="nav-link" href="{{ url_for('index') }}">Home<span class="mr-auto"></span></a>
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -152,7 +154,7 @@
                 {% endif %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button"
-                            class="btn sm btn-success"> <bold>  Book Cleaning </bold></button></a>
+                            class="btn btn-sm btn-secondary"> <bold>  Book Cleaning </bold></button></a>
                 </li>
             </ul>
         </div>
@@ -235,19 +237,19 @@
                             <bold class="strong" style="color: rgb(245, 90, 90);"> Our first home visits are free</bold>. In this
                             visit we tell you more about how the cleaning is done. We also know what your home looks
                             like and submit a price proposal. <br>
-                            <a href="{{ url_for('home_visit') }}" class="btn btn-outline-success button btn-sm active" role="button" aria-pressed="true"
+                            <a href="{{ url_for('home_visit') }}" class="btn btn-outline-primary button btn-sm active" role="button" aria-pressed="true"
                                 style="margin-top: 10px;">Book visit</a>
                         </p>
                         <hr>
                         <p>You can also book your cleaning without having a customer's visit. <br>
-                            <a href="{{ url_for('add_task') }}" class="btn btn-outline-success button btn-sm active"
+                            <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
                                 role="button" aria-pressed="true" style="margin-top: 10px;">Book Cleaning</a>
                         </p>
                         <hr>
                         <p>You can send us an email with more details about your cleaning or if there is anything you
                             would like us to know or if you want to get in contact with us and we shall get to you as
                             soon as possible. <br>
-                            <a href="{{ url_for('contact') }}" class="btn btn-outline-success button btn-sm active"
+                            <a href="{{ url_for('contact') }}" class="btn btn-outline-primary button btn-sm active"
                                 role="button" aria-pressed="true" style="margin-top: 10px;">Send Email</a>
 
                         </p>
@@ -307,7 +309,7 @@
         <div class="row slider">
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Home Cleaning</h5>
-                <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/home.logo2.png') }}" alt="Card image cap">
+                <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/home.logo3.png') }}" alt="Card image cap">
                 <a href="#" class="card-text">Go somewhere</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
