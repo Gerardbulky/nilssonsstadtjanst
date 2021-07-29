@@ -1,7 +1,14 @@
 $(document).ready(function(){
     $('#myCollapsible').collapse('show')
     $('#element').toast('show')
-    
+    $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+    });
+
     $('.slider').slick({
         centerMode: true,
         centerPadding: '60px',
