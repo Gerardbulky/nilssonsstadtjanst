@@ -24,6 +24,46 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/moving_cleaning")
+def moving_cleaning():
+    return render_template("moving_cleaning.html")
+
+
+@app.route("/home_cleaning")
+def home_cleaning():
+    return render_template("home_cleaning.html")
+
+
+@app.route("/company_cleaning")
+def company_cleaning():
+    return render_template("company_cleaning.html")
+
+
+@app.route("/window_cleaning")
+def window_cleaning():
+    return render_template("window_cleaning.html")
+
+
+@app.route("/step_cleaning")
+def step_cleaning():
+    return render_template("step_cleaning.html")
+
+
+@app.route("/office_cleaning")
+def office_cleaning():
+    return render_template("office_cleaning.html")
+
+
+@app.route("/big_cleaning")
+def big_cleaning():
+    return render_template("big_cleaning.html")
+
+
+@app.route("/boutique_cleaning")
+def boutique_cleaning():
+    return render_template("boutique_cleaning.html")
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
@@ -53,8 +93,8 @@ def search():
 
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
+@app.route("/create_account", methods=["GET", "POST"])
+def create_account():
     if request.method == "POST":
         username = request.form.get("username").lower()
         password = request.form.get("password")
@@ -66,12 +106,12 @@ def register():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for('register'))
+            return redirect(url_for('create_account'))
 
         if password == confirm:
-            register = {"username": username,
+            create_account = {"username": username,
                         "password": generate_password_hash(password)} 
-            mongo.db.users.insert_one(register) 
+            mongo.db.users.insert_one(create_account) 
             
         # put the new user into 'session' cookie
             session["user"] = request.form.get("username").lower()
@@ -80,7 +120,7 @@ def register():
         else:
             flash("Passwords do not match.")
 
-    return render_template("register.html")
+    return render_template("create_account.html")
 
 
 @app.route("/login", methods=["GET", "POST"])

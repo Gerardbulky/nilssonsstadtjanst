@@ -144,13 +144,14 @@
                         Services
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="home-clean.html">Window Cleaning</a>
-                        <a class="dropdown-item" href="#">Home Cleaning</a>
-                        <a class="dropdown-item" href="#">Big Cleaning</a>
-                        <a class="dropdown-item" href="#">Step Cleaning</a>
-                        <a class="dropdown-item" href="#">Company Cleaning</a>
-                        <a class="dropdown-item" href="#">Moving Cleaning</a>
-                        <a class="dropdown-item" href="#">Office Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('window_cleaning') }}">Window Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('home_cleaning') }}">Home Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('big_cleaning') }}">Big Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('step_cleaning') }}">Step Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('company_cleaning') }}">Company Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('moving_cleaning') }}">Moving Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('office_cleaning') }}">Office Cleaning</a>
+                        <a class="dropdown-item" href="{{ url_for('boutique_cleaning') }}">Boutique Cleaning</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -183,7 +184,7 @@
                         <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('register') }}">Create account</a>
+                        <a class="nav-link" href="{{ url_for('create_account') }}">Create account</a>
                     </li>
                 {% endif %}
                 <li class="nav-item">
@@ -343,50 +344,66 @@
         <div class="row slider">
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Home Cleaning</h5>
+                <a href="{{ url_for('home_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 4rem;" src="{{ url_for('static', filename='images/home.logo3.png') }}" alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('home_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
-            <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
+            <div class="cards col-md-12" href="{{ url_for('window_cleaning') }}" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Window Cleaning</h5>
+                <a href="{{ url_for('window_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 7rem;" src="{{ url_for('static', filename='images/window.logoo.png') }}"
                     alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('window_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Big Cleaning</h5>
+                <a href="{{ url_for('big_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/big.logoo.png') }}"
                     alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('big_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Company Cleaning</h5>
+                <a href="{{ url_for('company_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 4rem;" src="{{ url_for('static', filename='images/company.logo.png') }}"
                     alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('company_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Moving Cleaning</h5>
+                <a href="{{ url_for('moving_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/moving.logo.png') }}"
                     alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('moving_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Steps Cleaning</h5>
+                <a href="{{ url_for('step_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/steps.logo.png') }}"
                     alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('step_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Office Cleaning</h5>
+                <a href="{{ url_for('office_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 6rem;" src="{{ url_for('static', filename='images/office.logo.png') }}"
                     alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('office_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Boutique Cleaning</h5>
+                <a href="{{ url_for('boutique_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 5rem;"
                     src="{{ url_for('static', filename='images/boutique.logo.png') }}" alt="Card image cap">
-                <a href="#" class="card-text">Go somewhere</a>
+                </a>
+                <a href="{{ url_for('boutique_cleaning') }}" class="card-text">Book Cleaning</a>
             </div>
         </div>
     </section>

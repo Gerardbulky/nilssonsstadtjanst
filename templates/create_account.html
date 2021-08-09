@@ -3,12 +3,12 @@
 {% block content %}
     <!-------------------------------------Registration Section----------------------------------------------------->
     <section class="container">
-        <h2 class="offset-3" style="margin-top: 20px;">Create Account</h2>
-        <hr class="offset-3" style="width: 200px; height: 1px; background-color: #4998ee;">
+        <h3 class="offset-3" style="margin-top: 20px;">Create Account</h3>
+        <hr class="offset-3" style="width: 200px; background-color: #4998ee;">
         <div class="row">
             <div class="col-lg-8">
                 <div class="card-body text-center">
-                    <form class="border-tertiary" method="POST" action="{{ url_for('register') }}">
+                    <form class="border-tertiary" method="POST" action="{{ url_for('create_account') }}">
                         <!----------Users Usersname------->
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
@@ -63,7 +63,7 @@
                                     required>
                             </div>
                         </div>------->
-                        <!----------Register Button-------------->
+                        <!----------create_account Button-------------->
                         <div class="row" style="margin: 25px;">
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Create account <i
                                     class="fa fa-sign-in" aria-hidden="true"></i></button>

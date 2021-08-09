@@ -125,7 +125,7 @@
                             <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('register') }}">Create account</a>
+                            <a class="nav-link" href="{{ url_for('create_account') }}">Create account</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -195,11 +195,11 @@
                             <div class="col-4"></div>
                             <div class="col-4">
                                 <p class="text-center my-1">
-                                    <strong class="small d-none d-md-block"> If You don't Have An Account <a href="{{ url_for('register')}}"
+                                    <strong class="small d-none d-md-block"> If You don't Have An Account <a href="{{ url_for('create_account')}}"
                                             class="font-weight-bold">Create account</a></strong>
                                 </p>
                                 <p class="text-center my-1">
-                                    <strong class="small d-block d-md-none"><a href="{{ url_for('register')}}"
+                                    <strong class="small d-block d-md-none"><a href="{{ url_for('create_account')}}"
                                             class="font-weight-bold" style="color: black;">Create an Account</a></strong>
                                 </p>
                             </div>
