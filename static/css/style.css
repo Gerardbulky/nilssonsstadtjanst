@@ -187,10 +187,6 @@ body {
     width: 100%;
     border: thin #cdd7e6 solid;
 }
-.email-us-header{
-    margin-left: 20px;
-    margin-top: 15px;
-}
 
 button[type="submit"] {
     margin-top: 15px;
