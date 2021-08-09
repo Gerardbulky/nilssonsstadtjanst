@@ -274,7 +274,7 @@ margin-left: 20px;
 
 
 .slick-next:before, .slick-prev:before {
-    background-color: rgb(116, 81, 241);
+    background-color: black;
 }
 .slick-next {
     right: -5px;
@@ -308,6 +308,10 @@ margin-left: 20px;
 .navbar-brand:hover {
     box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4),
               inset -1px -1px 3px rgba(255,255,255,0.4);
+}
+
+.contact-bottom{
+    margin-bottom: 50px;
 }
 
 @media (min-width: 30em) { 
