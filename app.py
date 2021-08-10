@@ -209,6 +209,24 @@ def home_visit():
     return render_template("home_visit.html", categories=categories)
 
 
+@app.route("/window_booking", methods=["GET", "POST"])
+def window_booking():
+    if request.method == "POST":
+        window = {
+            "category_name": request.form.get("category_name"),
+            "time_and_date": request.form.get("time_and_date"),
+            "address": request.form.get("address"),
+            "phone_number": request.form.get("phone_number"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(window)
+        flash("Task Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+    categories = mongo.db.categories.find().sort("category_name", 1)    
+    return render_template("window_booking.html", categories=categories)
+
+
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
     mongo.db.tasks.remove({"_id": ObjectId(task_id)})
