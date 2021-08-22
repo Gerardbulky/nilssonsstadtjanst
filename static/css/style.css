@@ -206,7 +206,7 @@ margin-left: 20px;
         
 .contact-bottom{border-bottom: thick #cdd7e6 solid;}
 
-.information{margin-bottom: 50px;}
+.information{margin-bottom: 30px;}
 
 .Top{
     background-color: #ffffff;
@@ -254,7 +254,7 @@ margin-left: 20px;
     border: none;
     cursor: pointer;
 
-    background-color: #5acc86;
+    /*background-color: #5acc86;*/
     background-color: #007bff;
     box-shadow: inset 1px 1px 3px rgba(255,255,255,0.4),
                 inset -1px -1px 3px rgba(0,0,0,0.4);
