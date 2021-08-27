@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Cleaning company</title>
+    <title>Allt Städtjänst company</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
@@ -30,7 +30,7 @@
     </script>
     {% endblock %}
 
-    <title>{% block title %}SuperClean{% endblock %}</title>
+    <title>{% block title %}Allt städtjänst{% endblock %}</title>
 </head>
 
 <body>
@@ -59,7 +59,7 @@
                                     style="height: 120px" alt="Window Cleaning" />
                             </div>
                             <div class="card-body text-center">
-                                <h6 class="card-title title-one">Window Cleaning</h6>
+                                <h6 class="card-title title-one">Fönsterputsning</h6>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                                     style="height: 120px" alt="Home Cleaning" />
                             </div>
                             <div class="card-body text-center">
-                                <h6 class="card-title title-two">Home Cleaning</h6>
+                                <h6 class="card-title title-two">Hemstädning</h6>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                                     style="height: 120px" alt="Moving Cleaning" />
                             </div>
                             <div class="card-body text-center">
-                                <h6 class="card-title title-three">Moving Cleaning</h6>
+                                <h6 class="card-title title-three">Flyttstädning</h6>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                     alt="Window Cleaning" />
                             </div>
                             <div class="card-body text-center">
-                                <h6 class="card-title title-one">Window Cleaning</h6>
+                                <h6 class="card-title title-one">Fönsterputsning</h6>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
                                     alt="Home Cleaning" />
                             </div>
                             <div class="card-body text-center">
-                                <h6 class="card-title title-two">Home Cleaning</h6>
+                                <h6 class="card-title title-two">Hemstädning</h6>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                                     alt="Moving Cleaning" />
                             </div>
                             <div class="card-body text-center">
-                                <h6 class="card-title title-three">Moving Cleaning</h6>
+                                <h6 class="card-title title-three">Flyttstädning</h6>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Services
+                        Våra tjänster
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ url_for('window_cleaning') }}">Window Cleaning</a>
@@ -155,14 +155,14 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('prices') }}">Prices</a>
+                    <a class="nav-link" href="{{ url_for('prices') }}">Pricer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('discount') }}">Discounts</a>
+                    <a class="nav-link" href="{{ url_for('discount') }}">RUT-skatteavdraget</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ url_for('contact') }}">Kontakt</a>
                 </li>
                 {% if session.user %}
                     <li class="nav-item">
@@ -181,15 +181,15 @@
                         </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+                        <a class="nav-link" href="{{ url_for('login') }}">Logga In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('create_account') }}">Create account</a>
+                        <a class="nav-link" href="{{ url_for('create_account') }}">skapa konto</a>
                     </li>
                 {% endif %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button"
-                            class="btn btn-sm btn-success"> <bold>  Book Cleaning </bold></button></a>
+                            class="btn btn-sm btn-dark"> <bold>Boka städning</bold></button></a>
                 </li>
             </ul>
         </div>
@@ -249,14 +249,15 @@
                 <div class="card information Middle">
                     <div class="card-body">
                         <h5>
-                            <strong>Our Vision</strong>
+                            <strong>Om oss</strong>
                         </h5>
                         <p>
-                            The cleaners we hired are professionals who take pride in doing excellent work, providing
-                            you with the peace of mind that you want from a cleaning company, leaving you with more time
-                            to spend on the things that matter.
+                            Vi gör allt för att städa, ge våra kunder den sinnesro som du vill ha från ett städföretag, så att de får mer tid att
+                            spendera på saker som är viktiga.
+                            <!--We do everything about cleaning, providing our customers with the peace of mind that you want from a cleaning company, leaving them with more time
+                            to spend on the things that matter. -->
                         </p>
-                        <p>We do everything about cleaning and we leave our customers fully satisfied</p>
+                       <!---- <p>c and we leave our customers fully satisfied, The cleaners we hired are professionals who take pride in doing excellent work</p> -->
                         <!---------
               and in exceeding your expectations and attention to detail.
             <p>
@@ -271,20 +272,20 @@
             --------->
                         <hr>
                         <p>
-                            <bold class="strong" style="color: rgb(17, 1, 1);"><strong> Our first home visits are free!</strong></bold>. <br> 
-                            In this visit we tell you how the cleaning is done. We know what your home looks like and offer the price. <br>
+                            <bold class="strong" style="color: rgb(17, 1, 1);"><strong> Ett gratis första hembesök ingår i alla våra tjänster!</strong></bold>. <br> 
+                            I det här besöket berättar vi hur städningen går till. Vi vet hur din bostad ser ut och erbjuder priset. <br>
                             <a href="{{ url_for('home_visit') }}" class="btn btn-outline-primary button btn-sm active" role="button" aria-pressed="true"
-                                style="margin-top: 10px;">Book visit</a>
+                                style="margin-top: 10px;">Boka besök</a>
                         </p>
                         <hr>
-                        <p>You can also book your cleaning directly without having a customer's visit. <br>
+                        <p>Du kan också boka din städning utan ett kundbesök, om du kan ge oss alla informationen om din städning<br>
                             <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
-                                role="button" aria-pressed="true" style="margin-top: 10px;">Book Cleaning</a>
+                                role="button" aria-pressed="true" style="margin-top: 10px;">Boka städning</a>
                         </p>
                         <hr>
-                        <p>You can also email us with more details about your cleaning and we shall get back to you as soon as possible. <br>
+                        <p>Du kan också mejla oss med information om din städning så återkommer vi så snart som möjligt. <br>
                             <a href="{{ url_for('contact') }}" class="btn btn-outline-primary button btn-sm active"
-                                role="button" aria-pressed="true" style="margin-top: 10px;">Send Email</a>
+                                role="button" aria-pressed="true" style="margin-top: 10px;">mejl oss</a>
 
                         </p>
                     </div>
@@ -294,7 +295,7 @@
             <div class="col-lg-4">
                 <div class="card border-primary mb-3" style="width:100%;">
                     <div class="card-header">
-                        <h5>Contact</h5>
+                        <h5>Kontakt</h5>
                     </div>
                     <div class="card-body text-primary">
                         <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
@@ -308,29 +309,29 @@
                         <a target="_blank"
                             href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
                                 class="fa fa-location-arrow" aria-hidden="true"></i> :
-                            Location</a>
+                            riktning</a>
                     </div>
                 </div>
 
                 <!----------------------Section Opening Hours in body------------------------------------------------------------>
                 <div class="card border-secondary mb-3" style="width:100%;">
                     <div class="card-header">
-                        <h5>Opening Hours</h5>
+                        <h5>Telefontider</h5>
                     </div>
                     <div class="card-body table">
                         <tr>
-                            <td><strong>Mon-Fri:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
+                            <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td><strong>Saturday:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Closed
+                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Stängt
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td><strong>Sunday:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                Closed
+                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                Stängt
                             </td>
                         </tr>
                     </div>
@@ -346,7 +347,7 @@
                 <a href="{{ url_for('home_cleaning') }}">
                 <img class="card-img-down mb-4" style="width: 4rem;" src="{{ url_for('static', filename='images/home.logo3.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('home_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('home_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" href="{{ url_for('window_cleaning') }}" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Window Cleaning</h5>
@@ -354,7 +355,7 @@
                 <img class="card-img-down mb-4" style="width: 7rem;" src="{{ url_for('static', filename='images/window.logoo.png') }}"
                     alt="Card image cap">
                 </a>
-                <a href="{{ url_for('window_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('window_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Big Cleaning</h5>
@@ -362,7 +363,7 @@
                 <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/big.logoo.png') }}"
                     alt="Card image cap">
                 </a>
-                <a href="{{ url_for('big_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('big_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Company Cleaning</h5>
@@ -370,7 +371,7 @@
                 <img class="card-img-down mb-4" style="width: 4rem;" src="{{ url_for('static', filename='images/company.logo.png') }}"
                     alt="Card image cap">
                 </a>
-                <a href="{{ url_for('company_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('company_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Moving Cleaning</h5>
@@ -378,7 +379,7 @@
                 <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/moving.logo.png') }}"
                     alt="Card image cap">
                 </a>
-                <a href="{{ url_for('moving_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('moving_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Steps Cleaning</h5>
@@ -386,7 +387,7 @@
                 <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/steps.logo.png') }}"
                     alt="Card image cap">
                 </a>
-                <a href="{{ url_for('step_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('step_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Office Cleaning</h5>
@@ -394,7 +395,7 @@
                 <img class="card-img-down mb-4" style="width: 6rem;" src="{{ url_for('static', filename='images/office.logo.png') }}"
                     alt="Card image cap">
                 </a>
-                <a href="{{ url_for('office_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('office_cleaning') }}" class="card-text">Boka städning</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Boutique Cleaning</h5>
@@ -402,7 +403,7 @@
                 <img class="card-img-down mb-4" style="width: 5rem;"
                     src="{{ url_for('static', filename='images/boutique.logo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('boutique_cleaning') }}" class="card-text">Book Cleaning</a>
+                <a href="{{ url_for('boutique_cleaning') }}" class="card-text">Boka städning</a>
             </div>
         </div>
     </section>
@@ -424,7 +425,7 @@
             <div class="row jumbotron">
                 <div class="col-lg-4 logo">
                     <h1>
-                        <text-muted>Super Clean AB</text-muted>
+                        <text-muted>Allt Städtjänst AB</text-muted>
                     </h1>
                 </div>
 
@@ -439,7 +440,7 @@
                         Website : https://superclean.se</a>
                     <br />
                     <a target="_blank"
-                        href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403">Location</a>
+                        href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403">riktning</a>
                 </div>
 
                 <!----------------------Section Social links Footer------------------------------------------------->

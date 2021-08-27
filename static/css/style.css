@@ -322,6 +322,10 @@ margin-left: 20px;
     padding-right: 15px;
 }
 
+.rut-link a:hover{
+    text-decoration: none !important;
+}
+
 @media (min-width: 30em) { 
 
  }
