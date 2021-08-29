@@ -1,8 +1,8 @@
 $(document).ready(function initMap() {
       // Map Options
       var options = {
-        zoom: 7,
-        center: { lat: 59.7294, lng: 13.2354 },
+        zoom: 8,
+        center: { lat: 59.4294, lng: 12.1354 },
       };
       // initialising the map
       var map = new google.maps.Map(document.getElementById("map"), options);

@@ -186,11 +186,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('create_account') }}">skapa konto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button"
+                                class="btn btn-sm btn-dark"> <bold>Boka städning</bold></button></a>
+                    </li>
                 {% endif %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button"
-                            class="btn btn-sm btn-dark"> <bold>Boka städning</bold></button></a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -424,9 +424,9 @@
         <div class="contents socials footer">
             <div class="row jumbotron">
                 <div class="col-lg-4 logo">
-                    <h1>
+                    <h2>
                         <text-muted>Allt Städtjänst AB</text-muted>
-                    </h1>
+                    </h2>
                 </div>
 
                 <!----------------------Section contact footer----------------------------------------------------->
