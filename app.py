@@ -275,6 +275,96 @@ def big_booking():
     return render_template("big_booking.html", categories=categories)
 
 
+@app.route("/step_booking", methods=["GET", "POST"])
+def step_booking():
+    if request.method == "POST":
+        step = {
+            "category_name": request.form.get("category_name"),
+            "time_and_date": request.form.get("time_and_date"),
+            "address": request.form.get("address"), 
+            "phone_number": request.form.get("phone_number"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(step)
+        flash("Task Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+    categories = mongo.db.categories.find().sort("category_name", 1)    
+    return render_template("step_booking.html", categories=categories)
+
+
+@app.route("/company_booking", methods=["GET", "POST"])
+def company_booking():
+    if request.method == "POST":
+        company = {
+            "category_name": request.form.get("category_name"),
+            "time_and_date": request.form.get("time_and_date"),
+            "address": request.form.get("address"), 
+            "phone_number": request.form.get("phone_number"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(company)
+        flash("Task Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+    categories = mongo.db.categories.find().sort("category_name", 1)    
+    return render_template("company_booking.html", categories=categories)
+
+
+@app.route("/moving_booking", methods=["GET", "POST"])
+def moving_booking():
+    if request.method == "POST":
+        moving = {
+            "category_name": request.form.get("category_name"),
+            "time_and_date": request.form.get("time_and_date"),
+            "address": request.form.get("address"), 
+            "phone_number": request.form.get("phone_number"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(moving)
+        flash("Task Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+    categories = mongo.db.categories.find().sort("category_name", 1)    
+    return render_template("moving_booking.html", categories=categories)
+
+
+@app.route("/office_booking", methods=["GET", "POST"])
+def office_booking():
+    if request.method == "POST":
+        office = {
+            "category_name": request.form.get("category_name"),
+            "time_and_date": request.form.get("time_and_date"),
+            "address": request.form.get("address"), 
+            "phone_number": request.form.get("phone_number"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(office)
+        flash("Task Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+    categories = mongo.db.categories.find().sort("category_name", 1)    
+    return render_template("office_booking.html", categories=categories)
+
+
+@app.route("/boutique_booking", methods=["GET", "POST"])
+def boutique_booking():
+    if request.method == "POST":
+        boutique = {
+            "category_name": request.form.get("category_name"),
+            "time_and_date": request.form.get("time_and_date"),
+            "address": request.form.get("address"), 
+            "phone_number": request.form.get("phone_number"),
+            "full_name": request.form.get("full_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(boutique)
+        flash("Task Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+    categories = mongo.db.categories.find().sort("category_name", 1)    
+    return render_template("boutique_booking.html", categories=categories)
+
+
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
     mongo.db.tasks.remove({"_id": ObjectId(task_id)})
