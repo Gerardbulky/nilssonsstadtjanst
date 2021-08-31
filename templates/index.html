@@ -14,7 +14,8 @@
         type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
     <!-----slick css link----->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -88,8 +89,8 @@
                     <div class="col-lg-4 d-none d-lg-block d-lg-4">
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
-                                <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top" style="height: 120px"
-                                    alt="Window Cleaning" />
+                                <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top"
+                                    style="height: 120px" alt="Window Cleaning" />
                             </div>
                             <div class="card-body text-center">
                                 <h6 class="card-title title-one">Fönsterputsning</h6>
@@ -99,8 +100,8 @@
                     <div class="col-md-4 d-none d-lg-block d-lg-4">
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
-                                <img src="{{ url_for('static', filename='images/home.jpg') }}" class="card-img-top" style="height: 120px"
-                                    alt="Home Cleaning" />
+                                <img src="{{ url_for('static', filename='images/home.jpg') }}" class="card-img-top"
+                                    style="height: 120px" alt="Home Cleaning" />
                             </div>
                             <div class="card-body text-center">
                                 <h6 class="card-title title-two">Hemstädning</h6>
@@ -110,8 +111,8 @@
                     <div class="col-md-4 d-none d-lg-block d-lg-4">
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
-                                <img src="{{ url_for('static', filename='images/moving.jpg') }}" class="card-img-top" style="height: 120px"
-                                    alt="Moving Cleaning" />
+                                <img src="{{ url_for('static', filename='images/moving.jpg') }}" class="card-img-top"
+                                    style="height: 120px" alt="Moving Cleaning" />
                             </div>
                             <div class="card-body text-center">
                                 <h6 class="card-title title-three">Flyttstädning</h6>
@@ -124,62 +125,62 @@
         </div>
     </div>
     <!------------------------------------------Navigation------------------------------------------------------------->
-<div class="container-fluid sticky-top"> 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand ml-5" href="{{ url_for('index') }}">
-        <img src="{{ url_for('static', filename='images/logo-again3.png') }}" class="responsive" alt="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-             <!--  <li class="nav-item active">
+    <div class="container-fluid sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand ml-5" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo-again3.png') }}" class="responsive" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!--  <li class="nav-item active">
                     <a class="nav-link" href="{{ url_for('index') }}">Home<span class="mr-auto"></span></a>
                 </li> -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Våra tjänster
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url_for('window_cleaning') }}">Fönsterputsning</a>
-                        <a class="dropdown-item" href="{{ url_for('home_cleaning') }}">Hemstädning</a>
-                        <a class="dropdown-item" href="{{ url_for('big_cleaning') }}">Storstädnin</a>
-                        <a class="dropdown-item" href="{{ url_for('step_cleaning') }}">Trappstädning</a>
-                        <a class="dropdown-item" href="{{ url_for('company_cleaning') }}">Företagsstädning</a>
-                        <a class="dropdown-item" href="{{ url_for('moving_cleaning') }}">Flyttstädning</a>
-                        <a class="dropdown-item" href="{{ url_for('office_cleaning') }}">Kontorstädning</a>
-                        <a class="dropdown-item" href="{{ url_for('boutique_cleaning') }}">Butiksstädning</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('prices') }}">Pricer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('discount') }}">RUT-skatteavdraget</a>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Våra tjänster
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ url_for('window_cleaning') }}">Fönsterputsning</a>
+                            <a class="dropdown-item" href="{{ url_for('home_cleaning') }}">Hemstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('big_cleaning') }}">Storstädnin</a>
+                            <a class="dropdown-item" href="{{ url_for('step_cleaning') }}">Trappstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('company_cleaning') }}">Företagsstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('moving_cleaning') }}">Flyttstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('office_cleaning') }}">Kontorstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('boutique_cleaning') }}">Butiksstädning</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('prices') }}">Pricer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('discount') }}">RUT-skatteavdraget</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('contact') }}">Kontakt</a>
-                </li>
-                {% if session.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Kontakt</a>
+                    </li>
+                    {% if session.user %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                     </li>
                     {% if session.user|lower == "admin"|lower %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('get_tasks') }}">All Tasks</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('get_categories') }}">Manage Bookings</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('get_tasks') }}">All Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('get_categories') }}">Manage Bookings</a>
+                    </li>
                     {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
-                        </li>
-                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('login') }}">Logga In</a>
                     </li>
@@ -189,12 +190,14 @@
                     {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button"
-                                class="btn btn-sm btn-dark"> <bold>Boka städning</bold></button></a>
+                                class="btn btn-sm btn-dark">
+                                <bold>Boka Städning</bold>
+                            </button></a>
                     </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <!-------------------------------------Flashed Messages------------------------------------------------->
     <section>
         {% with messages = get_flashed_messages() %}
@@ -244,7 +247,7 @@
                     </div>
                 </div>
                 <!------------------------------slick slider----------------------------------------------------->
-                
+
                 <!----------------------About Our Company content in body------------------------------------------------------------>
                 <div class="card information Middle">
                     <div class="card-body">
@@ -252,12 +255,13 @@
                             <strong>Om oss</strong>
                         </h5>
                         <p>
-                            Vi gör allt för att städa, ge våra kunder den sinnesro som du vill ha från ett städföretag, så att de får mer tid att
+                            Vi gör allt för att städa, ge våra kunder den sinnesro som du vill ha från ett städföretag,
+                            så att de får mer tid att
                             spendera på saker som är viktiga.
                             <!--We do everything about cleaning, providing our customers with the peace of mind that you want from a cleaning company, leaving them with more time
                             to spend on the things that matter. -->
                         </p>
-                       <!---- <p>c and we leave our customers fully satisfied, The cleaners we hired are professionals who take pride in doing excellent work</p> -->
+                        <!---- <p>c and we leave our customers fully satisfied, The cleaners we hired are professionals who take pride in doing excellent work</p> -->
                         <!---------
               and in exceeding your expectations and attention to detail.
             <p>
@@ -272,22 +276,27 @@
             --------->
                         <hr>
                         <p>
-                            <bold class="strong" style="color: rgb(17, 1, 1);"><strong> Ett gratis första hembesök ingår i alla våra tjänster!</strong></bold>. <br> 
-                            I det här besöket berättar vi hur städningen går till. Vi vet hur din bostad ser ut och erbjuder priset. <br>
-                            <a href="{{ url_for('home_visit') }}" class="btn btn-outline-primary button btn-sm active" role="button" aria-pressed="true"
-                                style="margin-top: 10px;">Boka besök</a>
+                            <bold class="strong" style="color: rgb(17, 1, 1);"><strong> Ett gratis första hembesök ingår
+                                    i alla våra tjänster!</strong></bold>. <br>
+                            I det här besöket berättar vi hur städningen går till. Vi vet hur din bostad ser ut och
+                            erbjuder priset. <br>
+                            <a href="{{ url_for('home_visit') }}" class="btn btn-outline-primary button btn-sm active"
+                                role="button" aria-pressed="true" style="margin-top: 10px;">Boka besök</a>
                         </p>
                         <hr>
-                        <p>Du kan också boka din städning utan ett kundbesök, om du kan ge oss alla informationen om din städning<br>
+                        <p>Du kan också boka din städning utan ett kundbesök, om du kan ge oss alla informationen om din
+                            städning<br>
                             <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
                                 role="button" aria-pressed="true" style="margin-top: 10px;">Boka städning</a>
                         </p>
+                        <!---
                         <hr>
                         <p>Du kan också mejla oss med information om din städning så återkommer vi så snart som möjligt. <br>
-                            <a href="{{ url_for('contact') }}" class="btn btn-outline-primary button btn-sm active"
+                            <a href="#" class="btn btn-outline-primary button btn-sm active"
                                 role="button" aria-pressed="true" style="margin-top: 10px;">mejl oss</a>
 
                         </p>
+                        --->
                     </div>
                 </div>
             </div>
@@ -345,65 +354,66 @@
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Hemstädning</h5>
                 <a href="{{ url_for('home_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 4rem;" src="{{ url_for('static', filename='images/home.logo3.png') }}" alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 4rem;"
+                        src="{{ url_for('static', filename='images/home.logo3.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('home_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('home_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" href="{{ url_for('window_cleaning') }}" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Fönsterputsning</h5>
                 <a href="{{ url_for('window_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 7rem;" src="{{ url_for('static', filename='images/window.logoo.png') }}"
-                    alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 7rem;"
+                        src="{{ url_for('static', filename='images/window.logoo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('window_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('window_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Storstädning</h5>
                 <a href="{{ url_for('big_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/big.logoo.png') }}"
-                    alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 8rem;"
+                        src="{{ url_for('static', filename='images/big.logoo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('big_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('big_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Företagsstädning</h5>
                 <a href="{{ url_for('company_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 4rem;" src="{{ url_for('static', filename='images/company.logo.png') }}"
-                    alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 4rem;"
+                        src="{{ url_for('static', filename='images/company.logo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('company_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('company_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Flyttstädning</h5>
                 <a href="{{ url_for('moving_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 8rem;" src="{{ url_for('static', filename='images/moving.logo.png') }}"
-                    alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 8rem;"
+                        src="{{ url_for('static', filename='images/moving.logo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('moving_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('moving_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Trappstädning</h5>
                 <a href="{{ url_for('step_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 5rem;" src="{{ url_for('static', filename='images/steps.logo.png') }}"
-                    alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 5rem;"
+                        src="{{ url_for('static', filename='images/steps.logo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('step_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('step_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Kontorstädning</h5>
                 <a href="{{ url_for('office_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 6rem;" src="{{ url_for('static', filename='images/office.logo.png') }}"
-                    alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 6rem;"
+                        src="{{ url_for('static', filename='images/office.logo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('office_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('office_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
             <div class="cards col-md-12" style="width: 16rem; height: 16rem;">
                 <h5 class="text-center my-4">Butiksstädning</h5>
                 <a href="{{ url_for('boutique_cleaning') }}">
-                <img class="card-img-down mb-4" style="width: 5rem;"
-                    src="{{ url_for('static', filename='images/boutique.logo.png') }}" alt="Card image cap">
+                    <img class="card-img-down mb-4" style="width: 5rem;"
+                        src="{{ url_for('static', filename='images/boutique.logo.png') }}" alt="Card image cap">
                 </a>
-                <a href="{{ url_for('boutique_cleaning') }}" class="card-text">Boka städning</a>
+                <a href="{{ url_for('boutique_cleaning') }}" class="card-text">Läs mer & Boka</a>
             </div>
         </div>
     </section>
@@ -483,19 +493,35 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <!--------slick cdn------------>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
     <!--maps.js-->
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7mXrqRgrOSz2Ek9m4X-DJRNMmQllpSOo&callback=initMap"></script>
-    
+
     <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
     <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!--sweetalert popup-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
+    <!---
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                showButtonPanel: true,
+                dateFormat: 'dd-mm-yy',
+                minDate: 0, maxDate: "+1M +365D",
+                showWeek: true,
+                firstDay: 1
+            });
+        });
+    </script> --->
+
 </body>
 
 </html>

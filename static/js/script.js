@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $('#myCollapsible').collapse('show')
     $('#element').toast('show')
-    
     $('.autoplay').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
