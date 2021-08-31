@@ -159,8 +159,8 @@ def profile(username):
 
     if "user" in session:
         return render_template("profile.html", username=username, categories=categories, task=task)
-       
     return render_template(url_for('login'))
+
 
 @app.route("/logout")
 def logout():
@@ -173,19 +173,31 @@ def logout():
 @app.route("/add_task", methods=["GET", "POST"])
 def add_task():
     if request.method == "POST":
-        task = {
-            "category_name": request.form.get("category_name"),
-            "any_additional_information": request.form.get("any_additional_information"),
-            "time_and_date": request.form.get("time_and_date"),
-            "address": request.form.get("address"),
-            "phone_number": request.form.get("phone_number"),
-            "how_often": request.form.get("how_often"),
-            "full_name": request.form.get("full_name"),
-            "created_by": session["user"]
-        }
-        mongo.db.tasks.insert_one(task)
-        flash("Task Successfully Added")
-        return redirect(url_for("profile", username=session["user"]))
+        if "user" in session:
+            task = {
+                "category_name": request.form.get("category_name"),
+                "any_additional_information": request.form.get("any_additional_information"),
+                "time_and_date": request.form.get("time_and_date"),
+                "address": request.form.get("address"),
+                "phone_number": request.form.get("phone_number"),
+                "full_name": request.form.get("full_name"),
+                "created_by": session["user"]
+            }
+            mongo.db.tasks.insert_one(task)
+            flash("Task Successfully Added")
+            return redirect(url_for("profile", username=session["user"]))
+        else:
+            task = {
+                "category_name": request.form.get("category_name"),
+                "any_additional_information": request.form.get("any_additional_information"),
+                "time_and_date": request.form.get("time_and_date"),
+                "address": request.form.get("address"),
+                "phone_number": request.form.get("phone_number"),
+                "full_name": request.form.get("full_name")
+            }
+            mongo.db.tasks.insert_one(task)
+            flash("Task Successfully Added")
+            return redirect(url_for("add_task"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("add_task.html", categories=categories)
 
