@@ -29,11 +29,17 @@
                         Vi har med oss all städmaterial och städutrustning, så inget mer tillkommer.
                     </p>
                     <p>
-                        <strong>Kontakta oss idag för ett gratis hembesök och prisoffert! eller boka fönsterputsning direkt!. </strong>
+                        <strong>Boka idag för ett gratis hembesök och prisoffert! eller boka fönsterputsning direkt!. </strong>
                     </p>
+                    <!--------------<p>
+                            <a href="{{ url_for('window_booking') }}" style="margin-top: 20px; display: flex; align-items: center;"
+                                class="btn btn-outline-primary button btn-sm active" role="button" aria-pressed="true"> &nbsp &nbsp Book Now</a>
+                        </p>---------------------->
                     <p>
-                        <a href="{{ url_for('window_booking') }}" style="margin-top: 20px; display: flex; align-items: center;" class="btn btn-outline-primary button btn-sm active" role="button"
-                            aria-pressed="true">Boka fönsterputs</a>
+                        <ul class="uls">
+                            <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
+                            <li class="lis"><a class="as" href="{{ url_for('window_booking') }}">Boka fönsterputs</a></li>
+                        </ul>
                     </p>
                 </div>
             </div>

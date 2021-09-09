@@ -18,7 +18,7 @@
                         hjälpa dig med alla typer av städning. Inget jobb är för litet eller för stort.
                     </p>
                         
-                    <p></p><strong> Kontakta oss för ett gratis hembesök! </strong></p>
+                    <p></p><strong> Boka för ett gratis hembesök! </strong></p>
                 </div>
             </div>
             <div class="row">
@@ -93,10 +93,12 @@
                             Vi har med oss all städmaterial och städutrustning, så inget mer tillkommer.
                         </p>
                 
-                        <p></p><strong> Kontakta oss för ett gratis hembesök! </strong></p>
+                        <p></p><strong> Boka för ett gratis hembesök! </strong></p>
                         <p>
-                            <a href="{{ url_for('home_booking') }}" style="margin-top: 20px; display: flex; align-items: center;"
-                                class="btn btn-outline-primary button btn-sm active" role="button" aria-pressed="true"> &nbsp &nbsp Book Now</a>
+                        <ul class="uls">
+                            <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
+                            <li class="lis"><a class="as" href="{{ url_for('home_booking') }}">Boka hemstäd</a></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
@@ -132,25 +134,18 @@
                 </div>
                 <div class="card-body table">
                     <tr>
-                        <td>
-                            <strong>Mån-Fre:</strong>
-                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
-
+                        <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
                         </td>
                     </tr>
                     <br />
                     <tr>
-                        <td>
-                            <strong>Lörday:</strong>
-                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Closed
+                        <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9:00 - 16:00
                         </td>
                     </tr>
                     <br />
                     <tr>
-                        <td>
-                            <strong>Sönday:</strong>
-                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            Closed
+                        <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            9:00 - 13:00
                         </td>
                     </tr>
                 </div>

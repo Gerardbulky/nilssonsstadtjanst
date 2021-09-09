@@ -328,5 +328,44 @@ margin-left: 20px;
 
 @media (min-width: 30em) { 
 
- }
-   
+}
+
+.uls {
+  padding: 0;
+  width: 100%;
+}
+
+.lis {
+  display: inline;
+}
+
+.as {
+  outline: none;
+  text-decoration: none !important;
+  display: inline-block;
+  width: 45%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: white;
+  border: none;
+}
+
+.lis:last-child a {
+  margin-right: 0;
+}
+
+.as:link, as:visited, as:focus {
+  background: #007bff;
+  box-shadow: inset 1px 1px 3px rgba(255,255,255,0.4),
+                inset -1px -1px 3px rgba(0,0,0,0.4);
+}
+
+.as:hover {
+  background: #acb8c5;
+  color: #fafafa;
+}
+
+.as:active {
+  color: white;
+}
