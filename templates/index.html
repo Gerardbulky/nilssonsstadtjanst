@@ -20,15 +20,9 @@
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
     {% block extrascripts %}
-    <!-------email.js------->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_xvQLhl1lpI2EFLO4SqJ1N");
-        })();
-    </script>
     {% endblock %}
 
     <title>{% block title %}Allt städtjänst{% endblock %}</title>
@@ -57,7 +51,7 @@
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
                                 <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top"
-                                    style="height: 120px" alt="Window Cleaning" />
+                                    style="height: 120px" alt="Fönsterputsning" />
                             </div>
                             <div class="card-body text-center">
                                 <h6 class="card-title title-one">Fönsterputsning</h6>
@@ -90,7 +84,7 @@
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
                                 <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top"
-                                    style="height: 120px" alt="Window Cleaning" />
+                                    style="height: 120px" alt="Fönsterputsning" />
                             </div>
                             <div class="card-body text-center">
                                 <h6 class="card-title title-one">Fönsterputsning</h6>
@@ -189,9 +183,9 @@
                     </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('add_task') }}"><button type="button"
+                        <a class="nav-link" href="{{ url_for('home_visit') }}"><button type="button"
                                 class="btn btn-sm btn-dark">
-                                <bold>Boka Städning</bold>
+                                <bold>Boka besök</bold>
                             </button></a>
                     </li>
                 </ul>
@@ -507,6 +501,14 @@
     <!--sweetalert popup-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-------email.js------->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_xvQLhl1lpI2EFLO4SqJ1N");
+        })();
+    </script>
     <!---
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

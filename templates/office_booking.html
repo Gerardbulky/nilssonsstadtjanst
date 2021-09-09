@@ -15,65 +15,77 @@
                         <!-------------section for select cleaning section------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-folder-open mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3" style="width: 80%;" required>
-                                    <option selected>Window Cleaning</option>
+                                <i class="fa fa-folder-open mr-2" aria-hidden="true"
+                                    style="font-size: xx-large; max-width: 20%;"></i>
+                                <select id="category_name" name="category_name"
+                                    class="custom-select custom-select-lg mb-3" style="width: 80%;" required>
+                                    <option selected>Kontorstädning</option>
                                 </select>
                             </div>
                         </div>
                         <!-------------section for additional information------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3 additional_info">
-                                <i class="fa fa-align-left mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <i class="fa fa-align-left mr-2" aria-hidden="true"
+                                    style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="any_additional_information" style="width: 80%;">
-                                    <textarea class="form-control" id="any_additional_information" type="text" name="any_additional_information" rows="3" placeholder="Mer Information (Valfri)"></textarea>
+                                    <textarea class="form-control" id="any_additional_information" type="text"
+                                        name="any_additional_information" rows="3"
+                                        placeholder="Mer Information (Valfri)"></textarea>
                                 </label>
                             </div>
                         </div>
-                        <!-------------section for time & date------------------------>
+                        <!-------------section for date------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-calendar mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
-                                <label for="time_and_date"  style="width: 80%;">
-                                    <input class="form-control" id="time_and_date" type="datetime-local" name="time_and_date" min="2021-07-01 00:00" max="2021-07-31 00:00"
-                                    value="2021-07-12 00:00" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" placeholder="Date & Time" required>
+                                <i class="fa fa-calendar mr-2" aria-hidden="true"
+                                    style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="time_and_date" style="width: 80%;">
+                                    <input class="form-control" id="time_and_date" type="date" name="time_and_date"
+                                        value="dd/dd-mm-yy" required>
                                 </label>
                                 <span class="validity"></span>
                             </div>
                         </div>
-                        
+
                         <!-------------section for address------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-home mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <i class="fa fa-home mr-2" aria-hidden="true"
+                                    style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="address" style="width: 80%;">
-                                    <input type="text" class="form-control" name="address" id="address" placeholder="Address" required>
+                                    <input type="text" class="form-control" name="address" id="address"
+                                        placeholder="Adress" required>
                                 </label>
                             </div>
                         </div>
                         <!-------------section for phone number------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-phone mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <i class="fa fa-phone mr-2" aria-hidden="true"
+                                    style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="phone_number" style="width: 80%;">
-                                    <input type="text" class="form-control" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+                                    <input type="text" class="form-control" name="phone_number" id="phone_number"
+                                        placeholder="Telefonnummer" required>
                                 </label>
                             </div>
                         </div>
                         <!-------------section for full name------------------------>
                         <div class="row">
                             <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-user mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <i class="fa fa-user mr-2" aria-hidden="true"
+                                    style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="full_name" style="width: 80%;">
-                                    <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Full Name"
-                                        required>
+                                    <input type="text" class="form-control" name="full_name" id="full_name"
+                                        placeholder="Ditt Namn" required>
                                 </label>
                             </div>
                         </div>
                         <!-------------section for button------------------------>
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary button btn-lg">Submit  <i class="fa fa-plus-square right ml-2"></i></button>
+                                <button type="submit" class="btn btn-primary button btn-lg">SKICKA IN <i
+                                        class="fa fa-plus-square right ml-2"></i></button>
                             </div>
                         </div>
                     </form>
