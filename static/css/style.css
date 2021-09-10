@@ -326,10 +326,7 @@ margin-left: 20px;
     text-decoration: none !important;
 }
 
-@media (min-width: 30em) { 
-
-}
-
+/******************* buttons for boka besok/städ************/
 .uls {
   padding: 0;
   width: 100%;
@@ -368,4 +365,8 @@ margin-left: 20px;
 
 .as:active {
   color: white;
+}
+
+@media (min-width: 30em) { 
+
 }

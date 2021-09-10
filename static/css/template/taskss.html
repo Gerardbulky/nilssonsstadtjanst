@@ -108,22 +108,22 @@
             <a class="nav-link" href="contact.html">Kontakt</a>
           </li>
           {% if session.user %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Manage Bookings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Manage Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+          </li>
           {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('login') }}">Logga In</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('create_account') }}">skapa konto</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('login') }}">Logga In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('create_account') }}">skapa konto</a>
+          </li>
           {% endif %}
         </ul>
       </div>
@@ -172,7 +172,7 @@
             <a target="_blank"
               href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
                 class="fa fa-location-arrow" aria-hidden="true"></i> :
-              Location</a>
+              Företagets plats</a>
           </div>
         </div>
 
@@ -231,7 +231,7 @@
 
         <!----------------------Section contact footer----------------------------------------------------->
         <div class="col-md-4 info">
-          <a href="tel:0720107276"> Telephone : 0720107276</a>
+          <a href="tel:0720107276"> : 0720107276</a>
           <br />
           <a target="_blank" href="#"> Email : gerardbulky@gmail.com</a>
           <br />
@@ -239,7 +239,8 @@
             Website : https://superclean.se</a>
           <br />
           <a target="_blank"
-            href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403">Location</a>
+            href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403">Företagets
+            plats</a>
         </div>
 
         <!----------------------Section Social links Footer------------------------------------------------->

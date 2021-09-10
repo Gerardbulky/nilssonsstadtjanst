@@ -15,7 +15,7 @@
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-user-plus mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
                                 <label for="username" style="width: 80%;">
-                                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="Användarnamn" required>
                                 </label>
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-lock mr-3" aria-hidden="true" style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
                                 <label for="password" style="width: 80%;">
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Lösenord" required>
                                 </label>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                         <!----------login Button-------------->
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="checkbox">
-                            <label class="form-check-label" for="checkbox">Remember my password </label>
+                            <label class="form-check-label" for="checkbox">Kom ihåg mitt lösenord </label>
                         </div>
                         <!----------login Button-------------->
                         <div class="row" style="margin: 25px;">
@@ -60,26 +60,25 @@
                         <div class="row">
                             <div class="col-4">
                                 <p class="text-center my-1">
-                                    <strong class="small d-none d-md-block"> Forgotten Password <a href="#"
+                                    <strong class="small d-none d-md-block"> Glöm lösenord <a href="#"
                                             class="font-weight-bold">
-                                            Reset Password</a></strong>
+                                            återställ lösenord</a></strong>
                                 </p>
                                 <p class="text-center my-1">
                                     <strong class="small d-block d-md-none"><a href="#" class="font-weight-bold"
                                             style="color: black;">
-                                            Reset Password</a></strong>
+                                            återställ lösenord</a></strong>
                                 </p>
                             </div>
                             <div class="col-4"></div>
                             <div class="col-4">
                                 <p class="text-center my-1">
-                                    <strong class="small d-none d-md-block"> If You don't Have An Account <a
-                                            href="{{ url_for('create_account')}}" class="font-weight-bold">Create
-                                            account</a></strong>
+                                    <strong class="small d-none d-md-block"> Om du inte har ett konto, <a
+                                            href="{{ url_for('create_account')}}" class="font-weight-bold">skapa konto</a></strong>
                                 </p>
                                 <p class="text-center my-1">
                                     <strong class="small d-block d-md-none"><a href="{{ url_for('create_account')}}"
-                                            class="font-weight-bold" style="color: black;">Create an Account</a></strong>
+                                            class="font-weight-bold" style="color: black;">skapa konto</a></strong>
                                 </p>
                             </div>
                         </div>
@@ -105,7 +104,7 @@
                         <a target="_blank"
                             href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
                                 class="fa fa-location-arrow" aria-hidden="true"></i> :
-                            Location</a>
+                            Företagets plats</a>
                     </div>
                 </div>
     
@@ -116,25 +115,18 @@
                     </div>
                     <div class="card-body table">
                         <tr>
-                            <td>
-                                <strong>Mån-Fre:</strong>
-                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
-    
+                            <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td>
-                                <strong>Lörday:</strong>
-                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Closed
+                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9:00 - 16:00
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td>
-                                <strong>Sönday:</strong>
-                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                Closed
+                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                9:00 - 13:00
                             </td>
                         </tr>
                     </div>
