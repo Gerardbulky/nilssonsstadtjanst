@@ -105,7 +105,7 @@ def create_account():
             {"username": username})
 
         if existing_user:
-            flash("Användarnamn existerar redan")
+            flash("Användarnamn existerar redan.")
             return redirect(url_for('create_account'))
 
         if password == confirm:
@@ -139,11 +139,11 @@ def login():
                     return redirect(url_for('profile', username=session["user"]))
             else:
                 # invalid password match
-                flash("Felaktigt användarnamn och/eller lösenord")
+                flash("Felaktigt användarnamn och/eller lösenord.")
                 return redirect(url_for("login"))
         else:
             # username doesn't exist
-            flash("Felaktigt användarnamn och/eller lösenord")
+            flash("Felaktigt användarnamn och/eller lösenord.")
             return redirect(url_for("login"))
     return render_template("login.html")
     
@@ -184,7 +184,7 @@ def add_task():
                 "created_by": session["user"]
             }
             mongo.db.tasks.insert_one(task)
-            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
             return redirect(url_for("profile", username=session["user"]))
         else:
             task = {
@@ -196,7 +196,7 @@ def add_task():
                 "full_name": request.form.get("full_name")
             }
             mongo.db.tasks.insert_one(task)
-            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
             return redirect(url_for("add_task"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("add_task.html", categories=categories)
@@ -216,7 +216,7 @@ def home_visit():
                 "created_by": session["user"]
             }
             mongo.db.tasks.insert_one(visit)
-            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
             return redirect(url_for("profile", username=session["user"]))
         else:
             visit = {
@@ -228,7 +228,7 @@ def home_visit():
                 "full_name": request.form.get("full_name"),
             }
             mongo.db.tasks.insert_one(visit)
-            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
             return redirect(url_for("home_visit"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("home_visit.html", categories=categories)
@@ -246,7 +246,7 @@ def window_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(window)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("window_booking.html", categories=categories)
@@ -264,7 +264,7 @@ def home_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(home)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("home_booking.html", categories=categories)
@@ -282,7 +282,7 @@ def big_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(big)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("big_booking.html", categories=categories)
@@ -300,7 +300,7 @@ def step_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(step)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("step_booking.html", categories=categories)
@@ -318,7 +318,7 @@ def company_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(company)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("company_booking.html", categories=categories)
@@ -336,7 +336,7 @@ def moving_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(moving)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("moving_booking.html", categories=categories)
@@ -354,7 +354,7 @@ def office_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(office)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("office_booking.html", categories=categories)
@@ -372,7 +372,7 @@ def boutique_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(boutique)
-        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("boutique_booking.html", categories=categories)
@@ -381,7 +381,7 @@ def boutique_booking():
 @app.route("/delete_task/<task_id>")
 def delete_task(task_id):
     mongo.db.tasks.remove({"_id": ObjectId(task_id)})
-    flash("Task Successfully Deleted")
+    flash("Task Successfully Deleted.")
     return redirect(url_for("get_tasks"))
 
 
@@ -398,7 +398,7 @@ def add_category():
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
-        flash("New Category Added")
+        flash("New Category Added.")
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
@@ -411,7 +411,7 @@ def edit_category(category_id):
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
-        flash("Category Successfully Updated")
+        flash("Category Successfully Updated.")
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
@@ -421,7 +421,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category Successfully Deleted")
+    flash("Category Successfully Deleted.")
     return redirect(url_for("get_categories"))
 
 
