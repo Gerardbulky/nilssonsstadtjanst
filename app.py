@@ -105,7 +105,7 @@ def create_account():
             {"username": username})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Användarnamn existerar redan")
             return redirect(url_for('create_account'))
 
         if password == confirm:
@@ -115,10 +115,10 @@ def create_account():
             
         # put the new user into 'session' cookie
             session["user"] = request.form.get("username").lower()
-            flash("Registration Successful!")
+            flash("Registrering lyckad!")
             return redirect(url_for('profile', username=session["user"]))
         else:
-            flash("Passwords do not match.")
+            flash("Lösenordet matchar inte.")
 
     return render_template("create_account.html")
 
@@ -139,11 +139,11 @@ def login():
                     return redirect(url_for('profile', username=session["user"]))
             else:
                 # invalid password match
-                flash("Incorrect Username and/or Password")
+                flash("Felaktigt användarnamn och/eller lösenord")
                 return redirect(url_for("login"))
         else:
             # username doesn't exist
-            flash("Incorrect Username and/or Password")
+            flash("Felaktigt användarnamn och/eller lösenord")
             return redirect(url_for("login"))
     return render_template("login.html")
     
@@ -184,7 +184,7 @@ def add_task():
                 "created_by": session["user"]
             }
             mongo.db.tasks.insert_one(task)
-            flash("Tack för bokningen!. Uppgiften har lagts till")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
             return redirect(url_for("profile", username=session["user"]))
         else:
             task = {
@@ -196,7 +196,7 @@ def add_task():
                 "full_name": request.form.get("full_name")
             }
             mongo.db.tasks.insert_one(task)
-            flash("Tack för bokningen!. Uppgiften har lagts till")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
             return redirect(url_for("add_task"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("add_task.html", categories=categories)
@@ -216,7 +216,7 @@ def home_visit():
                 "created_by": session["user"]
             }
             mongo.db.tasks.insert_one(visit)
-            flash("Tack för bokningen!. Uppgiften har lagts till")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
             return redirect(url_for("profile", username=session["user"]))
         else:
             visit = {
@@ -228,7 +228,7 @@ def home_visit():
                 "full_name": request.form.get("full_name"),
             }
             mongo.db.tasks.insert_one(visit)
-            flash("Tack för bokningen!. Uppgiften har lagts till")
+            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
             return redirect(url_for("home_visit"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("home_visit.html", categories=categories)
@@ -246,7 +246,7 @@ def window_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(window)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("window_booking.html", categories=categories)
@@ -264,7 +264,7 @@ def home_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(home)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("home_booking.html", categories=categories)
@@ -282,7 +282,7 @@ def big_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(big)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("big_booking.html", categories=categories)
@@ -300,7 +300,7 @@ def step_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(step)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("step_booking.html", categories=categories)
@@ -318,7 +318,7 @@ def company_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(company)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("company_booking.html", categories=categories)
@@ -336,7 +336,7 @@ def moving_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(moving)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("moving_booking.html", categories=categories)
@@ -354,7 +354,7 @@ def office_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(office)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("office_booking.html", categories=categories)
@@ -372,7 +372,7 @@ def boutique_booking():
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(boutique)
-        flash("Tack för bokningen!. Uppgiften har lagts till")
+        flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss")
         return redirect(url_for("profile", username=session["user"]))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("boutique_booking.html", categories=categories)
