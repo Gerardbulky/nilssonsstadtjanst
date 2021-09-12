@@ -366,6 +366,12 @@ margin-left: 20px;
 .as:active {
   color: white;
 }
+.allt-section{
+    padding-right: 0px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    max-height: 250px;
+}
 
 @media (min-width: 30em) { 
 
