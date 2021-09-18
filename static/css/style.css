@@ -229,6 +229,11 @@ margin-left: 20px;
     justify-content: space-around;
 }
 
+/************** centers the windows and renders spacing as well *********************/
+.col-12{
+    display: inline-block;
+}
+
 .cards{
     display: flex;
     align-items: center;
