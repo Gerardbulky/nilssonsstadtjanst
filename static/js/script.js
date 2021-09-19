@@ -8,7 +8,7 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         arrows: false,
     });
-
+    
     $('.slider').slick({
         centerMode: true,
         centerPadding: '60px',
