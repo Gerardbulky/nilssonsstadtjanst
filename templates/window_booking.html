@@ -14,6 +14,10 @@
                     <form class="text-center" method="POST" action="{{ url_for('add_task') }}">
                         <!-------------section for select cleaning section------------------------>
                         <div class="row">
+                            <div id="pop-up-container">
+                                <img src="{{ url_for('static', filename='images/different-window.png') }}" class="img-fluid" alt="Responsive image">
+                            </div>
+
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-folder-open mr-2" aria-hidden="true"
                                     style="font-size: xx-large; max-width: 20%;"></i>
@@ -27,8 +31,9 @@
                         <div class="row">
                             <!-----select type one------------>
                             <div class="col-12">
-                                <h4 class="header-window-booking"> Hur är ditt fönster?</h4>
+                               <h4 class="header-window-booking"> Hur är ditt fönster?</h4> 
                             </div>
+
                             <div class="col-sm-8 my-3 offset-2" style="display: flex; align-items: center; justify-content: center;">
                                 <!----select type one-->
                                 <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
