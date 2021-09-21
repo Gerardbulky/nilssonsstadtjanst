@@ -31,12 +31,14 @@
                                 {{ task.phone_number }} <br>
                                 {{ task.email }} <br>
                                 <br>
-                                <p style="margin-bottom: 0;"><strong>  Window cleaning information </strong></p>
-                                type1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
-                                type2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
-                                type3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
-                                sides to clean: &nbsp; {{ task.window_cleaning_sides }}<br>
-                                {{ task.any_additional_information }} <br>
+                                {% if task.select %}
+                                    <p style="margin-bottom: 0;"><strong>  Window cleaning information </strong></p>
+                                    type1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
+                                    type2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
+                                    type3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
+                                    sides to clean: &nbsp; {{ task.window_cleaning_sides }}<br>
+                                    {{ task.any_additional_information }} <br>
+                                {% endif %}
                                 Created by: {{ task.created_by }} <br>
                             </div>
                         </div>

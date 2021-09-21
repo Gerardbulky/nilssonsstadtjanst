@@ -422,14 +422,14 @@ input[type="file"]{
         border-radius: 4px;
         outline: none;
         padding: 0.5em 0.8em;
-        margin-right: 15px;
-        font-size: 1em;
+        margin-right: 5px;
+        font-size: .9em;
         font-weight: bold;
         cursor: pointer;
     }
 
     .file-upload__button:active {
-        background: #00745D;
+        background: #d2fff6;
     }
 
     .file-upload__label {
