@@ -31,7 +31,7 @@
                                 {{ task.phone_number }} <br>
                                 {{ task.email }} <br>
                                 <br>
-                                {% if task.select %}
+                                {% if task.category_name == "Fönsterputsning" %}
                                     <p style="margin-bottom: 0;"><strong>  Window cleaning information </strong></p>
                                     type1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
                                     type2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>

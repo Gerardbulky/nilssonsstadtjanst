@@ -59,6 +59,7 @@
                             <p>
                                 <i class="fa fa-check" style="color: #4998ee;"></i> Rengöring av disk/köksbänk, kakel. <br>
                                 <i class="fa fa-check" style="color: #4998ee;"></i> Avtorkning av köksskåp och köksluckor (utvändigt). <br>
+                                <i class="fa fa-check" style="color: #4998ee;"></i> Rengöring av kyl- och frysskåp utvändigt.. <br>
                                 <i class="fa fa-check" style="color: #4998ee;"></i> Rengöring av spis och mikrovågsugnar (in och utvändigt). <br>
                                 <i class="fa fa-check" style="color: #4998ee;"></i> Avtorkning av vitvaror och fläkt. <br>
                                 <i class="fa fa-check" style="color: #4998ee;"></i> Rengöring av golv, lister och socklar. <br>
@@ -94,7 +95,15 @@
             </div>
                 <div class="card information" style="width: 100%;">
                     <div class="card-body">
-                        <h5 class="text-center my-3" style="margin-top: 0px;"> Priser hemstädning </h5>
+                        <p></p><strong> Boka för ett gratis hembesök eller boka hemstädning direkt! </strong></p>
+                        <p>
+                        <ul class="uls">
+                            <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
+                            <li class="lis"><a class="as" href="{{ url_for('home_booking') }}">Boka hemstäd</a></li>
+                        </ul>
+                        </p>
+                        <hr class="" style="background-color: #cdd7e6; height: 1px; margin-top: 50px;">
+                        <h5 class="text-center my-4" style="margin-top: 0px;"> Priser hemstädning </h5>
                         <p>
                             <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Priset är vad kunden betalar efter RUT-avdrag.
                         </p>
@@ -107,14 +116,7 @@
                         <p>
                         <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Vi tillhandahåller material och utrustning för städningen.
                         </p>
-                
-                        <p></p><strong> Boka för ett gratis hembesök eller boka hemstädning direkt! </strong></p>
-                        <p>
-                        <ul class="uls">
-                            <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
-                            <li class="lis"><a class="as" href="{{ url_for('home_booking') }}">Boka hemstäd</a></li>
-                        </ul>
-                        </p>
+
                     </div>
                 </div>
             
