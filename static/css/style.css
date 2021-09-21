@@ -442,8 +442,12 @@ input[type="file"]{
 
     @media only screen and (max-width: 1200px) { 
     .card-title{
-        font-size: 10px;
+        display: inline-table;
         }
+    .title-one {
+        font-size: 14px;
+        margin-left: 0;
+    }
     }
 @media only screen and (max-width: 600px) { 
     .file-upload{
