@@ -4,23 +4,28 @@
 <!-------------------------------------prices section----------------------------------------------------->
 <section class="container">
     <div class="row">
-        <h3 class="offset-3 mt-4" style="text-align: center;">Fönsterputsning
-            <hr style="width: 100px; background-color: #4998ee;">
-        </h3>
-        <img src="{{ url_for('static', filename='images/different-window.png') }}" class="img-fluid"
+        <div class="col-12">
+            <h3 class="text-center mt-4" style="text-align: center;">Fönsterputsning
+                <hr style="width: 100px; background-color: #4998ee;">
+            </h3>
+        </div>
+        <div class="col-12">
+            <h4 class="text-center my-4"> Hur är ditt fönster?</h4>
+        </div>
+        <div class="col-12">
+        <img src="{{ url_for('static', filename='images/different-window.png') }}" style="max-height: 500px; width: 100%;" class="img-fluid"
             alt="Responsive image">
+        </div>
         <hr>
 
-        <div class="col-12 table-responsive" style="margin-top: 30px;">
-            <div class="col-12">
-                <h4 class="text-center"> Hur är ditt fönster!</h4>
-            </div>
+        <div class="col-12 table-responsive" style="margin-top: 0px;">
+            
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">typ</th>
-                        <th scope="col">putsning av 2 sidor</th>
-                        <th scope="col" style="margin-left: -10; padding-left: -10px;">kosta</th>
+                        <th scope="col">Typ</th>
+                        <th scope="col">Putsning av 2 sidor</th>
+                        <th scope="col" style="margin-left: -10; padding-left: -10px;">Kosta</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,6 +86,16 @@
                         <br>
                         Hos oss får du alltid har en utmärkt och glasklart fönsterputsning med ditt hem eller företag.
                     </p>
+                    <p>
+                        <strong>Boka idag för ett gratis hembesök och prisoffert eller boka fönsterputsning direkt!.
+                        </strong>
+                    </p>
+                    <p>
+                    <ul class="uls">
+                        <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
+                        <li class="lis"><a class="as" href="{{ url_for('window_booking') }}">Boka fönsterputs</a></li>
+                    </ul>
+                    </p>
                     <br>
                     <hr class="my-4" style="background-color: #cdd7e6; height: 1px;">
                     <h5 class="text-center my-4" style="margin-top: 20px;"> Pris fönsterputsning </h5>
@@ -90,21 +105,10 @@
                         <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Om din bostad ligger långt bort kan ytterligare kostnad tillkomma. <br>
                         <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Vi tillhandahåller alla material och utrustning för städningen.
                     </p>
-                    
-                    <p>
-                        <strong>Boka idag för ett gratis hembesök och prisoffert eller boka fönsterputsning direkt!.
-                        </strong>
-                    </p>
                     <!--------------<p>
                             <a href="{{ url_for('window_booking') }}" style="margin-top: 20px; display: flex; align-items: center;"
                                 class="btn btn-outline-primary button btn-sm active" role="button" aria-pressed="true"> &nbsp &nbsp Book Now</a>
                         </p>---------------------->
-                    <p>
-                    <ul class="uls">
-                        <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
-                        <li class="lis"><a class="as" href="{{ url_for('window_booking') }}">Boka fönsterputs</a></li>
-                    </ul>
-                    </p>
                 </div>
             </div>
         </div>

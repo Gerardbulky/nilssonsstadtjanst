@@ -180,7 +180,16 @@ def add_task():
                 "time_and_date": request.form.get("time_and_date"),
                 "address": request.form.get("address"),
                 "phone_number": request.form.get("phone_number"),
+                "email": request.form.get("email"),
                 "full_name": request.form.get("full_name"),
+                "window_type_one": request.form.get("window_type_one"),
+                "window_count_one": request.form.get("window_count_one"),
+                "window_type_two": request.form.get("window_type_two"),
+                "window_count_two": request.form.get("window_count_two"),
+                "window_type_three": request.form.get("window_type_three"),
+                "window_count_three": request.form.get("window_count_three"),
+                "window_cleaning_sides": request.form.get("window_cleaning_sides"),
+                "myFile[]": request.form.get("myFile[]"),
                 "created_by": session["user"]
             }
             mongo.db.tasks.insert_one(task)
@@ -193,11 +202,21 @@ def add_task():
                 "time_and_date": request.form.get("time_and_date"),
                 "address": request.form.get("address"),
                 "phone_number": request.form.get("phone_number"),
-                "full_name": request.form.get("full_name")
+                "email": request.form.get("email"),
+                "full_name": request.form.get("full_name"),
+                "window_type_one": request.form.get("window_type_one"),
+                "window_count_one": request.form.get("window_count_one"),
+                "window_type_two": request.form.get("window_type_two"),
+                "window_count_two": request.form.get("window_count_two"),
+                "window_type_three": request.form.get("window_type_three"),
+                "window_count_three": request.form.get("window_count_three"),
+                "window_cleaning_sides": request.form.get("window_cleaning_sides"),
+                "myFile[]": request.form.get("myFile[]"),
+                
             }
             mongo.db.tasks.insert_one(task)
             flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
-            return redirect(url_for("add_task"))
+            return redirect(url_for("index"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("add_task.html", categories=categories)
 
@@ -213,6 +232,14 @@ def home_visit():
                 "address": request.form.get("address"),
                 "phone_number": request.form.get("phone_number"),
                 "full_name": request.form.get("full_name"),
+                "window_type_one": request.form.get("window_type_one"),
+                "window_count_one": request.form.get("window_count_one"),
+                "window_type_two": request.form.get("window_type_two"),
+                "window_count_two": request.form.get("window_count_two"),
+                "window_type_three": request.form.get("window_type_three"),
+                "window_count_three": request.form.get("window_count_three"),
+                "window_cleaning_sides": request.form.get("window_cleaning_sides"),
+                "myFile[]": request.form.get("myFile[]"),
                 "created_by": session["user"]
             }
             mongo.db.tasks.insert_one(visit)

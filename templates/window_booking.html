@@ -10,14 +10,13 @@
     <div class="row">
         <div class="col-12">
             <div class="card information" style="width: 100%;">
+                <!-------------section for different window image------------>
+                <img src="{{ url_for('static', filename='images/different-window.png') }}" style="max-height: 500px;"
+                    class="img-fluid" alt="Responsive image">
                 <div class="card-body">
                     <form class="text-center" method="POST" action="{{ url_for('add_task') }}">
                         <!-------------section for select cleaning section------------------------>
                         <div class="row">
-                            <div id="pop-up-container">
-                                <img src="{{ url_for('static', filename='images/different-window.png') }}" class="img-fluid" alt="Responsive image">
-                            </div>
-
                             <div class="col-sm-12 my-3" style="display: inline-block;">
                                 <i class="fa fa-folder-open mr-2" aria-hidden="true"
                                     style="font-size: xx-large; max-width: 20%;"></i>
@@ -36,7 +35,7 @@
 
                             <div class="col-sm-8 my-3 offset-2" style="display: flex; align-items: center; justify-content: center;">
                                 <!----select type one-->
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
+                                <select id="window_type_one" name="window_type_one" class="custom-select custom-select-lg mb-3"
                                     style="width: 45%; margin-right: 5px;">
                                     <option selected>Typ 1</option>
                                     <option value="1">A</option>
@@ -48,7 +47,7 @@
                                     <option value="7">G</option>
                                     <option value="8">H</option>
                                 </select>
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
+                                <select id="window_count_one" name="window_count_one" class="custom-select custom-select-lg mb-3"
                                     style="width: 45%; margin-left: 5px;">
                                     <option selected>Antal</option>
                                     <option value="1">1</option>
@@ -105,7 +104,7 @@
                             </div>
                             <!------select type two----------->
                             <div class="col-sm-8 my-3 offset-2" style="display: flex; align-items: center; justify-content: center;">
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
+                                <select id="window_type_two" name="window_type_two" class="custom-select custom-select-lg mb-3"
                                     style="width: 45%; margin-right: 5px;">
                                     <option selected>Typ 2</option>
                                     <option value="1">A</option>
@@ -117,7 +116,7 @@
                                     <option value="7">G</option>
                                     <option value="8">H</option>
                                 </select>
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
+                                <select id="window_count_two" name="window_count_two" class="custom-select custom-select-lg mb-3"
                                     style="width: 45%; margin-left: 5px;">
                                     <option selected>Antal</option>
                                     <option value="1">1</option>
@@ -174,7 +173,7 @@
                             </div>
                             <!------select type three--------->
                             <div class="col-sm-8 my-3 offset-2" style="display: flex; align-items: center; justify-content: center;">
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
+                                <select id="window_type_three" name="window_type_three" class="custom-select custom-select-lg mb-3"
                                     style="width: 45%; margin-right: 5px;">
                                     <option selected>Typ 3</option>
                                     <option value="1">A</option>
@@ -186,7 +185,7 @@
                                     <option value="7">G</option>
                                     <option value="8">H</option>
                                 </select>
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3"
+                                <select id="window_count_three" name="window_count_three" class="custom-select custom-select-lg mb-3"
                                     style="width: 45%; margin-left: 5px;">
                                     <option selected>Antal</option>
                                     <option value="1">1</option>
@@ -252,6 +251,7 @@
                                     <input type="file" class="file" id="file" accept="image/*">
                                     <label class="upload-file" for="file"><i class="fa fa-file-image-o" aria-hidden="true"></i>  &nbsp; bifoga bilder på dina fönster</label>
                                     ---->
+                                    <label for="myFile[]"></label>
                                     <input class="file-upload__input" type="file" name="myFile[]" id="myFile" multiple>
                                     <button class="file-upload__button" type="button"><i class="fa fa-file-image-o" aria-hidden="true"></i> &nbsp; bifoga bilder på dina fönster</button>
                                     <span class="file-upload__label"></span>
@@ -260,7 +260,8 @@
                             </div>
                             <!---------section for number of sides to clean----------------->
                             <div class="col-sm-10 offset-1" style="display: flex; align-items: center; justify-content: center;">
-                                <select id="category_name" name="category_name" class="custom-select custom-select-lg mb-3" style="width: 80%;">
+                                <label for="window_cleaning_sides"></label>
+                                <select id="window_cleaning_sides" name="window_cleaning_sides" class="custom-select custom-select-lg mb-3" style="width: 80%;">
                                     <option selected>Antal sidor att putsa</option>
                                     <option value="1">2</option>
                                     <option value="2">4</option>
@@ -314,6 +315,15 @@
                                 <label for="phone_number" style="width: 80%;">
                                     <input type="text" class="form-control" name="phone_number" id="phone_number"
                                         placeholder="Telefonnummer" required>
+                                </label>
+                            </div>
+                        </div>
+                        <!-------------section for email------------------------>
+                        <div class="row">
+                            <div class="col-sm-12 my-3" style="display: inline-block;">
+                                <i class="fa fa-envelope-o mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
+                                <label for="email" style="width: 80%;">
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="E-post" required>
                                 </label>
                             </div>
                         </div>

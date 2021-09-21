@@ -440,12 +440,16 @@ input[type="file"]{
         white-space: nowrap;
     }
 
+    @media only screen and (max-width: 1200px) { 
+    .card-title{
+        font-size: 10px;
+        }
+    }
 @media only screen and (max-width: 600px) { 
     .file-upload{
         max-width: 100%;
         font-size: 14px;
         margin-left: 0;
-
     }
     .header-window-booking{
         font-size: 20px;

@@ -118,6 +118,27 @@
             </div>
         </div>
     </div>
+    <!-------------------------------------Flashed Messages------------------------------------------------->
+    <section>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes my-4">
+            <div class="col" style="background-color: rgb(183, 240, 232); text-align: center;">
+                <h4 role="alert" aria-live="assertive" aria-atomic="true" id="element" class="toast" data-autohide="false"
+                    style="max-width: 80%; display: contents;">
+    
+                    <div class="toast-body" style="font-size: x-large; margin: 7px;">
+                        {{ message }}
+                    </div>
+                </h4>
+            </div>
+        </div>
+    
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
     <!------------------------------------------Navigation------------------------------------------------------------->
     <div class="container-fluid sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -202,26 +223,7 @@
         </div>
     </div>
     <!-------------------------------------Flashed Messages------------------------------------------------->
-    <section>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes my-4">
-            <div class="col" style="background-color: rgb(183, 240, 232); text-align: center;">
-                <h4 role="alert" aria-live="assertive" aria-atomic="true" id="element" class="toast"
-                    data-autohide="false" style="max-width: 80%; display: contents;">
-
-                    <div class="toast-body" style="font-size: x-large; margin: 7px;">
-                        {{ message }}
-                    </div>
-                </h4>
-            </div>
-        </div>
-
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
-    </section>
+    
 
     <!-------------------------------------Image Slider----------------------------------------------------->
     {% block content %}

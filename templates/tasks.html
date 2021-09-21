@@ -21,10 +21,47 @@
 </section>
 
 <section class="container">
-    {% if tasks %}
-    <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
-        <div class="col-10 mr-auto card">
-            {% for task in tasks %}
+    {% if session.user %}
+        {% if tasks %}
+            <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
+                <div class="col-10 mr-auto card">
+                    {% for task in tasks %}
+                        <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
+                                        <a class="btn btn-danger" href="{{ url_for('delete_task', task_id=task._id) }}">Delete</a>
+                                        <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Full Name: &nbsp;&nbsp;&nbsp; {{ task.full_name }} <br>
+                                Address: &nbsp;&nbsp; &nbsp; &nbsp; {{ task.address }} <br>
+                                Phone: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ task.phone_number }} <br>
+                                email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ task.email }} <br>
+                                Information: &nbsp; {{ task.any_additional_information }} <br>
+                                type1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
+                                type2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
+                                type3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
+                                sides to clean: &nbsp; {{ task.window_cleaning_sides }} <br>
+                                Created By: &nbsp; &nbsp;  {{ task.created_by }} <br>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            <h3 class="header my-4 text-center" style="color: red;">No Results Found
+        {% endif %}
+    {% else %}
+        {% if tasks %}
+        <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
+            <div class="col-10 mr-auto card">
+                {% for task in tasks %}
                 <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
@@ -35,21 +72,27 @@
                         </button>
                     </h2>
                 </div>
-
+        
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         Full Name: &nbsp;&nbsp;&nbsp; {{ task.full_name }} <br>
                         Address: &nbsp;&nbsp; &nbsp; &nbsp; {{ task.address }} <br>
-                        Phone: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ task.phone_number }}<br>
-                        Information: &nbsp; {{ task.any_additional_information }}<br>
-                        Created By: &nbsp; &nbsp;  {{ task.created_by }}<br>
+                        Phone: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ task.phone_number }} <br>
+                        email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{ task.email }} <br>
+                        Information: &nbsp; {{ task.any_additional_information }} <br>
+                        type1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
+                        type2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
+                        type3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
+                        sides to clean: &nbsp; {{ task.window_cleaning_sides }} <br>
                     </div>
                 </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
-    {% else %}
-        <h3 class="header my-4 text-center" style="color: red;">No Results Found
+        {% else %}
+            <h3 class="header my-4 text-center" style="color: red;">No Results Found
+        {% endif %}
+            
     {% endif %}
 </section>
 {% endblock %}
