@@ -566,8 +566,8 @@
                 }
 
                 var myClock = document.getElementById("clockDisplay");
-                myClock.textContent = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year; 
-                myClock.innerText = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year;
+                myClock.textContent = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ " : " +m+ ":" +s; 
+                myClock.innerText = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ " : " +m+ ":" +s;
 
                 setTimeout("renderTime()", 1000);
         }

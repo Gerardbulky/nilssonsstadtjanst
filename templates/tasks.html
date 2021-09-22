@@ -48,7 +48,7 @@
             
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                            <p style="margin-bottom: 0;"><strong> Personal information </strong></p>
+                            <p style="margin-bottom: 0;"><strong> Personlig information </strong></p>
                             {{ task.full_name }} <br>
                             {{ task.address }} <br>
                             {{ task.phone_number }} <br>
@@ -56,11 +56,11 @@
                             <br>
 
                             {% if task.category_name == "Fönsterputsning" %}
-                                <p style="margin-bottom: 0;"><strong> Window cleaning information </strong></p>
-                                type1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
-                                type2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
-                                type3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
-                                sides to clean: &nbsp; {{ task.window_cleaning_sides }}<br>
+                                <p style="margin-bottom: 0;"><strong> Fönsterputsning information </strong></p>
+                                Typ1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
+                                Typ2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
+                                Typ3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
+                                Antal sidor att putsa: &nbsp; {{ task.window_cleaning_sides }}<br>
                             {% endif %}
 
                             {{ task.any_additional_information }} <br>
