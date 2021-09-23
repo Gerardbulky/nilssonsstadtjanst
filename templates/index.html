@@ -180,10 +180,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('contact') }}">Kontakt</a>
                     </li>
-                    {% if session.user %}
+                   <!-- {% if session.user %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
-                    </li>
+                    </li> -->
                     {% if session.user|lower == "admin"|lower %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('get_tasks') }}">All Tasks</a>
@@ -195,14 +195,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
                     </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('login') }}">Logga In</a>
+                   <!---- {% endif %} -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Boka städning
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ url_for('window_cleaning') }}">Fönsterputsning</a>
+                            <a class="dropdown-item" href="{{ url_for('home_cleaning') }}">Hemstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('big_cleaning') }}">Storstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('step_cleaning') }}">Trappstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('company_cleaning') }}">Företagsstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('moving_cleaning') }}">Flyttstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('office_cleaning') }}">Kontorstädning</a>
+                            <a class="dropdown-item" href="{{ url_for('boutique_cleaning') }}">Butiksstädning</a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('create_account') }}">Skapa konto</a>
-                    </li>
-                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('home_visit') }}"><button type="button"
                                 class="btn btn-sm btn-dark">
@@ -294,9 +303,36 @@
                         <hr>
                         <p>Du kan också boka din städning utan ett kundbesök, om du kan ge oss all nödvändig
                             information om din bostad och den städning du önskar så att vi kan planera din städning.<br>
-                            <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
-                                role="button" aria-pressed="true" style="margin-top: 10px;">Boka städning</a>
+                         <!----   <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
+                                role="button" aria-pressed="true" style="margin-top: 10px;">Boka städning</a> -->
                         </p>
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                            <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary button btn-sm dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Boka städning
+                                </button>
+                                <div class="dropdown-menu dropdown-booking" aria-labelledby="btnGroupDrop1" style="background-color: rgb(45, 118, 185);">
+                                    <a class="dropdown-item" href="{{ url_for('window_booking') }}"><strong style="color: white;"> Fönsterputsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('home_booking') }}"><strong style="color: white;">Hemstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('big_booking') }}"><strong style="color: white;">Storstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('step_booking') }}"><strong style="color: white;">Trappstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('company_booking') }}"><strong style="color: white;">Företagsstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('moving_booking') }}"><strong style="color: white;">Flyttstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('office_booking') }}"><strong style="color: white;">Kontorstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="{{ url_for('boutique_booking') }}"><strong style="color: white;">Butiksstädsbokning</strong></a>
+                                    <hr style="margin: 0; padding: 0; background-color: white;">
+                                    <a class="dropdown-item" href="#"><strong style="color: white;">Byggstädsbokning</strong></a>
+                                </div>
+                            </div>
+                        </div>
                         <!---
                         <hr>
                         <p>Du kan också mejla oss med information om din städning så återkommer vi så snart som möjligt. <br>
@@ -480,6 +516,16 @@
                                 <i class="fa fa-instagram" aria-hidden="true"> </i>
                             </a>
                         </li>
+                        <li class="list-inline-item">
+                            <a href="{{ url_for('login') }}" class="btn-floating btn-inst mx-1">
+                                <i class="fa fa-sign-in" aria-hidden="true"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{{ url_for('create_account') }}" class="btn-floating btn-inst mx-1">
+                                <i class="fa fa-plus-circle" aria-hidden="true"> </i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -518,6 +564,10 @@
     <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
     <script src="{{ url_for('static', filename='js/maps.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!--adjust here-->
+    <!--multer.js-images-->
+    <script src="{{ url_for('static', filename='js/multer.js') }}"></script>
     <!--sweetalert popup-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

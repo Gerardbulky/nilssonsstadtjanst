@@ -158,7 +158,8 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if "user" in session:
-        return render_template("profile.html", username=username, categories=categories, task=task)
+        return redirect(url_for("get_tasks"))
+        # return render_template("profile.html", username=username, categories=categories, task=task)
     return render_template(url_for('login'))
 
 

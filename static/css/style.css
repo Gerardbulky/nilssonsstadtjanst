@@ -404,6 +404,10 @@ input[type="file"]{
 }
 ****/
 
+.dropdown-booking a:hover{
+    background-color: #152125;
+}
+
 /******************** section for insert button************/
     .file-upload {
         display: inline-flex;
