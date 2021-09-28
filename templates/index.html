@@ -39,7 +39,7 @@
                 <a href="{{ url_for('index') }}">
                     <img alt="logo image" id="logo-img" class="responsive-image"
                         style="width: 90%; height: 290px; margin: 0; padding-bottom: 20px; padding-right: 0px; padding-left: 0px;"
-                        src="{{ url_for('static', filename='images/nilsson-städ-logo1.jpg') }}" />
+                        src="{{ url_for('static', filename='images/royal_pic.jpg') }}" />
                 </a>
             </div>
 
@@ -478,14 +478,16 @@
         <div class="contents socials footer">
             <div class="row jumbotron">
                 <div class="d-none d-md-block col-lg-4 logo">
-                    <h2>
-                        <text-muted>NILSSONS STÄDTJÄNST AB</text-muted>
-                       <h5 class="text-center">I  &nbsp; VÄRMLAND</h5> 
-                    </h2>
+                    <h1>
+                        <P></P>
+                        <P></P>
+                        <P></P>
+                        <text-muted>ROYAL STÄD</text-muted>
+                    </h1>
                 </div>
                 <div class="d-md-none col-lg-4 logo">
                     <h4 class="box" style="inline-size: 310px;">
-                        <text-muted>NILSSONS STÄDTJÄNST AB</text-muted>
+                        <text-muted>ROYAL STÄD</text-muted>
                     </h4>
                 </div>
 
@@ -566,8 +568,6 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     <!--adjust here-->
-    <!--multer.js-images-->
-    <script src="{{ url_for('static', filename='js/multer.js') }}"></script>
     <!--sweetalert popup-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -663,6 +663,25 @@
         });
     </script> --->
 
+    <!----------script to insert image trial-------------
+    <script type="text/javascript"> </script>
+        document.querySelector("#myFile").addEventListener("change", function () {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => {
+                localStorage.setItem("recent-image", reader.result);
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const recentImageDataUrl = localStorage.getItem("recent-image")
+
+            if (recentImageDataUrl) {
+                document.querySelector("#myFile").setAttribute("src", recentImageDataUrl);
+            }
+        });-->
 </body>
 
 </html>
