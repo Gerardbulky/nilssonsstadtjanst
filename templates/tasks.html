@@ -65,8 +65,11 @@
                                 <img src="  " alt="" id="myFile" width="250" height="250">
                                 <br>
                             {% endif %}
+                                {{ task.any_additional_information }} <br>
 
-                            {{ task.any_additional_information }} <br>
+                            {% if task.category_name == "Flyttstädning" %}
+                                {{ task.home_size }} M²<br>
+                            {% endif %}
                         </div>
                     </div>
                 {% endfor %}
