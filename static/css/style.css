@@ -454,12 +454,8 @@ input[type="file"]{
         overflow: hidden;
         white-space: nowrap;
     }
-    .col-md-4 {
-        padding-right: 0px;
-    }
-    .col-lg-3 {
-        padding-right: 0px;
-    }
+    
+    
 
     @media only screen and (max-width: 1200px) { 
     .card-title{
