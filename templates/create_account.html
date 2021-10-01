@@ -1,42 +1,48 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <!-------------------------------------Registration Section----------------------------------------------------->
-    <section class="container">
-        <h3 class="offset-3" style="margin-top: 20px;">Skapa konto</h3>
-        <hr class="offset-3" style="width: 200px; background-color: #4998ee;">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="card-body text-center">
-                    <form class="border-tertiary" method="POST" action="{{ url_for('create_account') }}">
-                        <!----------Users Usersname------->
-                        <div class="row">
-                            <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-user-plus mr-2" aria-hidden="true" style="font-size: xx-large; max-width: 20%;"></i>
-                                <label for="username" style="width: 80%;">
-                                    <input type="text" class="form-control" name="username" id="username" placeholder=" Användarnamn" required>
-                                </label>
-                            </div>
+<!-------------------------------------Registration Section----------------------------------------------------->
+<section class="container">
+    <h3 class="offset-3" style="margin-top: 20px;">Skapa konto</h3>
+    <hr class="offset-3" style="width: 200px; background-color: #4998ee;">
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="card-body text-center">
+                <form class="border-tertiary" method="POST" action="{{ url_for('create_account') }}">
+                    <!----------Users Usersname------->
+                    <div class="row">
+                        <div class="col-sm-12 my-3" style="display: inline-block;">
+                            <i class="fa fa-user-plus mr-2" aria-hidden="true"
+                                style="font-size: xx-large; max-width: 20%;"></i>
+                            <label for="username" style="width: 80%;">
+                                <input type="text" class="form-control" name="username" id="username"
+                                    placeholder=" Användarnamn" required>
+                            </label>
                         </div>
-                        <!----------Users Password--------->
-                        <div class="row">
-                            <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-lock mr-3" aria-hidden="true" style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
-                                <label for="password" style="width: 80%;">
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="Lösenord" required>
-                                </label>
-                            </div>
+                    </div>
+                    <!----------Users Password--------->
+                    <div class="row">
+                        <div class="col-sm-12 my-3" style="display: inline-block;">
+                            <i class="fa fa-lock mr-3" aria-hidden="true"
+                                style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
+                            <label for="password" style="width: 80%;">
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="Lösenord" required>
+                            </label>
                         </div>
-                        <!----------Users Repeat Password--------->
-                        <div class="row">
-                            <div class="col-sm-12 my-3" style="display: inline-block;">
-                                <i class="fa fa-lock mr-3" aria-hidden="true" style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
-                                <label for="confirm" style="width: 80%;">
-                                    <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Upprepa Lösenord" required>
-                                </label>
-                            </div>
+                    </div>
+                    <!----------Users Repeat Password--------->
+                    <div class="row">
+                        <div class="col-sm-12 my-3" style="display: inline-block;">
+                            <i class="fa fa-lock mr-3" aria-hidden="true"
+                                style="font-size: xx-large; max-width: 20%; padding: 5px;"></i>
+                            <label for="confirm" style="width: 80%;">
+                                <input type="password" class="form-control" name="confirm" id="confirm"
+                                    placeholder="Upprepa Lösenord" required>
+                            </label>
                         </div>
-                        <!----------Users Usersname-------------
+                    </div>
+                    <!----------Users Usersname-------------
                         <div class="form-group row">
                             <label for="username" class="col-md-2 col-form-label">Username <i class="fa fa-user"
                                     aria-hidden="true"></i></label>
@@ -45,7 +51,7 @@
                                     maxlength="25" required>
                             </div>
                         </div>------->
-                        <!----------Users Password-------
+                    <!----------Users Password-------
                         <div class="form-group row">
                             <label for="password" class="col-md-2 col-form-label">Password <i class="fa fa-lock"
                                     aria-hidden="true"></i></label>
@@ -54,7 +60,7 @@
                                     maxlength="25" class="validate" required>
                             </div>
                         </div>------->
-                        <!----------Users Repeat Password-------
+                    <!----------Users Repeat Password-------
                         <div class="form-group row">
                             <label for="confirm" class="col-md-2 col-form-label">Repeat Password <i class="fa fa-lock"
                                     aria-hidden="true"></i></label>
@@ -63,70 +69,70 @@
                                     required>
                             </div>
                         </div>------->
-                        <!----------create_account Button-------------->
-                        <div class="row" style="margin: 25px;">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">skapa konto <i
-                                    class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    <!----------create_account Button-------------->
+                    <div class="row" style="margin: 25px;">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">skapa konto <i
+                                class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    </div>
+                    <!----------SIGN IN IF ALREADY HAVE AN ACCOUNT-------------->
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-center my-1">
+                                <strong class="small"> Har redan ett konto <a href="{{ url_for('login') }}"
+                                        class="font-weight-bold">Logga in</a></strong>
+                            </p>
                         </div>
-                        <!----------SIGN IN IF ALREADY HAVE AN ACCOUNT-------------->
-                        <div class="row">
-                            <div class="col">
-                                <p class="text-center my-1">
-                                    <strong class="small"> Har redan ett konto <a href="{{ url_for('login') }}"
-                                            class="font-weight-bold">Logga in</a></strong>
-                                </p>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!----------------------Section Contact in body------------------------------------------------------------>
+        <div class="col-lg-3">
+            <div class="card border-primary mb-3" style="width:100%; justified-content-center">
+                <div class="card-header">
+                    <h5>Kontakt</h5>
+                </div>
+                <div class="card-body text-primary">
+                    <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
+                    <br />
+                    <a target="_blank" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> :
+                        gerardbulky@gmail.com</a>
+                    <br />
+                    <a target="_blank" href="https://superclean.se/"><i class="fa fa-globe" aria-hidden="true"></i>
+                        :
+                        https://superclean.se</a>
+                    <br />
+                    <a target="_blank"
+                        href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
+                            class="fa fa-location-arrow" aria-hidden="true"></i> :
+                        Företagets plats</a>
                 </div>
             </div>
-            <!----------------------Section Contact in body------------------------------------------------------------>
-            <div class="col-lg-4">
-                <div class="card border-primary mb-3" style="width:100%; justified-content-center">
-                    <div class="card-header">
-                        <h5>Kontakt</h5>
-                    </div>
-                    <div class="card-body text-primary">
-                        <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
-                        <br />
-                        <a target="_blank" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> :
-                            gerardbulky@gmail.com</a>
-                        <br />
-                        <a target="_blank" href="https://superclean.se/"><i class="fa fa-globe" aria-hidden="true"></i>
-                            :
-                            https://superclean.se</a>
-                        <br />
-                        <a target="_blank"
-                            href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
-                                class="fa fa-location-arrow" aria-hidden="true"></i> :
-                            Företagets plats</a>
-                    </div>
+
+            <!----------------------Section Opening Hours in body------------------------------------------------------------>
+            <div class="card border-secondary mb-3" style="width:100%; justified-content-center">
+                <div class="card-header">
+                    <h5>Telefontider</h5>
                 </div>
-    
-                <!----------------------Section Opening Hours in body------------------------------------------------------------>
-                <div class="card border-secondary mb-3" style="width:100%; justified-content-center">
-                    <div class="card-header">
-                        <h5>Telefontider</h5>
-                    </div>
-                    <div class="card-body table">
-                        <tr>
-                            <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
-                            </td>
-                        </tr>
-                        <br />
-                        <tr>
-                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9:00 - 16:00
-                            </td>
-                        </tr>
-                        <br />
-                        <tr>
-                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                9:00 - 13:00
-                            </td>
-                        </tr>
-                    </div>
+                <div class="card-body table">
+                    <tr>
+                        <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
+                        </td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9:00 - 16:00
+                        </td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            9:00 - 13:00
+                        </td>
+                    </tr>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}

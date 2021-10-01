@@ -3,12 +3,16 @@
 {% block content %}
 <!-------------------------------------prices section----------------------------------------------------->
 <section class="container">
+    <h3 class="mt-4" style="text-align: center;">Hemstädning
+        <hr style="width: 100px; background-color: #4998ee;">
+    </h3>
     <div class="row">
-        <h3 class="offset-3 mt-4" style="text-align: center;">Hemstädning
-            <hr style="width: 100px; background-color: #4998ee;">
-        </h3>
 
-        <div class="col-md-8">
+        <div class="col-12 home-cleaning-image">
+            <img class="" src="{{ url_for('static', filename='images/home-cleaning-image.jpg') }}"  style="width: 100%; padding-right: 15px;" alt="">
+        </div>
+
+        <div class="col-md-9">
            <div class="card information">
                 <div class="card-body" style="width: 100%;">
                     <p>
@@ -29,7 +33,7 @@
                 </div>
             </div> 
             <div class="row">
-                <div class="col" style="margin-bottom: -15px;">
+                <div class="col-12" style="margin-bottom: -15px;">
                     <h5 class="text-center"> I en hemstädning ingår följande. </h5>
                 </div>
             </div>
@@ -118,15 +122,14 @@
                         <h5 class="text-center my-4" style="margin-top: 0px;"> Priser hemstädning </h5>
                         <p>
                             <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Priset är vad kunden betalar efter RUT-avdrag.
-                        </p>
-                        <p>
+                            <br>
                             <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> 225 kr per timme. Startavgift 110 kr.
-                        </p>
-                        <p>
-                        <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i>  Om din bostad ligger långt bort kan ytterligare kostnad tillkomma.
-                        </p>
-                        <p>
-                        <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Vi tillhandahåller material och utrustning för städningen.
+                            <br>
+                            <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Om din bostad ligger långt bort kan ytterligare
+                                kostnad tillkomma.
+                            <br>
+                            <i class="fa fa-marker" style="color: black; font-size: xx-large;">.</i> Vi tillhandahåller material och utrustning för
+                                städningen.
                         </p>
 
                     </div>
@@ -135,8 +138,8 @@
         </div>
 
         <!----------------------Section Contact in body------------------------------------------------------------>
-        <div class="col-md-4">
-            <div class="card border-primary mb-3" style="width:100%; justified-content-center">
+        <div class="col-md-3">
+            <div class="card border-primary mb-3" style="width:100%; float: right;">
                 <div class="card-header">
                     <h5>Kontakt</h5>
                 </div>
@@ -157,7 +160,7 @@
             </div>
 
             <!----------------------Section Opening Hours in body------------------------------------------------------------>
-            <div class="card border-secondary mb-3" style="width:100%; justified-content-center;">
+            <div class="card border-secondary mb-3" style="width:100%; float: right;">
                 <div class="card-header">
                     <h5>Telefontider</h5>
                 </div>

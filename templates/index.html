@@ -47,7 +47,7 @@
             <div class="col-md-8 d-none d-lg-block d-lg-4">
 
                 <div class="row autoplay gallery justified-content-center">
-                    <div class="col-lg-4 d-none d-lg-block d-lg-4">
+                    <div class="col-lg-3 d-none d-lg-block d-lg-4">
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
                                 <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top"
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-block d-lg-4">
+                    <div class="col-lg-3 d-none d-lg-block d-lg-4">
                         <div class="card shadow" style="width: 100%;">
                             <div class="gally-pic">
                                 <img src="{{ url_for('static', filename='images/window.jpg') }}" class="card-img-top"
@@ -125,16 +125,16 @@
         {% for message in messages %}
         <div class="row flashes my-2">
             <div class="col" style="background-color: rgb(183, 240, 232); text-align: center;">
-                <h4 role="alert" aria-live="assertive" aria-atomic="true" id="element" class="toast" data-autohide="false"
-                    style="max-width: 80%; display: contents;">
-    
+                <h4 role="alert" aria-live="assertive" aria-atomic="true" id="element" class="toast"
+                    data-autohide="false" style="max-width: 80%; display: contents;">
+
                     <div class="toast-body" style="font-size: x-large; margin: 7px;">
                         {{ message }}
                     </div>
                 </h4>
             </div>
         </div>
-    
+
         {% endfor %}
         {% endif %}
         {% endwith %}
@@ -180,7 +180,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('contact') }}">Kontakt</a>
                     </li>
-                   <!-- {% if session.user %}
+                    <!-- {% if session.user %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                     </li> -->
@@ -195,10 +195,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
                     </li>
-                   <!---- {% endif %} -->
+                    <!---- {% endif %} -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             Boka städning
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -226,13 +226,13 @@
         <div class="row" style="background-color: rgb(213, 222, 238);">
             <div class="col">
                 <p class="text-center small" style="color: black; margin-top: 10px; margin-bottom: 10px;">
-                   <strong>50% rabatt för din andra hemstädning hos oss!</strong>
+                    <strong>50% rabatt för din andra hemstädning hos oss!</strong>
                 </p>
             </div>
         </div>
     </div>
     <!-------------------------------------Flashed Messages------------------------------------------------->
-    
+
 
     <!-------------------------------------Image Slider----------------------------------------------------->
     {% block content %}
@@ -261,10 +261,10 @@
                     </div>
                 </div>
             </div>
-                <!------------------------------slick slider----------------------------------------------------->
+            <!------------------------------slick slider----------------------------------------------------->
 
-                <!----------------------About Our Company content in body------------------------------------------------------------>
-                <div class="col-lg-8">
+            <!----------------------About Our Company content in body------------------------------------------------------------>
+            <div class="col-lg-9">
                 <div class="card information Middle">
                     <div class="card-body">
                         <h5>
@@ -303,33 +303,44 @@
                         <hr>
                         <p>Du kan också boka din städning utan ett kundbesök, om du kan ge oss all nödvändig
                             information om din bostad och den städning du önskar så att vi kan planera din städning.<br>
-                         <!----   <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
+                            <!----   <a href="{{ url_for('add_task') }}" class="btn btn-outline-primary button btn-sm active"
                                 role="button" aria-pressed="true" style="margin-top: 10px;">Boka städning</a> -->
                         </p>
                         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                             <div class="btn-group" role="group">
-                                <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary button btn-sm dropdown-toggle" data-toggle="dropdown"
+                                <button id="btnGroupDrop1" type="button"
+                                    class="btn btn-outline-primary button btn-sm dropdown-toggle" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
                                     Boka städning
                                 </button>
-                                <div class="dropdown-menu dropdown-booking" aria-labelledby="btnGroupDrop1" style="background-color: rgb(45, 118, 185);">
-                                    <a class="dropdown-item" href="{{ url_for('window_booking') }}"><strong style="color: white;"> Fönsterputsbokning</strong></a>
+                                <div class="dropdown-menu dropdown-booking" aria-labelledby="btnGroupDrop1"
+                                    style="background-color: rgb(45, 118, 185);">
+                                    <a class="dropdown-item" href="{{ url_for('window_booking') }}"><strong
+                                            style="color: white;"> Fönsterputsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('home_booking') }}"><strong style="color: white;">Hemstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('home_booking') }}"><strong
+                                            style="color: white;">Hemstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('big_booking') }}"><strong style="color: white;">Storstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('big_booking') }}"><strong
+                                            style="color: white;">Storstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('step_booking') }}"><strong style="color: white;">Trappstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('step_booking') }}"><strong
+                                            style="color: white;">Trappstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('company_booking') }}"><strong style="color: white;">Företagsstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('company_booking') }}"><strong
+                                            style="color: white;">Företagsstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('moving_booking') }}"><strong style="color: white;">Flyttstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('moving_booking') }}"><strong
+                                            style="color: white;">Flyttstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('office_booking') }}"><strong style="color: white;">Kontorstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('office_booking') }}"><strong
+                                            style="color: white;">Kontorstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="{{ url_for('boutique_booking') }}"><strong style="color: white;">Butiksstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="{{ url_for('boutique_booking') }}"><strong
+                                            style="color: white;">Butiksstädsbokning</strong></a>
                                     <hr style="margin: 0; padding: 0; background-color: white;">
-                                    <a class="dropdown-item" href="#"><strong style="color: white;">Byggstädsbokning</strong></a>
+                                    <a class="dropdown-item" href="#"><strong
+                                            style="color: white;">Byggstädsbokning</strong></a>
                                 </div>
                             </div>
                         </div>
@@ -345,7 +356,7 @@
                 </div>
             </div>
             <!----------------------Section Contact in body------------------------------------------------------------>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="card border-primary mb-3" style="width:100%;">
                     <div class="card-header">
                         <h5>Kontakt</h5>
@@ -378,13 +389,15 @@
                         </tr>
                         <br />
                         <tr>
-                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp9:00 -
+                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp9:00
+                                -
                                 16:00
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp9:00 - 13:00
+                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp9:00 -
+                                13:00
                             </td>
                         </tr>
                     </div>
@@ -477,7 +490,7 @@
 
         <div class="contents socials footer">
             <div class="row jumbotron">
-                <div class="d-none d-md-block col-lg-4 logo">
+                <div class="d-none d-md-block col-lg-3 logo">
                     <h1>
                         <P></P>
                         <P></P>
@@ -485,14 +498,14 @@
                         <text-muted>NILSONS STÄDTJÄNST</text-muted>
                     </h1>
                 </div>
-                <div class="d-md-none col-lg-4 logo">
+                <div class="d-md-none col-lg-3 logo">
                     <h4 class="box" style="inline-size: 310px;">
                         <text-muted>NILSONS STÄDTJÄNST</text-muted>
                     </h4>
                 </div>
 
                 <!----------------------Section contact footer----------------------------------------------------->
-                <div class="col-lg-4 info">
+                <div class="col-lg-3 info">
                     <a href="tel:0720107276">Telefonnummer : 0720107276</a>
                     <br />
                     <a target="_blank" href="#"> Email : gerardbulky@gmail.com</a>
@@ -502,11 +515,12 @@
                         Hemsida : https://nilssonsstädtjänst.se</a>
                     <br />
                     <a target="_blank"
-                        href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403">Företagets plats</a>
+                        href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403">Företagets
+                        plats</a>
                 </div>
 
                 <!----------------------Section Social links Footer------------------------------------------------->
-                <div class="col-lg-4 socials page-footer font-small special-color-dark pt-4">
+                <div class="col-lg-3 socials page-footer font-small special-color-dark pt-4">
                     <ul class="list-unstyled socials-links">
                         <li class="list-inline-item">
                             <a target="_blank" href="#" class="btn-floating btn-fb mx-1">
@@ -582,19 +596,19 @@
 
     <!----------displaying date and time on webpage----------------->
     <script type="text/javascript">
-        function renderTime(){
+        function renderTime() {
             // Date
             var mydate = new Date();
             var year = mydate.getYear();
-                if(year < 1000){
-                    year +=1900
-                }
+            if (year < 1000) {
+                year += 1900
+            }
 
             var day = mydate.getDay();
             var month = mydate.getMonth();
             var daym = mydate.getDate();
-            var dayarray = new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thursday,","Friday,","Saturday,");
-            var montharray = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+            var dayarray = new Array("Sunday,", "Monday,", "Tuesday,", "Wednesday,", "Thursday,", "Friday,", "Saturday,");
+            var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
             // Date End
 
             // Time
@@ -602,24 +616,24 @@
             var h = currentTime.getHours();
             var m = currentTime.getMinutes();
             var s = currentTime.getSeconds();
-                if(h == 24){
-                    h = 0;
-                } else if(h > 12){
-                    h = h - 0;
-                }
+            if (h == 24) {
+                h = 0;
+            } else if (h > 12) {
+                h = h - 0;
+            }
 
-                if(h < 10){
-                    h = "0" + h;
-                }
-                if(m < 10){
-                    m = "0" + s;
-                }
+            if (h < 10) {
+                h = "0" + h;
+            }
+            if (m < 10) {
+                m = "0" + s;
+            }
 
-                var myClock = document.getElementById("clockDisplay");
-                myClock.textContent = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ " : " +m+ ":" +s; 
-                myClock.innerText = "" +dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year+ " | " +h+ " : " +m+ ":" +s;
+            var myClock = document.getElementById("clockDisplay");
+            myClock.textContent = "" + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " + h + " : " + m + ":" + s;
+            myClock.innerText = "" + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " + h + " : " + m + ":" + s;
 
-                setTimeout("renderTime()", 1000);
+            setTimeout("renderTime()", 1000);
         }
         renderTime();
     </script>

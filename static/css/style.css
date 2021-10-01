@@ -7,6 +7,7 @@ body {
   padding: 0;
   flex-wrap: wrap;
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
 }
 
 .row{
@@ -385,6 +386,14 @@ margin-left: 20px;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+.price-cards {
+    padding: 0px;
+    margin-top: 20px;
+    margin-left: 0px;
+    float: left;
+    background-color: #fafafa;
+    align-content: center;
+}
 /******************* section for insert button********
 input[type="file"]{
     display: none;
@@ -444,6 +453,12 @@ input[type="file"]{
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+    }
+    .col-md-4 {
+        padding-right: 0px;
+    }
+    .col-lg-3 {
+        padding-right: 0px;
     }
 
     @media only screen and (max-width: 1200px) { 

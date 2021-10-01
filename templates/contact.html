@@ -2,92 +2,92 @@
 
 
 {% block content %}
-    <!-------------------------------------Map Section-------------------------------------------------------->
-    <div class="container contact-header">
-        <h3 class="offset-4 my-4">Kontakt </h3>
-        <hr class="offset-4" style="width: 100px; background-color: #4998ee; margin-top: 0;">
-    </div>
-    <section class="container">
-        <div class="row">
-            <p class="strong mt-4 mb-0">Här finns vi</p>
-            <div class="mb-4" id="map"></div>
-            <div class="col-lg-8">
-                <!-------------------------------------Contact Form--------------------------------------------------------->
-    
-                <div class="form contact-bottom">
-                    <div class="email-us my-4">
-                        <h5 class="text-center">
-                            Maila oss!
-                            
-                            
-                        </h5>
-                    </div>
-                    <form id="contact-form">
-                        <input type="text" name="name" id="fullname" class="form-control kiki" placeholder="Namn"
-                            required />
-                        <input type="email" name="email" id="emailaddress" class="form-control kiki" placeholder="E-postadress"
-                            required />
-                        <input type="text" name="subject" id="subject" class="form-control kiki" placeholder=" Ämne"
-                            required />
-                        <textarea name="messagesummary" id="messagesummary" rows="5" class="form-control kiki2"
-                            placeholder=" Meddelande"></textarea>
-                        <div class="form-row">
-                            <div class="col" style="justify-content: center; display: flex;">
-                                <button id="button" type="submit" class="btn btn-primary">
-                                    Skicka meddelande
-                                </button>
-                            </div>
+<!-------------------------------------Map Section-------------------------------------------------------->
+<div class="container contact-header">
+    <h3 class="offset-4 my-4">Kontakt </h3>
+    <hr class="offset-4" style="width: 100px; background-color: #4998ee; margin-top: 0;">
+</div>
+<section class="container">
+    <div class="row">
+        <p class="strong mt-4 mb-0">Här finns vi</p>
+        <div class="mb-4" id="map"></div>
+        <div class="col-lg-9">
+            <!-------------------------------------Contact Form--------------------------------------------------------->
+
+            <div class="form contact-bottom">
+                <div class="email-us my-4">
+                    <h5 class="text-center">
+                        Maila oss!
+
+
+                    </h5>
+                </div>
+                <form id="contact-form">
+                    <input type="text" name="name" id="fullname" class="form-control kiki" placeholder="Namn"
+                        required />
+                    <input type="email" name="email" id="emailaddress" class="form-control kiki"
+                        placeholder="E-postadress" required />
+                    <input type="text" name="subject" id="subject" class="form-control kiki" placeholder=" Ämne"
+                        required />
+                    <textarea name="messagesummary" id="messagesummary" rows="5" class="form-control kiki2"
+                        placeholder=" Meddelande"></textarea>
+                    <div class="form-row">
+                        <div class="col" style="justify-content: center; display: flex;">
+                            <button id="button" type="submit" class="btn btn-primary">
+                                Skicka meddelande
+                            </button>
                         </div>
-                    </form>
-                </div>
-                
+                    </div>
+                </form>
             </div>
-    
-            <!----------------------Section Contact in body------------------------------------------------------------>
-            <div class="col-lg-4">
-                <div class="card border-primary mb-3" style="width:100%; content-center">
-                    <div class="card-header">
-                        <h5>Kontakt</h5>
-                    </div>
-                    <div class="card-body text-primary">
-                        <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
-                        <br />
-                        <a target="_blank" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> :
-                            gerardbulky@gmail.com</a>
-                        <br />
-                        <a target="_blank" href="https://superclean.se/"><i class="fa fa-globe" aria-hidden="true"></i> :
-                            https://superclean.se</a>
-                        <br />
-                        <a target="_blank"
-                            href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
-                                class="fa fa-location-arrow" aria-hidden="true"></i> :
-                            Företagets plats</a>
-                    </div>
+
+        </div>
+
+        <!----------------------Section Contact in body------------------------------------------------------------>
+        <div class="col-lg-3">
+            <div class="card border-primary mb-3" style="width:100%; content-center">
+                <div class="card-header">
+                    <h5>Kontakt</h5>
                 </div>
-                <!----------------------Section Opening Hours in body------------------------------------------------------------>
-                <div class="card border-secondary mb-3" style="width:100%; content-center">
-                    <div class="card-header">
-                        <h5>Telefontider </h5>
-                    </div>
-                    <div class="card-body table">
-                        <tr>
-                            <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
-                            </td>
-                        </tr>
-                        <br />
-                        <tr>
-                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9:00 - 16:00
-                            </td>
-                        </tr>
-                        <br />
-                        <tr>
-                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                9:00 - 13:00
-                            </td>
-                        </tr>
-                    </div>
+                <div class="card-body text-primary">
+                    <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
+                    <br />
+                    <a target="_blank" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> :
+                        gerardbulky@gmail.com</a>
+                    <br />
+                    <a target="_blank" href="https://superclean.se/"><i class="fa fa-globe" aria-hidden="true"></i> :
+                        https://superclean.se</a>
+                    <br />
+                    <a target="_blank"
+                        href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
+                            class="fa fa-location-arrow" aria-hidden="true"></i> :
+                        Företagets plats</a>
+                </div>
+            </div>
+            <!----------------------Section Opening Hours in body------------------------------------------------------------>
+            <div class="card border-secondary mb-3" style="width:100%; content-center">
+                <div class="card-header">
+                    <h5>Telefontider </h5>
+                </div>
+                <div class="card-body table">
+                    <tr>
+                        <td><strong>Mån-Fre:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
+                        </td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9:00 - 16:00
+                        </td>
+                    </tr>
+                    <br />
+                    <tr>
+                        <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            9:00 - 13:00
+                        </td>
+                    </tr>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
