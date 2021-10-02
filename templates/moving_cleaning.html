@@ -118,11 +118,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">0-49</th>
-                            <td>2.500 kr oavsett storlek</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">50-99</th>
+                            <th scope="row">0-99</th>
                             <td>50 kr</td>
                         </tr>
                     </tbody>
@@ -134,41 +130,13 @@
                     </tbody>
                 </table>
                 <p class="offset-1">Inställelseavgift på 110 kr tillkommer på alla priser ovan. </p>
-            </div>
-            <div class="card information" style="border-left: solid 2px #69bfdd; width: 100%;">
-                <div class="card-body">
-                    <table class="table">
-                        Prisexempel:
-                        </p>
-                        <tbody>
-                            <tr>
-                                <th scope="row">55</th>
-                                <td>Kvm</td>
-                                <td>2 860 kr</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">80</th>
-                                <td>Kvm</td>
-                                <td>4 110 kr.</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="row">115</th>
-                                <td>Kvm</td>
-                                <td>4 710 kr.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p><strong>Boka idag för ett gratis hembesök och prisoffert eller flyttstädning direkt! </strong>
-                    </p>
-                    <p>
-                    <ul class="uls">
-                        <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
-                        <li class="lis"><a class="as" href="{{ url_for('moving_booking') }}">Boka flyttstäd</a></li>
-                    </ul>
-                    </p>
-                </div>
+                <p class="offset-1"><strong>Boka idag för ett gratis hembesök och prisoffert eller flyttstädning direkt! </strong></p>
+                <p>
+                <ul class="uls" style="padding-left: 30px;">
+                    <li class="lis"><a class="as" href="{{ url_for('home_visit') }}">Boka besök</a></li>
+                    <li class="lis"><a class="as" href="{{ url_for('moving_booking') }}">Boka flyttstäd</a></li>
+                </ul>
+                </p>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-2" style="padding-right: 0px;">
