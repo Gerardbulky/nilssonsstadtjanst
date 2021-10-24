@@ -37,8 +37,8 @@ body {
     align-content: center;
 }
 
-.card-title{margin-left: 5px;
-            margin-bottom: 5px;}
+.card-title{margin: 0;
+            padding: 0;}
 
 .gallery {
     width: 80%;
@@ -375,10 +375,20 @@ margin-left: 20px;
   color: white;
 }
 .allt-section{
-    padding-right: 0px;
+    padding-right: 0;
     padding-bottom: 0;
     padding-left: 20px;
-    max-height: 250px;
+    max-height: 200px;
+    max-width: 100%;
+}
+.myvideo {
+    height:500px;
+    width:100%;
+    overflow:hidden;
+}
+.myvideo > video {
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .table td, .table th {
@@ -465,7 +475,20 @@ input[type="file"]{
         font-size: 14px;
         margin-left: 0;
     }
+    .myvideo {
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+.myvideo > video {
+    min-width: 100%;
+    min-height: 100%;
     }
+
+.allt-section{
+    width: 100%;
+}
+}
 @media only screen and (max-width: 600px) { 
     .file-upload{
         max-width: 100%;
@@ -475,4 +498,7 @@ input[type="file"]{
     .header-window-booking{
         font-size: 20px;
     }
+    .allt-section{
+    width: 100%;}
 }
+    
