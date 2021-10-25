@@ -233,7 +233,7 @@
         </div>
     </div>
     <!-------------------------------------Flashed Messages------------------------------------------------->
-    <section class="container-fluid col-lg-12 myvideo">
+    <section class="container-fluid d-block d-md-none col-lg-12 myvideo">
         <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}" style="width: 100%; height: 100v;"
             muted loop autoplay></video>
     </section>
@@ -242,7 +242,10 @@
     {% block content %}
     <section class="container Middle">
         <div class="row">
-            
+            <div class="d-none d-md-block col-lg-12 myvideo">
+                <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}" style="width: 100%; height: 100v;"
+                    muted loop autoplay></video>
+            </div>
         <!--    <div class="col-lg-12 sliding">
                 <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
