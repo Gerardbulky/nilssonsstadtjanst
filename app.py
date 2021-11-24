@@ -81,14 +81,17 @@ def prices():
 
 @app.route("/get_tasks")
 def get_tasks():
-    tasks = mongo.db.tasks.find().sort("_id", -1)
+    tasks = list(mongo.db.tasks.find().sort("_id", -1)) # i made task into list to get the length
     return render_template("tasks.html", tasks=tasks)
+
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     tasks = list(mongo.db.tasks.find({"$text": {"$search": query}}))
+    if not tasks:
+        flash("Du har angett ett felaktigt sökkriterium")
     return render_template("tasks.html", tasks=tasks)
 
 
