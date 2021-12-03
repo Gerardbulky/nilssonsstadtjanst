@@ -29,7 +29,7 @@
 
     <!-------------displaying the number of cleaning---------------->
     <div class="col-12 col-md-6">
-        <p class="text-muted mt-3 text-center text-md-left">
+        <p class="text-muted mt-3 text-center">
             Total Städning = {{ tasks|length }}
         </p>
     </div>
@@ -38,10 +38,12 @@
 
 <section class="container">
     {% if session.user %}
-        {% if tasks %}
+    {% if tasks %}
+    Date: {{ date_time }}
+        {% for task in tasks %}
         <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
             <div class="col-10 mr-auto card">
-                {% for task in tasks %}
+                
                     <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
                         <h2 class="mb-0">
                             <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
@@ -79,9 +81,10 @@
                             {% endif %}
                         </div>
                     </div>
-                {% endfor %}
+                
             </div>
         </div>
+        {% endfor %}
         {% else %}
         <h3 class="header my-4 text-center" style="color: red;">No Results Found
         {% endif %}

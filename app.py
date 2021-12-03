@@ -4,16 +4,27 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from datetime import datetime
+from flask_mail import Mail, Message
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
 
 app = Flask(__name__)
+mail = Mail(app)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+# mail starts here
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_HOST_USER'] = os.environ.get("MAIL_HOST_USER")
+app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASS")
+app.config['DEFAULT_FROM_EMAIL'] = os.environ.get("MAIL_HOST_USER")
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
 
 
 mongo = PyMongo(app)
@@ -82,7 +93,10 @@ def prices():
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find().sort("_id", -1)) # i made task into list to get the length
-    return render_template("tasks.html", tasks=tasks)
+    now = datetime.now() # current date and time
+    date_time = now.strftime("%d/%m/%Y")
+    time = now.strftime("%H:%M:%S")
+    return render_template("tasks.html", tasks=tasks, date_time=date_time, time=time)
 
 
 
