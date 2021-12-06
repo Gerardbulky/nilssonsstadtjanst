@@ -12,21 +12,22 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-mail = Mail(app)
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
+
 # mail starts here
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_HOST_USER'] = os.environ.get("MAIL_HOST_USER")
-app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASS")
-app.config['DEFAULT_FROM_EMAIL'] = os.environ.get("MAIL_HOST_USER")
+app.config['MAIL_PASS'] = os.environ.get("MAIL_PASS")
+# app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_HOST_USER")
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
 
+mail = Mail(app)
 mongo = PyMongo(app)
 
 
@@ -90,6 +91,12 @@ def prices():
     return render_template("prices.html")
 
 
+@app.route("/sendmail")
+def sendmail():
+    
+    return render_template("sendmail.html")
+
+
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find().sort("_id", -1)) # i made task into list to get the length
@@ -127,7 +134,7 @@ def create_account():
 
         if password == confirm:
             create_account = {"username": username,
-                        "password": generate_password_hash(password)} 
+                              "password": generate_password_hash(password)} 
             mongo.db.users.insert_one(create_account) 
             
         # put the new user into 'session' cookie
