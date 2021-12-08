@@ -9,23 +9,26 @@ from flask_mail import Mail, Message
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+import smtplib, ssl
 
 
 app = Flask(__name__)
 
 
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+
 # mail starts here
 app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_PORT'] = 465
 app.config['MAIL_HOST_USER'] = os.environ.get("MAIL_HOST_USER")
 app.config['MAIL_PASS'] = os.environ.get("MAIL_PASS")
 # app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_HOST_USER")
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
+
 
 mail = Mail(app)
 mongo = PyMongo(app)
@@ -93,8 +96,10 @@ def prices():
 
 @app.route("/sendmail")
 def sendmail():
-    
-    return render_template("sendmail.html")
+    msg = Message('Hello from the other side!', sender =   'nilssonsstadstjanst@gmail.com', recipients = ['gerardambe@yahoo.com'])
+    msg.body = "Hey Paul, sending you this email from my Flask app, lmk if it works"
+    mail.send(msg)
+    return "Message sent!"
 
 
 @app.route("/get_tasks")
