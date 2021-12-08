@@ -22,16 +22,15 @@ app.secret_key = os.environ.get("SECRET_KEY")
 # mail starts here
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_HOST_USER'] = os.environ.get("MAIL_HOST_USER")
-app.config['MAIL_PASS'] = os.environ.get("MAIL_PASS")
-# app.config['MAIL_DEFAULT_SENDER'] = os.environ.get("MAIL_HOST_USER")
+app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")
+app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 
 
-mail = Mail(app)
 mongo = PyMongo(app)
+mail = Mail(app)
 
 
 @app.route("/")
@@ -96,8 +95,9 @@ def prices():
 
 @app.route("/sendmail")
 def sendmail():
-    msg = Message('Hello from the other side!', sender =   'nilssonsstadstjanst@gmail.com', recipients = ['gerardambe@yahoo.com'])
+    msg = Message('Hello from the other side!', sender = 'nilssonsstadstjanst@gmail.com', recipients = ['gerardambe@yahoo.com'])
     msg.body = "Hey Paul, sending you this email from my Flask app, lmk if it works"
+    msg.html = "<b>Hey Paul</b>, sending you this email from my <a href="https://google.com">Flask app</a>, lmk if it works"
     mail.send(msg)
     return "Message sent!"
 
