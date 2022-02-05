@@ -30,7 +30,7 @@
 
 <body>
     <!------------------------------------Image Header-------------------------------------------------------------------->
-
+    {% block navbar %}
     <!-- <div class="promo text-center" style="background-color:rgb(74, 153, 226); display:inline-block; color:#fd0202; padding-top:5px; padding-bottom:0px;"><h5><small><strong><i class="fa fa-star" style="color:white;"></i> Your frist cleaning is free <i class="fa fa-star" style="color:white;"></i></strong></small> 👉 <a style="color:#fafafa;" href="0720107276" target="_blank" class="btn-sm btn-success"><small><strong>  Book Now!</strong></small></a> </h5></div>-->
     <div class="container-fluid" style="margin-bottom: 0;">
         <!------------------------------------Logo Image------------>
@@ -117,7 +117,10 @@
             </div>
         </div>
     </div>
+    {% endblock %}
     <!-------------------------------------Flashed Messages------------------------------------------------->
+   
+    {% block message %}
     <section>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -138,6 +141,8 @@
         {% endif %}
         {% endwith %}
     </section>
+    {% endblock %}
+   
     <!------------------------------------------Navigation------------------------------------------------------------->
     <div class="container-fluid sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light">

@@ -14,7 +14,7 @@ cryptography==2.9
 decorator==4.4.2
 defusedxml==0.6.0
 distlib==0.3.0
-dnspython==2.1.0
+dnspython==2.2.0
 docutils==0.16
 entrypoints==0.3
 filelock==3.0.12

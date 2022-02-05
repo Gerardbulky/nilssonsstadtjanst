@@ -1,4 +1,5 @@
 import os
+import smtplib, ssl
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -9,7 +10,6 @@ from flask_mail import Mail, Message
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-import smtplib, ssl
 
 
 app = Flask(__name__)
@@ -19,14 +19,12 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
-# mail starts here
-app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")
-app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
-
+app.config["MAIL_SERVER"] = 'smtp.gmail.com'
+app.config["MAIL_PORT "] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME_ORIGINAL'] = os.environ.get("MAIL_USERNAME_ORIGINAL")
+app.config['MAIL_PASS_ORIGIN'] = os.environ.get("MAIL_PASS_ORIGIN")
 
 
 mongo = PyMongo(app)
@@ -35,7 +33,10 @@ mail = Mail(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    msg = Message('Hello from the other side!', sender = 'nilssonsstadtjanst@gmail.com', recipients = ['gerardbulky@gmail.com'])
+    msg.body = "Hey Paul, sending you this email from my Flask app, lmk if it works"
+    mail.send(msg)
+    return render_template("login.html")
 
 
 @app.route("/moving_cleaning")
@@ -93,13 +94,16 @@ def prices():
     return render_template("prices.html")
 
 
-@app.route("/sendmail")
-def sendmail():
-    msg = Message('Hello from the other side!', sender = 'nilssonsstadstjanst@gmail.com', recipients = ['gerardambe@yahoo.com'])
-    msg.body = "Hey Paul, sending you this email from my Flask app, lmk if it works"
-    msg.html = "<b>Hey Paul</b>, sending you this email from my <a href="https://google.com">Flask app</a>, lmk if it works"
-    mail.send(msg)
-    return "Message sent!"
+@app.route("/email", methods=['POST', 'GET'])
+def email():
+    if request.method == "POST":
+        msg = Message('hello', sender='nilssonsstadtjanst@gmail.com', recipients=['gerardambe@yahoo.com'])
+        msg.body = "Cool email bro."
+        mail.send(msg)
+        return render_template("index.html", result="Success!")
+    else:
+        return render_template("index.html", result="Failure!")
+
 
 
 @app.route("/get_tasks")
@@ -152,6 +156,25 @@ def create_account():
     return render_template("create_account.html")
 
 
+@app.route("/reset_password", methods=['GET','POST'])
+def reset_password():
+    if request.method == "POST":
+        existing_email = mongo.db.tasks.find_one(
+            {"email": request.form.get("email")})
+
+        if existing_email:
+            flash("Your reset request has been sent to your email")
+            send_mail()
+            return redirect(url_for('login'))
+        else:
+            # invalid password match
+            flash("Felaktigt användarnamn och/eller mail.")
+            return redirect(url_for("reset_password"))
+
+    return render_template("reset_password.html")
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -175,7 +198,8 @@ def login():
             flash("Felaktigt användarnamn och/eller lösenord.")
             return redirect(url_for("login"))
     return render_template("login.html")
-    
+
+
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -186,9 +210,10 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+
     if "user" in session:
-        return redirect(url_for("get_tasks"))
-        # return render_template("profile.html", username=username, categories=categories, task=task)
+        # return redirect(url_for("get_tasks"))
+        return render_template("profile.html", username=username, categories=categories, task=task)
     return render_template(url_for('login'))
 
 
@@ -280,7 +305,7 @@ def home_visit():
             }
             mongo.db.tasks.insert_one(visit)
             flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
-            return redirect(url_for("index"))
+            return redirect(url_for("profile"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("home_visit.html", categories=categories)
 
@@ -493,6 +518,7 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted.")
     return redirect(url_for("get_categories"))
+
 
 
 if __name__=="__main__":

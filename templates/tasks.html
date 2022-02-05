@@ -38,55 +38,55 @@
 
 <section class="container">
     {% if session.user %}
-    {% if tasks %}
-    Date: {{ date_time }}
-        {% for task in tasks %}
-        <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
-            <div class="col-10 mr-auto card">
-                
-                    <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
-                                    <a class="btn btn-danger" href="{{ url_for('delete_task', task_id=task._id) }}">Delete</a>
-                                    <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
-                            </button>
-                        </h2>
-                    </div>
-            
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p style="margin-bottom: 0;"><strong> Personlig information </strong></p>
-                            {{ task.full_name }} <br>
-                            {{ task.address }} <br>
-                            {{ task.phone_number }} <br>
-                            {{ task.email }} <br>
-                            <br>
-
-                            {% if task.category_name == "Fönsterputsning" %}
-                                <p style="margin-bottom: 0;"><strong> Fönsterputsning information </strong></p>
-                                Typ1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
-                                Typ2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
-                                Typ3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
-                                Antal sidor att putsa: &nbsp; {{ task.window_cleaning_sides }}<br>
-                                file: &nbsp; {{ task.myFile }}
-                                <img src="  " alt="" id="myFile" width="250" height="250">
-                                <br>
-                            {% endif %}
-                                {{ task.any_additional_information }} <br>
-
-                            {% if task.category_name == "Flyttstädning" %}
-                                {{ task.home_size }} M²<br>
-                            {% endif %}
+        {% if tasks %}
+        Date: {{ date_time }}
+            {% for task in tasks %}
+                <div class=" row accordion offset-1" id="accordionExample" style="width: 100%">
+                    <div class="col-10 mr-auto card">
+                    
+                        <div class="card-header" style="background-color: rgb(28, 99, 230);" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-caret-down" style="color: #fff; font-size: large; margin-right: 10px;">
+                                        <a class="btn btn-danger" href="{{ url_for('delete_task', task_id=task._id) }}">Delete</a>
+                                        <strong>{{ task.category_name }}</strong> : {{ task.time_and_date }}</i>
+                                </button>
+                            </h2>
                         </div>
-                    </div>
                 
-            </div>
-        </div>
-        {% endfor %}
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p style="margin-bottom: 0;"><strong> Personlig information </strong></p>
+                                {{ task.full_name }} <br>
+                                {{ task.address }} <br>
+                                {{ task.phone_number }} <br>
+                                {{ task.email }} <br>
+                                <br>
+
+                                {% if task.category_name == "Fönsterputsning" %}
+                                    <p style="margin-bottom: 0;"><strong> Fönsterputsning information </strong></p>
+                                    Typ1: &nbsp; {{ task.window_type_one }} = {{ task.window_count_one }} <br>
+                                    Typ2: &nbsp; {{ task.window_type_two }} = {{ task.window_count_two }} <br>
+                                    Typ3: &nbsp; {{ task.window_type_three }} = {{ task.window_count_three }} <br>
+                                    Antal sidor att putsa: &nbsp; {{ task.window_cleaning_sides }}<br>
+                                    file: &nbsp; {{ task.myFile }}
+                                    <img src="  " alt="" id="myFile" width="250" height="250">
+                                    <br>
+                                {% endif %}
+                                    {{ task.any_additional_information }} <br>
+
+                                {% if task.category_name == "Flyttstädning" %}
+                                    {{ task.home_size }} M²<br>
+                                {% endif %}
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            {% endfor %}
         {% else %}
-        <h3 class="header my-4 text-center" style="color: red;">No Results Found
+            <h3 class="header my-4 text-center" style="color: red;">No Results Found </h3>
         {% endif %}
     {% endif %}
 </section>
