@@ -2,7 +2,7 @@ $(document).ready(function(){
 // ADDING Eventlistener to Contact-form.   
     $("#contact-form").submit(function(event){
         event.preventDefault();
-            emailjs.send("gmail","nilssonsstadtjanst", {
+        emailjs.send("gmail","gerardbulky@gmail.com", {
     "from_name": document.getElementById("fullname").value,
     "from_email": document.getElementById("emailaddress").value,
     "from_subject": document.getElementById("subject").value,

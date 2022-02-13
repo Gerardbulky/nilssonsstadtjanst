@@ -1,5 +1,6 @@
 import os
-import smtplib, ssl
+
+
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -13,18 +14,19 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-
-
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
+mail = Mail(app)
 
 app.config["MAIL_SERVER"] = 'smtp.gmail.com'
-app.config["MAIL_PORT "] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME_ORIGINAL'] = os.environ.get("MAIL_USERNAME_ORIGINAL")
-app.config['MAIL_PASS_ORIGIN'] = os.environ.get("MAIL_PASS_ORIGIN")
+app.config["MAIL_PORT "] = 465
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = "nilssonstadtjanst@gmail.com"
+app.config['MAIL_PASSWORD'] = "twmizmseozztzjkx"
+
+app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.secret_key = os.getenv("SECRET_KEY")
+
 
 
 mongo = PyMongo(app)
@@ -33,10 +35,23 @@ mail = Mail(app)
 
 @app.route("/")
 def index():
-    msg = Message('Hello from the other side!', sender = 'nilssonsstadtjanst@gmail.com', recipients = ['gerardbulky@gmail.com'])
-    msg.body = "Hey Paul, sending you this email from my Flask app, lmk if it works"
-    mail.send(msg)
-    return render_template("login.html")
+    return render_template("index.html")
+
+
+@app.route("/form")
+def form():
+    return render_template("form.html")
+
+
+@app.route("/result", methods=['POST', 'GET'])
+def result():
+    if request.method == 'POST':
+        msg = Message(request.form.get('Subject'), sender='gerardbulky@gmail.com', recipients=[request.form.get('Email')])
+        msg.body = "Cool email bro."
+        mail.send(msg)
+        return render_template("result.html", result="Success!")
+    else:
+        return render_template("result.html", result="Failure!")
 
 
 @app.route("/moving_cleaning")

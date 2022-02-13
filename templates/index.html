@@ -238,10 +238,12 @@
         </div>
     </div>
     <!-------------------------------------Flashed Messages------------------------------------------------->
+    {% block conter %}
     <section class="container-fluid d-block d-md-none myvideo">
         <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}" style="width: 100%; height: 100v;"
             muted loop autoplay></video>
     </section>
+    {% endblock %}
 
     <!-------------------------------------Image Slider----------------------------------------------------->
     {% block content %}
