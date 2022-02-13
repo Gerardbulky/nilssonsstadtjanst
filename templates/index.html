@@ -119,7 +119,7 @@
     </div>
     {% endblock %}
     <!-------------------------------------Flashed Messages------------------------------------------------->
-   
+
     {% block message %}
     <section>
         {% with messages = get_flashed_messages() %}
@@ -142,7 +142,7 @@
         {% endwith %}
     </section>
     {% endblock %}
-   
+
     <!------------------------------------------Navigation------------------------------------------------------------->
     <div class="container-fluid sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -237,23 +237,20 @@
             </div>
         </div>
     </div>
-    <!-------------------------------------Flashed Messages------------------------------------------------->
-    {% block conter %}
-    <section class="container-fluid d-block d-md-none myvideo">
-        <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}" style="width: 100%; height: 100v;"
-            muted loop autoplay></video>
-    </section>
-    {% endblock %}
-
     <!-------------------------------------Image Slider----------------------------------------------------->
     {% block content %}
+    <section class="container-fluid d-block d-md-none myvideo">
+        <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}"
+            style="width: 100%; height: 100v;" muted loop autoplay></video>
+    </section>
+
     <section class="container Middle">
         <div class="row">
             <div class="d-none d-md-block col-lg-12 myvideo">
-                <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}" style="width: 100%; height: 100v;"
-                    muted loop autoplay></video>
+                <video src="{{ url_for('static', filename='images/cleaning-video-demo.mp4') }}"
+                    style="width: 100%; height: 100v;" muted loop autoplay></video>
             </div>
-        <!--    <div class="col-lg-12 sliding">
+            <!--    <div class="col-lg-12 sliding">
                 <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-interval="2000">
@@ -379,10 +376,10 @@
                         <a href="tel:0720107276"><i class="fa fa-phone" aria-hidden="true"></i> : 0720107276</a>
                         <br />
                         <a target="_blank" href="contact.html"><i class="fa fa-envelope-o" aria-hidden="true"></i> :
-                            gerardbulky@gmail.com</a>
+                            info@nilssonsstadtjanst.se</a>
                         <br />
                         <a target="_blank" href="#"><i class="fa fa-globe" aria-hidden="true"></i> :
-                            https://nilsonsstädtjänst.se</a>
+                            https://nilssonsstädtjänst.se</a>
                         <br />
                         <a target="_blank"
                             href="https://www.google.com/maps/place/Sundsgatan+35,+661+42+S%C3%A4ffle/@59.1302538,12.9298516,17z/data=!3m1!4b1!4m5!3m4!1s0x4644a8985505ee95:0x9daef44078fbed9f!8m2!3d59.1302538!4d12.9320403"><i
@@ -398,17 +395,17 @@
                     </div>
                     <div class="card-body table">
                         <tr>
-                            <td><strong>Mån-Fre:</strong>&nbsp&nbsp 7:00 - 19:00
+                            <td><strong>Mån-Fre:</strong>&nbsp&nbsp 7:00 - 17:00
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp 7:00 - 16:00
+                            <td><strong>Lördag:</strong>&nbsp&nbsp&nbsp&nbsp 8:00 - 14:00
                             </td>
                         </tr>
                         <br />
                         <tr>
-                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp 7:00 - 12:00
+                            <td><strong>Söndag:</strong>&nbsp&nbsp&nbsp Stängt
                             </td>
                         </tr>
                     </div>
@@ -519,7 +516,7 @@
                 <div class="col-lg-3 info">
                     <a href="tel:0720107276">Telefonnummer : 0720107276</a>
                     <br />
-                    <a target="_blank" href="#"> Email : gerardbulky@gmail.com</a>
+                    <a target="_blank" href="#"> Email : info@nilssonsstadtjanst</a>
                     <br />
                     <a target="_blank"
                         href="https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html">
@@ -641,8 +638,8 @@
             }
 
             var myClock = document.getElementById("clockDisplay");
-            myClock.textContent = "" + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " +h+":"+m+":"+s;
-            myClock.innerText = "" + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " +h+":"+m+":"+s;
+            myClock.textContent = "" + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " + h + ":" + m + ":" + s;
+            myClock.innerText = "" + dayarray[day] + " " + daym + " " + montharray[month] + " " + year + " | " + h + ":" + m + ":" + s;
 
             setTimeout("renderTime()", 1000);
         }
