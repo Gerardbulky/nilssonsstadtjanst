@@ -1,6 +1,5 @@
 import os
-
-
+import smtplib, ssl
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -14,44 +13,26 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
-mail = Mail(app)
 
-app.config["MAIL_SERVER"] = 'smtp.gmail.com'
-app.config["MAIL_PORT "] = 465
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = "nilssonstadtjanst@gmail.com"
-app.config['MAIL_PASSWORD'] = "twmizmseozztzjkx"
 
 app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 app.secret_key = os.getenv("SECRET_KEY")
 
-
+app.config['MAIL_SERVER']='smtp.eu.mailgun.org'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USER'] = 'postmaster@mg.nilssonsstadtjanst.se'
+app.config['MAIL_PASS'] = os.getenv("MAIL_PASSWORD")
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+mail = Mail(app)
 
 mongo = PyMongo(app)
-mail = Mail(app)
 
 
 @app.route("/")
 def index():
     return render_template("index.html")
-
-
-@app.route("/form")
-def form():
-    return render_template("form.html")
-
-
-@app.route("/result", methods=['POST', 'GET'])
-def result():
-    if request.method == 'POST':
-        msg = Message(request.form.get('Subject'), sender='gerardbulky@gmail.com', recipients=[request.form.get('Email')])
-        msg.body = "Cool email bro."
-        mail.send(msg)
-        return render_template("result.html", result="Success!")
-    else:
-        return render_template("result.html", result="Failure!")
 
 
 @app.route("/moving_cleaning")
@@ -319,8 +300,13 @@ def home_visit():
                 "full_name": request.form.get("full_name"),
             }
             mongo.db.tasks.insert_one(visit)
-            flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
-            return redirect(url_for("profile"))
+            # send mail section
+            msg = Message('Bokning mottagen', sender='info@nilssonsstadtjanst.se', recipients=[request.form.get("email")])
+            msg.body = 'Du har bokat: {} \n Tid och datum: {} \n Ditt namn: {} \n Adress: {} \n Telefonnummer: {} \n'.format(request.form.get("category_name"),request.form.get("time_and_date"),request.form.get("full_name"),request.form.get("address"),request.form.get("phone_number"))
+            mail.send(msg)
+
+            flash("Tack för bokningen! Vi har skickat en bekräftelse till din e-post. Vi ses!")
+            return redirect(url_for("index"))
     categories = mongo.db.categories.find().sort("category_name", 1)    
     return render_template("home_visit.html", categories=categories)
 
@@ -366,6 +352,7 @@ def home_booking():
             "full_name": request.form.get("full_name"),
             "created_by": session["user"]
         }
+
         mongo.db.tasks.insert_one(home)
         flash("Tack för bokningen!. Uppgiften har lagts till. Vi hör av oss.")
         return redirect(url_for("profile", username=session["user"]))
