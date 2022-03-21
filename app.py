@@ -1,11 +1,12 @@
 import os
 import smtplib, ssl
+import time
+from datetime import date
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from datetime import datetime
 from flask_mail import Mail, Message
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -15,14 +16,14 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 
-app.config["MONGO_DBNAME"] = os.getenv("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
-app.secret_key = os.getenv("SECRET_KEY")
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
 
 app.config['MAIL_SERVER']='smtp.eu.mailgun.org'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USER'] = 'postmaster@mg.nilssonsstadtjanst.se'
-app.config['MAIL_PASS'] = os.getenv("MAIL_PASSWORD")
+app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")
+app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = Mail(app)
@@ -90,25 +91,13 @@ def prices():
     return render_template("prices.html")
 
 
-@app.route("/email", methods=['POST', 'GET'])
-def email():
-    if request.method == "POST":
-        msg = Message('hello', sender='nilssonsstadtjanst@gmail.com', recipients=['gerardambe@yahoo.com'])
-        msg.body = "Cool email bro."
-        mail.send(msg)
-        return render_template("index.html", result="Success!")
-    else:
-        return render_template("index.html", result="Failure!")
-
-
 
 @app.route("/get_tasks")
 def get_tasks():
     tasks = list(mongo.db.tasks.find().sort("_id", -1)) # i made task into list to get the length
-    now = datetime.now() # current date and time
-    date_time = now.strftime("%d/%m/%Y")
-    time = now.strftime("%H:%M:%S")
-    return render_template("tasks.html", tasks=tasks, date_time=date_time, time=time)
+    
+    date_str = date.today()
+    return render_template("tasks.html", tasks=tasks, date_time=date_str)
 
 
 
@@ -517,7 +506,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
-    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    mongo.db.categories.delete({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted.")
     return redirect(url_for("get_categories"))
 
@@ -526,4 +515,4 @@ def delete_category(category_id):
 if __name__=="__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
