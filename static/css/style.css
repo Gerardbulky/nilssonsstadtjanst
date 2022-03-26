@@ -59,8 +59,36 @@ body {
 .gally-pic:hover img {
     transform: scale(1.2);
 }
-
-
+/********************** styling card body to align *********************/
+.card-body{
+    display: block;
+    clear: both;
+}
+.card-body .key,
+.card-body .value {
+    display: inline-block;
+}
+.card-body .key,
+.card-body .value {
+    margin: 0;
+}
+.card-body .key {
+    width: 5%;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.card-body .value {
+    position: relative;
+    width: 85%;
+}
+.card-body .key p {
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+.card-body .value p {
+    margin-top: 0;
+    margin-bottom: 1px;
+}
 /**********************navigation*********************/
 
 .navbar {
