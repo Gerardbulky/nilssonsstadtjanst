@@ -42,6 +42,9 @@ I would like to implement a feature whereby users can be able to book and pay fo
 
 # **Technology Used**
 - **Css and Html**
+- **Python**
+- **Flask**
+- - **SQL**
 - **bootstrap** - Is a framework used entirely to build the site,. [link](https://www.bootstrapcdn.com/).
 - **Emailjs** - To incorporate google email into the site. [link](https://www.emailjs.com/).
 - **Google Map.js** - To incorporate the google map into the site. [link](https://developers.google.com/maps/documentation/javascript/tutorial).
