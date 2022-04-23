@@ -1,5 +1,5 @@
 #  **Superclean Cleaning Service**
-- This is a simple project built entirely using html,css, bootstrap and javascrpit.Come take a walk🕺 with me through its entirety😎.
+- This is a simple project built entirely using HTML, CSS, Bootstrap, Jquery, Javascrpit, Python and Flask and [hosted](https://nilssonsstadtjanst.herokuapp.com/) on Heroku.
 - The project is divided into the **header,body and footer**. The header contains the **logo image** and three **photos** showing pictures of the types of cleaning offered by the company and a **navigation bar**.
 - The body section contains an **image slider** together with two card one containing information about the **opening hours** and the other card providing some **contact information**.
 - The footer contains a **wave image** and below that is the **company name** and **contact information** and **social links** and lastly we have the **copyright** section.
