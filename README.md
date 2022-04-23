@@ -73,7 +73,7 @@ I would like to implement a feature whereby users can be able to book and pay fo
 # **Deployment**
 The project was deployed to GitHub Pages using the following steps...
 
-- Log in to GitHub and locate the [GitHub Repository](https://github.com/gerardambe/cleaning-company/settings)
+- Log in to GitHub and locate the [GitHub Repository](https://github.com/gerardambe/cleaning-company)
 - At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
 - Scroll down the Settings page until you locate the "GitHub Pages" Section.
 - Under "Source", click the dropdown called "None" and select "Master Branch".
