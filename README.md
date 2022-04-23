@@ -84,12 +84,11 @@ The project was deployed to GitHub Pages using the following steps...
 # **Credit**
 ## **Content**
 - I owe a big thank you to all those who contributed in one way or another during this project.
-- Some ideas where obtained,like the rule of thirds from some materials at code institude.
+- Some ideas where obtained, like the rule of thirds from some materials at code institude.
 - The idea of using the sweetalert obtained from [link](https://www.youtube.com/watch?v=GC-9Bn7_eXs).
 - The idea of pop up when hovering over the google markers were obtained from [link](https://www.youtube.com/watch?v=Zxf1mnP5zcw&list=LLdR7i1DWa2mvrstuxruyJVw&index=13&t=900s).
 ## **Media**
 - Some of the photos used where obtained from Can Stock Photo.
 ## **Acknowledgements**
 - I recieved inspiration from myself because i work as a cleaner in a cleaning company. Just wanted to experiment what is like building a cleaning company.
-- I would like to thank my Mentor for his support throughout this journey.
-- The tutor for their relentless efforts
+
