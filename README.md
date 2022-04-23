@@ -41,7 +41,8 @@
 I would like to implement a feature whereby users can be able to book and pay for their services online.
 
 # **Technology Used**
-- **Css and Html**
+- **CSS and HTML**
+- **Javascript**
 - **Python**
 - **Flask**
 - **SQL**
