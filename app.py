@@ -28,7 +28,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 mail = Mail(app)
 
-mongo = PyMongo(app)
+
 
 
 @app.route("/")
