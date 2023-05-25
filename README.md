@@ -1,5 +1,5 @@
 #  **Superclean Cleaning Service**
-- This is a simple project built entirely using html,css, bootstrap and javascrpit.Come take a walk🕺 with me through its entirety😎.
+- This is a simple project built entirely using HTML, CSS, Bootstrap, Jquery, Javascrpit, Python and Flask and [hosted](https://nilssonsstadtjanst.herokuapp.com/) on Heroku.
 - The project is divided into the **header,body and footer**. The header contains the **logo image** and three **photos** showing pictures of the types of cleaning offered by the company and a **navigation bar**.
 - The body section contains an **image slider** together with two card one containing information about the **opening hours** and the other card providing some **contact information**.
 - The footer contains a **wave image** and below that is the **company name** and **contact information** and **social links** and lastly we have the **copyright** section.
@@ -7,7 +7,7 @@
 # **UX**
 - This project is intended for users who are looking for a website that offers cleaning services such as home cleaning,company cleaning,window cleaning etc. Below is a **sketch** of the Desktop and Mobile version the project website.
 <img src="static/images/sketchDesktop.jpg" width=300> <img src="static/images/sketchMobil.jpg" width=300>.
-- Attached is a [link to the deployed project on github](https://gerardambe.github.io/cleaning-company/) and a [link to the hosted site](https://8000-c9e53957-2352-4dc3-b1bb-0e5a5f07bfe1.ws-eu01.gitpod.io/index.html).
+- Attached is a [link to the deployed project on github](https://github.com/gerardambe/nilssonsstadtjanst) and a [link to the hosted site](https://nilssonsstadtjanst.herokuapp.com/).
 - The project in its entirety provides easy access to users with images of what the service offers in both mobile and Desktop easy to access versions.
 - As a user by clicking on the different features will provide you with more elaborated and explicit detailed information on what to expect.
 - In the contact section you have a mail section to send your request and also a map section that provides the users with the locations.
@@ -41,7 +41,11 @@
 I would like to implement a feature whereby users can be able to book and pay for their services online.
 
 # **Technology Used**
-- **Css and Html**
+- **CSS and HTML**
+- **Javascript**
+- **Python**
+- **Flask**
+- **SQL**
 - **bootstrap** - Is a framework used entirely to build the site,. [link](https://www.bootstrapcdn.com/).
 - **Emailjs** - To incorporate google email into the site. [link](https://www.emailjs.com/).
 - **Google Map.js** - To incorporate the google map into the site. [link](https://developers.google.com/maps/documentation/javascript/tutorial).
@@ -69,7 +73,7 @@ I would like to implement a feature whereby users can be able to book and pay fo
 # **Deployment**
 The project was deployed to GitHub Pages using the following steps...
 
-- Log in to GitHub and locate the [GitHub Repository](https://github.com/gerardambe/cleaning-company/settings)
+- Log in to GitHub and locate the [GitHub Repository](https://github.com/gerardambe/cleaning-company)
 - At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
 - Scroll down the Settings page until you locate the "GitHub Pages" Section.
 - Under "Source", click the dropdown called "None" and select "Master Branch".
@@ -80,12 +84,11 @@ The project was deployed to GitHub Pages using the following steps...
 # **Credit**
 ## **Content**
 - I owe a big thank you to all those who contributed in one way or another during this project.
-- Some ideas where obtained,like the rule of thirds from some materials at code institude.
+- Some ideas where obtained, like the rule of thirds from some materials at code institude.
 - The idea of using the sweetalert obtained from [link](https://www.youtube.com/watch?v=GC-9Bn7_eXs).
 - The idea of pop up when hovering over the google markers were obtained from [link](https://www.youtube.com/watch?v=Zxf1mnP5zcw&list=LLdR7i1DWa2mvrstuxruyJVw&index=13&t=900s).
 ## **Media**
 - Some of the photos used where obtained from Can Stock Photo.
 ## **Acknowledgements**
 - I recieved inspiration from myself because i work as a cleaner in a cleaning company. Just wanted to experiment what is like building a cleaning company.
-- I would like to thank my Mentor for his support throughout this journey.
-- The tutor for their relentless efforts
+
